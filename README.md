@@ -19,4 +19,4 @@ TODO: Write something here and remember the unit tests.
 - **Array:**
   - Remove objects based on `Equatable` comparison.
 - **Collection:**
-  - Get elements from
+  - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
