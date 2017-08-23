@@ -27,5 +27,5 @@ TODO: Write something here and remember the unit tests.
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
 
 <p style="text-align:center;margin-top:100px;">
-  ![Trifork](http://trifork.com/wp-content/uploads/2016/05/logo_trifork.png)
+  <img src="http://trifork.com/wp-content/uploads/2016/05/logo_trifork.png" alt="TRIFORK">
 </p>
