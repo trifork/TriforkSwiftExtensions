@@ -6,10 +6,9 @@
 
 Framework with generic Swift extensions.
 
-## Install
-
+## Installation
 ### Carthage
-`github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.1`
+```github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.1```
 
 
 ## Contributing
@@ -19,6 +18,13 @@ TODO: Write something here and remember the unit tests.
 ## Feature list
 
 - **Array:**
-  - Remove objects based on `Equatable` comparison.
+  - Remove `Element` instances based on `Equatable` comparison.
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **NSMutableAttributedString:**
+  - More simple interface to append strings with font and color to `NSMutableAttributedString`.
+
+
+  <p style="text-align:center;margin-top:100px;">
+  ![Trifork](http://trifork.com/wp-content/uploads/2016/05/logo_trifork.png)
+  </p>
