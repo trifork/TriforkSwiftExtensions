@@ -1,3 +1,7 @@
 language: objective-c
-xcode_project: TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj
-xcode_scheme: TriforkSwiftExtensions
+
+#script:
+#  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
+#xcode_project: TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj
+#xcode_scheme: TriforkSwiftExtensions
+script: xctool -sdk iphonesimulator -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions build test
