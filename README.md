@@ -22,8 +22,11 @@ TODO: Write something here and remember the unit tests.
   - Remove `Element` instances based on `Equatable` comparison.
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **Optional:**
+  - Passing an `Optional` receiver into another function as an unwrapped parameter.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
+
 
 ---
 
