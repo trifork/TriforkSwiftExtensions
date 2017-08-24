@@ -4,4 +4,6 @@ language: objective-c
 #  - xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
 #xcode_project: TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj
 #xcode_scheme: TriforkSwiftExtensions
-script: xctool -sdk iphonesimulator -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions build test
+#script: xctool -sdk iphonesimulator -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions build test
+script:
+      - xcodebuild test -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.0'
