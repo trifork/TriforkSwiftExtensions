@@ -3,7 +3,8 @@ osx_image: xcode8.3
 env:
   matrix:
     - IOS_DEVICE_NAME='iPhone 6', IOS_VERSION=9.0
-    - IOS_DEVICE_NAME='iPhone 7', IOS_VERSION=10.3
+    - IOS_DEVICE_NAME='iPhone 7', IOS_VERSION=latest
 script:
+  - xcodebuild -version
+  - xcodebuild -showsdks
   - xcodebuild clean test -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions CODE_SIGNING_REQUIRED=NO -destination "platform=iOS Simulator,name=$IOS_DEVICE_NAME,OS=$IOS_VERSION"
-  #- xcodebuild clean test -project TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj -scheme TriforkSwiftExtensions CODE_SIGNING_REQUIRED=NO -destination "platform=iOS Simulator,name=iPhone 6,OS=9.0"
