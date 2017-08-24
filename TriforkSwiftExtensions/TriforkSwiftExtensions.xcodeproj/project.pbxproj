@@ -10,8 +10,6 @@
 		E91351CF1F4EBE8800BC1A68 /* ArrayRemoveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34481F4D761200BB36BB /* ArrayRemoveExtension.swift */; };
 		E91351D01F4EBE8B00BC1A68 /* CollectionIndexExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34431F4D743900BB36BB /* CollectionIndexExtension.swift */; };
 		E91351D11F4EBE8E00BC1A68 /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF346B1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift */; };
-		E91351D51F4EC64400BC1A68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91351D31F4EC44500BC1A68 /* Foundation.framework */; };
-		E91351D71F4EC64900BC1A68 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91351D61F4EC64900BC1A68 /* UIKit.framework */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
 		E9DF34371F4D72E100BB36BB /* TriforkSwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9DF34441F4D743900BB36BB /* CollectionIndexExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34431F4D743900BB36BB /* CollectionIndexExtension.swift */; };
@@ -60,8 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91351D71F4EC64900BC1A68 /* UIKit.framework in Frameworks */,
-				E91351D51F4EC64400BC1A68 /* Foundation.framework in Frameworks */,
 				E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
