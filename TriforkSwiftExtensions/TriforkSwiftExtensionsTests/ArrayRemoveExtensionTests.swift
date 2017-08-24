@@ -32,6 +32,10 @@ class ArrayRemoveExtensionTests: XCTestCase {
         var objects: [NSObject] = [object1, object2, object3]
         objects.removeElement(object3)
         XCTAssert(objects == [object1, object2], "Element 'object3' should have been removed.")
+        
+        objects = [object1, object2, object3]
+        objects.removeElement(object2)
+        XCTAssert(objects == [object1, object3], "Element 'object2' should have been removed.")
     }
     
     func testRemoveObjects() {
