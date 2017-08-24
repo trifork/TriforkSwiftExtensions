@@ -36,7 +36,17 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
         
         let attributes2: [String: Any] = attributedString.attributes(at: text.characters.count, effectiveRange: nil)
-        self.assert(attributes: attributes2, fontName: ".SFUIDisplay", fontSize: 50.0, color: nil)
+        
+        let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
+        let expectedFontName: String
+        if iOSVersionMajor > 9 {
+            expectedFontName = ".SFUIDisplay"
+        }
+        else {
+            expectedFontName = ".SFUIDisplay-Regular"
+        }
+        
+        self.assert(attributes: attributes2, fontName: expectedFontName, fontSize: 50.0, color: nil)
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
         let attributes3: [String: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
