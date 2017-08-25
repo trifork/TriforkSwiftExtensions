@@ -8,12 +8,22 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.2
+github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.3
 ```
 
 
 ## Contributing
-TODO: Write something here and remember the unit tests.
+1. Fork
+2. Branch from either `development` (new features 🆕) or `master` (hot fixes 🔥)
+3. Develop and write unit tests.
+4. Commit with great messages.
+5. Push when you are done.
+6. Create a pull request.
+7. Wait for Travis CI results and fix the issues if there are any 👷🏻
+
+If you need more guidance, then [read this](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/).
+
+Happy contributing! 🎉
 
 
 ## Feature list
