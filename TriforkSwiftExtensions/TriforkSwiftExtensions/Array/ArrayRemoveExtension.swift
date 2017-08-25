@@ -14,6 +14,7 @@ public extension Array where Element: Equatable {
     public mutating func removeElement(_ element: Element) {
         if let index: Int = self.index(of: element) {
             self.remove(at: index)
+            self.removeElement(element) //Recursive call to remove multiple instances of the same element.
         }
     }
     
