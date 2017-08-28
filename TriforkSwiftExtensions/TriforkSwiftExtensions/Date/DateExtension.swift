@@ -25,17 +25,20 @@ public extension Date {
     ///
     /// Both date and time styles defaults to none, which means they will not be included in the string
     ///
-    /// This function respects the device's localization settings unless another is passed.
+    /// This function respects the device's localization and timeZone settings unless other are passed.
     /// 
     /// - short:    "8/28/17",                  "2:40 PM"
     /// - medium:   "Aug 28, 2017",             "2:40:52 PM"
     /// - long:     "August 28, 2017",          "2:40:52 PM GMT+2"
     /// - full:     "Monday, August 28, 2017",  "2:40:52 PM Central European Summer Time"
-    public func toString(dateStyle: DateFormatter.Style = .none, timeStyle: DateFormatter.Style = .none, locale: Locale? = nil) -> String {
+    public func toString(dateStyle: DateFormatter.Style = .none, timeStyle: DateFormatter.Style = .none, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter: DateFormatter = DateFormatter()
         
         if let locale: Locale = locale {
             dateFormatter.locale = locale
+        }
+        if let timeZone: TimeZone = timeZone {
+            dateFormatter.timeZone = timeZone
         }
         
         dateFormatter.timeStyle = timeStyle

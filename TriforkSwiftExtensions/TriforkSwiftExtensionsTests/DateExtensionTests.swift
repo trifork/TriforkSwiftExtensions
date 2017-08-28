@@ -24,27 +24,28 @@ class DateExtensionTests: XCTestCase {
     
     func testToStringWithStyles() {
         let locale: Locale = Locale(identifier: "en-US")
+        let timeZone: TimeZone = TimeZone(identifier: "Europe/Copenhagen")!
         XCTAssertEqual(self.date.toString(locale: locale), "")
         
         //Date only
-        XCTAssertEqual(self.date.toString(dateStyle: .short, locale: locale), "8/28/17")
-        XCTAssertEqual(self.date.toString(dateStyle: .medium, locale: locale), "Aug 28, 2017")
-        XCTAssertEqual(self.date.toString(dateStyle: .long, locale: locale), "August 28, 2017")
-        XCTAssertEqual(self.date.toString(dateStyle: .full, locale: locale), "Monday, August 28, 2017")
+        XCTAssertEqual(self.date.toString(dateStyle: .short, locale: locale, timeZone: timeZone), "8/28/17")
+        XCTAssertEqual(self.date.toString(dateStyle: .medium, locale: locale, timeZone: timeZone), "Aug 28, 2017")
+        XCTAssertEqual(self.date.toString(dateStyle: .long, locale: locale, timeZone: timeZone), "August 28, 2017")
+        XCTAssertEqual(self.date.toString(dateStyle: .full, locale: locale, timeZone: timeZone), "Monday, August 28, 2017")
         
         //Time only
-        XCTAssertEqual(self.date.toString(timeStyle: .short, locale: locale), "2:40 PM")
-        XCTAssertEqual(self.date.toString(timeStyle: .medium, locale: locale), "2:40:52 PM")
-        XCTAssertEqual(self.date.toString(timeStyle: .long, locale: locale), "2:40:52 PM GMT+2")
-        XCTAssertEqual(self.date.toString(timeStyle: .full, locale: locale), "2:40:52 PM Central European Summer Time")
+        XCTAssertEqual(self.date.toString(timeStyle: .short, locale: locale, timeZone: timeZone), "2:40 PM")
+        XCTAssertEqual(self.date.toString(timeStyle: .medium, locale: locale, timeZone: timeZone), "2:40:52 PM")
+        XCTAssertEqual(self.date.toString(timeStyle: .long, locale: locale, timeZone: timeZone), "2:40:52 PM GMT+2")
+        XCTAssertEqual(self.date.toString(timeStyle: .full, locale: locale, timeZone: timeZone), "2:40:52 PM Central European Summer Time")
         
         //Both
-        XCTAssertEqual(self.date.toString(dateStyle: .short, timeStyle: .short, locale: locale), "8/28/17, 2:40 PM")
-        XCTAssertEqual(self.date.toString(dateStyle: .medium, timeStyle: .medium, locale: locale), "Aug 28, 2017, 2:40:52 PM")
-        XCTAssertEqual(self.date.toString(dateStyle: .long, timeStyle: .long, locale: locale), "August 28, 2017 at 2:40:52 PM GMT+2")
-        XCTAssertEqual(self.date.toString(dateStyle: .full, timeStyle: .full, locale: locale), "Monday, August 28, 2017 at 2:40:52 PM Central European Summer Time")
+        XCTAssertEqual(self.date.toString(dateStyle: .short, timeStyle: .short, locale: locale, timeZone: timeZone), "8/28/17, 2:40 PM")
+        XCTAssertEqual(self.date.toString(dateStyle: .medium, timeStyle: .medium, locale: locale, timeZone: timeZone), "Aug 28, 2017, 2:40:52 PM")
+        XCTAssertEqual(self.date.toString(dateStyle: .long, timeStyle: .long, locale: locale, timeZone: timeZone), "August 28, 2017 at 2:40:52 PM GMT+2")
+        XCTAssertEqual(self.date.toString(dateStyle: .full, timeStyle: .full, locale: locale, timeZone: timeZone), "Monday, August 28, 2017 at 2:40:52 PM Central European Summer Time")
         
-        XCTAssertEqual(self.date.toString(dateStyle: .short, timeStyle: .full, locale: locale), "8/28/17, 2:40:52 PM Central European Summer Time")
+        XCTAssertEqual(self.date.toString(dateStyle: .short, timeStyle: .full, locale: locale, timeZone: timeZone), "8/28/17, 2:40:52 PM Central European Summer Time")
     }
     
     func testAsISO8601String() {
