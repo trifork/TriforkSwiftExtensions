@@ -51,9 +51,11 @@ Happy contributing! 🎉
 - **String:**
   - Base64 encoding and decoding.
   - Conversion to `URL` and `Data`.
-  - URL encoding
+  - URL encoding.
   - Check for regular expression matches.
-  - Validate as phone number or email
+  - Validate as phone number or email.
+- **URL:**
+  - Adding query parameters to URL.
 
 
 
