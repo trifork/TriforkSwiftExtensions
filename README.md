@@ -36,6 +36,7 @@ Happy contributing! 🎉
   - Conversion to `String` and hex `String`.
 - **Date:**
   - Convert to string according to specified `DateFormatter.Style`.
+  - Convert to and from ISO8601 formatted strings.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Float:**

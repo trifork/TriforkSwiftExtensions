@@ -197,16 +197,16 @@
 			isa = PBXGroup;
 			children = (
 				E9DF34361F4D72E100BB36BB /* Info.plist */,
-				E9DF34451F4D747300BB36BB /* CollectionExtensionTests.swift */,
 				E9DF344A1F4D768F00BB36BB /* ArrayExtensionTests.swift */,
-				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
-				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
-				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
-				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
-				E92269131F53F7AA00DAEFAE /* DoubleExtensionTests.swift */,
-				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
+				E9DF34451F4D747300BB36BB /* CollectionExtensionTests.swift */,
 				E922691D1F54435D00DAEFAE /* DataExtensionTests.swift */,
 				E92269221F5446AF00DAEFAE /* DateExtensionTests.swift */,
+				E92269131F53F7AA00DAEFAE /* DoubleExtensionTests.swift */,
+				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
+				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
+				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
+				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
+				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
