@@ -32,6 +32,8 @@ Happy contributing! 🎉
   - Remove `Element` instances based on `Equatable` comparison.
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **Data:**
+  - Conversion to `String` and hex `String`.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Float:**
