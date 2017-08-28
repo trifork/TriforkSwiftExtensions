@@ -34,6 +34,8 @@ Happy contributing! 🎉
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
 - **Data:**
   - Conversion to `String` and hex `String`.
+- **Date:**
+  - Convert to string according to specified `DateFormatter.Style`.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Float:**
