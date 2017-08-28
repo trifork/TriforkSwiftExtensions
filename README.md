@@ -32,6 +32,8 @@ Happy contributing! 🎉
   - Remove `Element` instances based on `Equatable` comparison.
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **Double:**
+  - Get as string with a maximum or exact number of significant digits.
 - **Float:**
   - Get as string with a maximum or exact number of significant digits.
 - **Optional:**

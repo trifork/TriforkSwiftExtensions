@@ -1,5 +1,5 @@
 //
-//  FloatExtension.swift
+//  DoubleExtension.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 28/08/2017.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-public extension Float {
-    
+public extension Double {
     
     /// Returns the receiver as a string with a number of maximum significant digits
     ///
@@ -17,7 +16,9 @@ public extension Float {
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47"
     public func string(withMaxDigits maxDigits: Int) -> String? {
-        return Double(self).string(withMaxDigits: maxDigits)
+        let formatter = NumberFormatter()
+        formatter.maximumSignificantDigits = maxDigits
+        return formatter.string(from: NSNumber(value: self))
     }
     
     /// Returns the receiver as a string with a number significant digits
@@ -26,6 +27,9 @@ public extension Float {
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47.00"
     public func string(withDigits digits: Int) -> String? {
-        return Double(self).string(withDigits: digits)
+        let formatter = NumberFormatter()
+        formatter.maximumSignificantDigits = digits
+        formatter.minimumSignificantDigits = digits
+        return formatter.string(from: NSNumber(value: self))
     }
 }
