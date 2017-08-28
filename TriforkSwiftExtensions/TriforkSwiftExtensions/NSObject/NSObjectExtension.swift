@@ -1,5 +1,5 @@
 //
-//  NSObjectClassExtension.swift
+//  NSObjectExtension.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 28/08/2017.

@@ -1,5 +1,5 @@
 //
-//  NSObjectClassExtensionTests.swift
+//  NSObjectExtensionTests.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 28/08/2017.
@@ -14,7 +14,7 @@ class MyTestClass: NSObject {
     
 }
 
-class NSObjectClassExtensionTests: XCTestCase {
+class NSObjectExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

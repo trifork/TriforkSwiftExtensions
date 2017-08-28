@@ -1,5 +1,5 @@
 //
-//  CollectionIndexExtension.swift
+//  CollectionExtension.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 23/08/2017.

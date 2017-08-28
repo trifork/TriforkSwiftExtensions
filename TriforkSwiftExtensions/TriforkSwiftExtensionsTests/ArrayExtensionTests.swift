@@ -9,7 +9,7 @@
 import XCTest
 @testable import TriforkSwiftExtensions
 
-class ArrayRemoveExtensionTests: XCTestCase {
+class ArrayExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

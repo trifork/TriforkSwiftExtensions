@@ -1,5 +1,5 @@
 //
-//  FloatExtensionsTests.swift
+//  DoubleExtensionTests.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 28/08/2017.
@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import TriforkSwiftExtensions
 
-class FloatExtensionsTests: XCTestCase {
+class DoubleExtensionsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,20 +21,20 @@ class FloatExtensionsTests: XCTestCase {
     }
     
     func testStringMaximumDigits() {
-        var float: Float = 56.4546789965
-        XCTAssertEqual(float.string(withMaxDigits: 4), "56.45")
-        XCTAssertEqual(float.string(withMaxDigits: 7), "56.45468")
-        XCTAssertEqual(float.string(withMaxDigits: 2), "56")
-        float = 46
-        XCTAssertEqual(float.string(withMaxDigits: 4), "46")
+        var double: Double = 56.4546789965
+        XCTAssertEqual(double.string(withMaxDigits: 4), "56.45")
+        XCTAssertEqual(double.string(withMaxDigits: 7), "56.45468")
+        XCTAssertEqual(double.string(withMaxDigits: 2), "56")
+        double = 46
+        XCTAssertEqual(double.string(withMaxDigits: 4), "46")
         
     }
     
     func testStringDigits() {
-        var float: Float = 56.4546789965
-        XCTAssertEqual(float.string(withDigits: 4), "56.45")
-        float = 46
-        XCTAssertEqual(float.string(withDigits: 4), "46.00")
+        var double: Double = 56.4546789965
+        XCTAssertEqual(double.string(withDigits: 4), "56.45")
+        double = 46
+        XCTAssertEqual(double.string(withDigits: 4), "46.00")
     }
     
 }

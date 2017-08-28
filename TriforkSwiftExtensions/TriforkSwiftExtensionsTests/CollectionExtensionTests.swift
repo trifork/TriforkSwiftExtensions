@@ -1,5 +1,5 @@
 //
-//  CollectionIndexExtensionTests.swift
+//  CollectionExtensionTests.swift
 //  TriforkSwiftExtensions
 //
 //  Created by Thomas Kalhøj Clemensen on 23/08/2017.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import TriforkSwiftExtensions
 
-class CollectionIndexExtensionTests: XCTestCase {
+class CollectionExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
