@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
 		E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */; };
+		E92269081F53E19F00DAEFAE /* NSObjectClassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269071F53E19F00DAEFAE /* NSObjectClassExtension.swift */; };
+		E922690A1F53E1C000DAEFAE /* NSObjectClassExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269091F53E1C000DAEFAE /* NSObjectClassExtensionTests.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
 		E9DF34371F4D72E100BB36BB /* TriforkSwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9DF34441F4D743900BB36BB /* CollectionIndexExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34431F4D743900BB36BB /* CollectionIndexExtension.swift */; };
@@ -34,6 +36,8 @@
 		E91351D61F4EC64900BC1A68 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionTests.swift; sourceTree = "<group>"; };
+		E92269071F53E19F00DAEFAE /* NSObjectClassExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectClassExtension.swift; sourceTree = "<group>"; };
+		E92269091F53E1C000DAEFAE /* NSObjectClassExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectClassExtensionTests.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriforkSwiftExtensions.h; sourceTree = "<group>"; };
 		E9DF342A1F4D72E100BB36BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +87,14 @@
 			path = Optional;
 			sourceTree = "<group>";
 		};
+		E92269061F53E18700DAEFAE /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				E92269071F53E19F00DAEFAE /* NSObjectClassExtension.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 		E9DF341C1F4D72E100BB36BB = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +121,7 @@
 				E9DF34421F4D743900BB36BB /* Collection */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
+				E92269061F53E18700DAEFAE /* NSObject */,
 				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 			);
@@ -123,6 +136,7 @@
 				E9DF344A1F4D768F00BB36BB /* ArrayRemoveExtensionTests.swift */,
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
+				E92269091F53E1C000DAEFAE /* NSObjectClassExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -266,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DF34441F4D743900BB36BB /* CollectionIndexExtension.swift in Sources */,
+				E92269081F53E19F00DAEFAE /* NSObjectClassExtension.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
 				E9DF34491F4D761200BB36BB /* ArrayRemoveExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -280,6 +295,7 @@
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
 				E9DF34461F4D747300BB36BB /* CollectionIndexExtensionTests.swift in Sources */,
 				E9DF344B1F4D768F00BB36BB /* ArrayRemoveExtensionTests.swift in Sources */,
+				E922690A1F53E1C000DAEFAE /* NSObjectClassExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,6 +37,8 @@ Happy contributing! 🎉
   - Passing an `Optional` receiver into another function/closure as an unwrapped parameter.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
+- **NSObject:**
+  - Gets the name of an object's class as a `String`.
 
 
 ---
