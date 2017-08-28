@@ -43,6 +43,13 @@ Happy contributing! 🎉
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
 - **NSObject:**
   - Gets the name of an object's class as a `String`.
+- **String:**
+  - Base64 encoding and decoding.
+  - Conversion to `URL` and `Data`.
+  - URL encoding
+  - Check for regular expression matches.
+  - Validate as phone number or email
+
 
 
 ---

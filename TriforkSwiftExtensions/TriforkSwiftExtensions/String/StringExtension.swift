@@ -11,4 +11,84 @@ import Foundation
 
 public extension String {
     
+    //MARK: - Encoding
+    
+    /// Returns a new and URL encoded instance of the receiver, without URL encoding query characters like :, ?, &, /, etc.
+    public var urlEncodedWithQuery: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self
+    }
+    
+    /// Returns a base64 encoded instance of the receiver.
+    public var base64Encoded: String? {
+        return self.data(using: .utf8)?.base64EncodedString()
+    }
+    
+    /// Returns a string decoded from the base64 encoded receiver, returns `nil` if the receiver is not base64 encoded.
+    public var decodeBase64: String? {
+        let result: String?
+        if let data: Data = Data(base64Encoded: self, options: .ignoreUnknownCharacters) {
+            result = String(data: data, encoding: .utf8)
+        }
+        else {
+            result = nil
+        }
+        return result
+    }
+    
+    //MARK: - Conversion
+    
+    /// Creates a URL instance from the receiver. Returns `nil` if the string is an invalid URL.
+    public func toURL() -> URL? {
+        return URL(string: self)
+    }
+    
+    /// Converts the receiver to UTF-8 encoded `Data` instance.
+    public func toData() -> Data? {
+        return self.data(using: .utf8)
+    }
+    
+    
+    //MARK: - RegEx
+    
+    /// Check if the receiver matches the regular expression defined in a string format.
+    /// 
+    /// The check is case insensitive
+    public func matches(withRegularExpression regExp: String) -> Bool {
+        let result: Bool
+        do {
+            let matcher: NSRegularExpression = try NSRegularExpression(pattern: regExp, options: .caseInsensitive)
+            result = self.matches(withRegularExpression: matcher)
+        } catch let error as NSError {
+            result = false
+            print("Unable to create regular expression from: %@: %@", regExp, error.localizedDescription)
+        }
+        return result
+    }
+    
+    /// Checks if the receiver matches a regular expression.
+    public func matches(withRegularExpression regExp: NSRegularExpression) -> Bool {
+        let searchRange: NSRange = NSRange(location: 0, length: self.length)
+        return regExp.numberOfMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: searchRange) > 0
+    }
+    
+    //MARK: - Validation
+    /// Checks if the string contains valid phone number
+    public var isPhoneNumber: Bool {
+        let detector: NSDataDetector? = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+        return detector?.matches(in: self, options: [], range: NSMakeRange(0, self.length)).count ?? 0 > 0
+    }
+    
+    /// Check if the string contains a valid email
+    public var isEmail: Bool {
+        return self.matches(withRegularExpression: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")
+    }
+    
+    //MARK: - Other
+    
+    /// Returns the number of characters in the string.
+    public var length: Int {
+        get {
+            return self.characters.count
+        }
+    }
 }
