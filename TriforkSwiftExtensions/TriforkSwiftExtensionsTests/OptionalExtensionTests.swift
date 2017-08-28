@@ -33,4 +33,15 @@ class OptionalExtensionTests: XCTestCase {
         XCTAssertEqual(optValue, "") //should not have changed due to action only called with nonnull argument
     }
     
+    func testDoWith() {
+        var receiver: String? = ""
+        receiver.doWith { (unwrapped: String) in
+            XCTAssertEqual(receiver, unwrapped)
+        }
+        receiver = nil
+        receiver.doWith { (unwrapped: String) in
+            XCTAssert(false, "This should not be called")
+        }
+    }
+    
 }

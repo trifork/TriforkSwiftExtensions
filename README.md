@@ -33,7 +33,8 @@ Happy contributing! 🎉
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
 - **Optional:**
-  - Passing an `Optional` receiver into another function as an unwrapped parameter.
+  - Passing an `Optional` receiver into another function and returns the other functions result or `nil`.
+  - Passing an `Optional` receiver into another function/closure as an unwrapped parameter.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
 
