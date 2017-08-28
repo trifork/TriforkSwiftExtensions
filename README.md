@@ -30,6 +30,7 @@ Happy contributing! 🎉
 
 - **Array:**
   - Remove `Element` instances based on `Equatable` comparison.
+  - `forEach` iteration with `Element` and index.
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
 - **Data:**

@@ -24,4 +24,12 @@ public extension Array where Element: Equatable {
             self.removeElement(object)
         }
     }
+    
+    
+    /// Iterates over the receiver and invokes the doThis closure for every element with element and index
+    public func forEach(_ body: ((Element, Int) -> Void)) {
+        for (index, element) in self.enumerated() {
+            body(element, index)
+        }
+    }
 }

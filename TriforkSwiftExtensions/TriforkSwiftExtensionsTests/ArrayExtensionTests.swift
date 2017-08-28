@@ -55,4 +55,14 @@ class ArrayExtensionTests: XCTestCase {
         XCTAssert(objects == [object3], "Element 'object1' and 'object2' should have been removed.")
     }
     
+    func testForeach() {
+        let strings: [String] = ["0", "1", "2", "3", "4"]
+        var i: Int = 0
+        strings.forEach { (element: String, index: Int) in
+            XCTAssertEqual(i, index)
+            XCTAssertEqual(element, strings[safe: index])
+            i += 1
+        }
+    }
+    
 }
