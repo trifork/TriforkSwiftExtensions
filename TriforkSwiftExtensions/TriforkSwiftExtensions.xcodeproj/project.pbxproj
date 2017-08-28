@@ -23,6 +23,9 @@
 		E92269231F5446AF00DAEFAE /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269221F5446AF00DAEFAE /* DateExtensionTests.swift */; };
 		E92269261F54510100DAEFAE /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269251F54510100DAEFAE /* URLExtension.swift */; };
 		E92269281F54510F00DAEFAE /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269271F54510F00DAEFAE /* URLExtensionTests.swift */; };
+		E922692B1F5459BC00DAEFAE /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922692A1F5459BC00DAEFAE /* UIAlertControllerExtension.swift */; };
+		E922692E1F545B5D00DAEFAE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922692D1F545B5D00DAEFAE /* UIViewControllerExtension.swift */; };
+		E92269301F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922692F1F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
 		E9DF34371F4D72E100BB36BB /* TriforkSwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9DF34441F4D743900BB36BB /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34431F4D743900BB36BB /* CollectionExtension.swift */; };
@@ -62,6 +65,9 @@
 		E92269221F5446AF00DAEFAE /* DateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		E92269251F54510100DAEFAE /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		E92269271F54510F00DAEFAE /* URLExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtensionTests.swift; sourceTree = "<group>"; };
+		E922692A1F5459BC00DAEFAE /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		E922692D1F545B5D00DAEFAE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E922692F1F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriforkSwiftExtensions.h; sourceTree = "<group>"; };
 		E9DF342A1F4D72E100BB36BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +173,22 @@
 			path = URL;
 			sourceTree = "<group>";
 		};
+		E92269291F5459B200DAEFAE /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				E922692A1F5459BC00DAEFAE /* UIAlertControllerExtension.swift */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
+		E922692C1F545B4C00DAEFAE /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E922692D1F545B5D00DAEFAE /* UIViewControllerExtension.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		E9DF341C1F4D72E100BB36BB = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +222,8 @@
 				E92269061F53E18700DAEFAE /* NSObject */,
 				E92269151F53F93300DAEFAE /* String */,
 				E92269241F5450F900DAEFAE /* URL */,
+				E92269291F5459B200DAEFAE /* UIAlertController */,
+				E922692C1F545B4C00DAEFAE /* UIViewController */,
 				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 			);
@@ -221,6 +245,7 @@
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
 				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
+				E922692F1F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -367,10 +392,12 @@
 				E9DF34441F4D743900BB36BB /* CollectionExtension.swift in Sources */,
 				E92269211F5445A400DAEFAE /* DateExtension.swift in Sources */,
 				E92269081F53E19F00DAEFAE /* NSObjectExtension.swift in Sources */,
+				E922692B1F5459BC00DAEFAE /* UIAlertControllerExtension.swift in Sources */,
 				E922690D1F53E3C800DAEFAE /* FloatExtension.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
 				E92269171F53F9A100DAEFAE /* StringExtension.swift in Sources */,
 				E9DF34491F4D761200BB36BB /* ArrayExtension.swift in Sources */,
+				E922692E1F545B5D00DAEFAE /* UIViewControllerExtension.swift in Sources */,
 				E92269121F53F75000DAEFAE /* DoubleExtension.swift in Sources */,
 				E922691C1F5441C400DAEFAE /* DataExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -383,6 +410,7 @@
 			files = (
 				E9DF346E1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift in Sources */,
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
+				E92269301F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift in Sources */,
 				E92269141F53F7AA00DAEFAE /* DoubleExtensionTests.swift in Sources */,
 				E92269231F5446AF00DAEFAE /* DateExtensionTests.swift in Sources */,
 				E92269281F54510F00DAEFAE /* URLExtensionTests.swift in Sources */,

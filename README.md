@@ -55,6 +55,12 @@ Happy contributing! 🎉
   - URL encoding.
   - Check for regular expression matches.
   - Validate as phone number or email.
+- **UIAlertController:**
+  - "OK" alert.
+  - Presentation with custom tint color.
+  - Add actions to alerts.
+- **UIViewController:**
+  - Convenience function to present an "Okay-`UIAlertController`"
 - **URL:**
   - Adding query parameters to URL.
 
