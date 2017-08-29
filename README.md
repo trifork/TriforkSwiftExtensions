@@ -32,8 +32,9 @@ Happy contributing! 🎉
   - Remove `Element` instances based on `Equatable` comparison.
   - `forEach` iteration with `Element` and index.
 - **Bundle:**
-  - Compile date of app.
-  - Version string of app.
+  - Compile date of the app.
+  - Version and build number of the app.
+  - Bundle name of the app.
   - Name of build configuration
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
