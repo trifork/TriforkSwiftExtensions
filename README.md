@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.4
+github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.5
 ```
 
 
