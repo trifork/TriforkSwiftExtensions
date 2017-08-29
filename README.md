@@ -59,6 +59,8 @@ Happy contributing! 🎉
   - "OK" alert.
   - Presentation with custom tint color.
   - Add actions to alerts.
+- **UIDevice:**
+  - Get device model name.
 - **UIViewController:**
   - Convenience function to present an "Okay-`UIAlertController`"
 - **URL:**
