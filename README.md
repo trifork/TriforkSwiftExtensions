@@ -66,6 +66,8 @@ Happy contributing! 🎉
   - Add actions to alerts.
 - **UIDevice:**
   - Get device model name.
+- **UIView:**
+  - Create circled view.
 - **UIViewController:**
   - Convenience function to present an "Okay-`UIAlertController`"
 - **URL:**
