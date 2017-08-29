@@ -68,6 +68,8 @@ Happy contributing! 🎉
   - Get device model name.
 - **UIView:**
   - Create circled view.
+- **UIStackView:**
+  - Remove all arranged subviews.
 - **UIViewController:**
   - Convenience function to present an "Okay-`UIAlertController`"
 - **URL:**
