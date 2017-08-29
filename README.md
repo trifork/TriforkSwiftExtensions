@@ -1,14 +1,14 @@
 # TriforkSwiftExtensions
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-<!-- ![Build status](https://api.travis-ci.org/tkctrifork/TriforkSwiftExtensions.svg?branch=master)-->
+<!-- ![Build status](https://api.travis-ci.org/trifork/TriforkSwiftExtensions.svg?branch=master)-->
 
 Framework with generic Swift extensions.
 
 ## Installation
 ### Carthage
 ```
-github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.5
+github "trifork/TriforkSwiftExtensions" ~> 0.0.5
 ```
 
 
@@ -19,7 +19,6 @@ github "tkctrifork/TriforkSwiftExtensions" ~> 0.0.5
 4. Commit with great messages.
 5. Push when you are done.
 6. Create a pull request.
-7. Wait for Travis CI results and fix the issues if there are any 👷🏻
 
 If you need more guidance, then [read this](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/).
 
