@@ -27,7 +27,6 @@ Happy contributing! 🎉
 
 
 ## Feature list
-
 - **Array:**
   - Remove `Element` instances based on `Equatable` comparison.
   - `forEach` iteration with `Element` and index.
@@ -68,6 +67,9 @@ Happy contributing! 🎉
   - Get device model name.
 - **UIView:**
   - Create circled view.
+  - Get current first responder.
+  - Round corners on one edge of a view.
+  - Perform shake animation.
 - **UIStackView:**
   - Remove all arranged subviews.
 - **UIViewController:**
@@ -75,7 +77,17 @@ Happy contributing! 🎉
 - **URL:**
   - Adding query parameters to URL.
 
+### TSELogger
+Some of the extension functions requires specific conditions (e.g. `UIView.circle()` needs a square view) and will write to the console using `print` if the requirements aren't met.
+If you have some custom logging in your project and want to catch the framework's errors it can be done by setting a custom log handler:
 
+```
+TSELogger.customLogErrorHandler = { (message: String) in
+  //Handle message
+}
+```
+
+**Note:** If the `customLogErrorHandler` property is set, the framework will not invoke `print` anymore - if you still want this it is your responsibility to invoke it in your custom closure.
 
 ---
 

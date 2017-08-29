@@ -29,5 +29,4 @@ class UIViewExtensionTests: XCTestCase {
         view.circle()
         XCTAssertEqual(view.layer.cornerRadius, 50.0)
     }
-    
 }

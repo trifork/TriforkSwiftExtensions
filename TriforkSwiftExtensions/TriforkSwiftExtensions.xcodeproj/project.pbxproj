@@ -33,6 +33,8 @@
 		E92269411F55495800DAEFAE /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */; };
 		E92269431F554A4B00DAEFAE /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269421F554A4B00DAEFAE /* UIStackViewExtension.swift */; };
 		E92269451F554A7C00DAEFAE /* UIStackViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */; };
+		E92269481F554FD900DAEFAE /* TSELogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269471F554FD900DAEFAE /* TSELogger.swift */; };
+		E922694A1F55516800DAEFAE /* TSELoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269491F55516800DAEFAE /* TSELoggerTests.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
 		E9DF34371F4D72E100BB36BB /* TriforkSwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9DF34441F4D743900BB36BB /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF34431F4D743900BB36BB /* CollectionExtension.swift */; };
@@ -82,6 +84,8 @@
 		E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
 		E92269421F554A4B00DAEFAE /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensionTests.swift; sourceTree = "<group>"; };
+		E92269471F554FD900DAEFAE /* TSELogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSELogger.swift; sourceTree = "<group>"; };
+		E92269491F55516800DAEFAE /* TSELoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSELoggerTests.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriforkSwiftExtensions.h; sourceTree = "<group>"; };
 		E9DF342A1F4D72E100BB36BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +239,14 @@
 			path = UIStackView;
 			sourceTree = "<group>";
 		};
+		E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E92269471F554FD900DAEFAE /* TSELogger.swift */,
+			);
+			path = TriforkSwiftExtensionUtilities;
+			sourceTree = "<group>";
+		};
 		E9DF341C1F4D72E100BB36BB = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +269,7 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E9DF34471F4D760300BB36BB /* Array */,
 				E92269361F5533F900DAEFAE /* Bundle */,
 				E9DF34421F4D743900BB36BB /* Collection */,
@@ -299,6 +312,7 @@
 				E92269341F55314900DAEFAE /* UIDeviceExtensionTests.swift */,
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */,
+				E92269491F55516800DAEFAE /* TSELoggerTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -449,6 +463,7 @@
 				E92269381F55340500DAEFAE /* BundleExtension.swift in Sources */,
 				E92269431F554A4B00DAEFAE /* UIStackViewExtension.swift in Sources */,
 				E922693E1F5547D100DAEFAE /* UIViewExtension.swift in Sources */,
+				E92269481F554FD900DAEFAE /* TSELogger.swift in Sources */,
 				E922690D1F53E3C800DAEFAE /* FloatExtension.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
 				E92269171F53F9A100DAEFAE /* StringExtension.swift in Sources */,
@@ -479,6 +494,7 @@
 				E9DF344B1F4D768F00BB36BB /* ArrayExtensionTests.swift in Sources */,
 				E92269451F554A7C00DAEFAE /* UIStackViewExtensionTests.swift in Sources */,
 				E922690F1F53E44800DAEFAE /* FloatExtensionTests.swift in Sources */,
+				E922694A1F55516800DAEFAE /* TSELoggerTests.swift in Sources */,
 				E922690A1F53E1C000DAEFAE /* NSObjectExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

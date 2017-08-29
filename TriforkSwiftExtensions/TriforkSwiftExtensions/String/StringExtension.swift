@@ -60,7 +60,7 @@ public extension String {
             result = self.matches(withRegularExpression: matcher)
         } catch let error as NSError {
             result = false
-            print("Unable to create regular expression from: %@: %@", regExp, error.localizedDescription)
+            TSELogger.log(message: "Unable to create regular expression from: \(regExp): \(error.localizedDescription)")
         }
         return result
     }
