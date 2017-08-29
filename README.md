@@ -1,7 +1,7 @@
 # TriforkSwiftExtensions
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Build status](https://api.travis-ci.org/tkctrifork/TriforkSwiftExtensions.svg?branch=master)
+<!-- ![Build status](https://api.travis-ci.org/tkctrifork/TriforkSwiftExtensions.svg?branch=master)-->
 
 Framework with generic Swift extensions.
 
