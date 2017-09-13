@@ -34,4 +34,18 @@ public extension URL {
         
         return URL(string: urlString) ?? self
     }
+    
+    /// Gets the value of a query parameter in the receiver.
+    ///
+    /// E.g. my-url://withSomethingCool?id=pewpew, the value of `id` will be `pewpew`.
+    public func valueOfQueryParameter(withName name: String) -> String? {
+        
+        var value: String?
+        if let components: URLComponents = URLComponents(string: self.absoluteString) {
+            value = components.queryItems?.first(where: { (item: URLQueryItem) -> Bool in
+                item.name == name
+            })?.value
+        }
+        return value
+    }
 }

@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 0.0.5
+github "trifork/TriforkSwiftExtensions" ~> 0.0.6
 ```
 
 
@@ -74,7 +74,8 @@ Happy contributing! 🎉
 - **UIViewController:**
   - Convenience function to present an "Okay-`UIAlertController`"
 - **URL:**
-  - Adding query parameters to URL.
+  - Adding query parameters to `URL`.
+  - Getting values from query parameters in `URL`.
 
 ### TSELogger
 Some of the extension functions requires specific conditions (e.g. `UIView.circle()` needs a square view) and will write to the console using `print` if the requirements aren't met.

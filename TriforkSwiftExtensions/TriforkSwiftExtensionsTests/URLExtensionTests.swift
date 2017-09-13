@@ -30,4 +30,10 @@ class URLExtensionTests: XCTestCase {
         XCTAssertEqual("http://www.trifork.com?favorite-emoji=%F0%9F%90%B3&text=Cool%20text%20with%20some%20spaces%20in%20it%20%F0%9F%98%8E&auth-token=verysecrettokenthatnobodyknows", url.adding(parameters: parameters).absoluteString)
     }
     
+    
+    func testValueOfQueryParameterWithName() {
+        
+        let url: URL = URL(string: "https://www.trifork.com?id=cool_beans")!
+        XCTAssertEqual(url.valueOfQueryParameter(withName: "id"), "cool_beans")
+    }
 }
