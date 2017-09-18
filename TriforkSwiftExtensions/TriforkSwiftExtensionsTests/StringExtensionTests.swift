@@ -21,9 +21,14 @@ class StringExtensionTests: XCTestCase {
         super.tearDown()
     }
     
-    func testUrlEncoded() {
+    func testUrlEncodedWithQuery() {
         let string: String = "http://my-important-url.com?withCoolParameters=coolParamters&andOtherStuffWithSpaces=some stuff"
         XCTAssertEqual("http://my-important-url.com?withCoolParameters=coolParamters&andOtherStuffWithSpaces=some%20stuff", string.urlEncodedWithQuery)
+    }
+    
+    func testUrlEncoded() {
+        let string: String = "http://my-important-url.com?withCoolParameters=coolParamters&andOtherStuffWithSpaces=some stuff"
+        XCTAssertEqual("http%3A%2F%2Fmy-important-url.com%3FwithCoolParameters%3DcoolParamters%26andOtherStuffWithSpaces%3Dsome%20stuff", string.urlEncoded)
     }
     
     func testBase64Encoded() {

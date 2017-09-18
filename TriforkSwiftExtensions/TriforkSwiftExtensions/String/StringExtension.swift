@@ -18,6 +18,12 @@ public extension String {
         return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? self
     }
     
+    /// Returns a url encoded strings with alphanumerics as allowed characters
+    public var urlEncoded: String {
+        let allowedCharacterSet: CharacterSet = CharacterSet(charactersIn: "!*'();:@&=+$,/?%#[] ").inverted
+        return self.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? self
+    }
+    
     /// Returns a base64 encoded instance of the receiver.
     public var base64Encoded: String? {
         return self.data(using: .utf8)?.base64EncodedString()
