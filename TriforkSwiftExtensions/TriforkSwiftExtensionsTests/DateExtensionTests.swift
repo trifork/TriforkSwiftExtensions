@@ -56,4 +56,12 @@ class DateExtensionTests: XCTestCase {
         XCTAssertEqual(self.date, Date.dateFrom(iso8601String: "2017-08-28T12:40:52.000Z"))
     }
     
+    func testAsISO8601StringWithoutMs() {
+        XCTAssertEqual(self.date.asISO8601WithoutMsString(), "2017-08-28T12:40:52Z")
+    }
+    
+    func testFromISO8601StringWihtoutMs() {
+        XCTAssertEqual(self.date, Date.dateFrom(iso8601StringWithoutMs: "2017-08-28T12:40:52Z"))
+    }
+    
 }

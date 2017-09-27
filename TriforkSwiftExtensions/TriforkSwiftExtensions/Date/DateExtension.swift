@@ -11,12 +11,21 @@ import Foundation
 public extension Date {
     
     private struct Formatter {
-        static let iso8601: DateFormatter = {
+        static let iso8601WithMs: DateFormatter = {
             let formatter = DateFormatter()
             formatter.calendar = Calendar(identifier: .iso8601)
             formatter.locale = Locale(identifier: "en_US_POSIX")
             formatter.timeZone = TimeZone(secondsFromGMT: 0)
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+            return formatter
+        }()
+        
+        static let iso8601WithoutMs: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .iso8601)
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
             return formatter
         }()
     }
@@ -48,13 +57,24 @@ public extension Date {
     
     /// Converts receiver to a string of the ISO8601 format.
     public func asISO8601String() -> String {
-        return Formatter.iso8601.string(from: self)
+        return Formatter.iso8601WithMs.string(from: self)
     }
     
     
     /// Constructs a Date instance based on a ISO8601 formatted string.
     public static func dateFrom(iso8601String: String) -> Date? {
-        return Formatter.iso8601.date(from: iso8601String)
+        return Formatter.iso8601WithMs.date(from: iso8601String)
+    }
+    
+    /// Converts receiver to a string of the ISO8601 format.
+    public func asISO8601WithoutMsString() -> String {
+        return Formatter.iso8601WithoutMs.string(from: self)
+    }
+    
+    
+    /// Constructs a Date instance based on a ISO8601 formatted string.
+    public static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
+        return Formatter.iso8601WithoutMs.date(from: iso8601StringWithoutMs)
     }
 }
 
