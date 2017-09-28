@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 0.0.7
+github "trifork/TriforkSwiftExtensions" ~> 0.0.9
 ```
 
 
@@ -62,6 +62,8 @@ Happy contributing! 🎉
   - "OK" alert.
   - Presentation with custom tint color.
   - Add actions to alerts.
+- **UIColor:**
+  - Creating `UIColor` instance directly from Zeplin format: `"rgb 255 0 255"`
 - **UIDevice:**
   - Get device model name.
 - **UIView:**

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
 		E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */; };
+		E91E19E01F7D129B00F38282 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E19DF1F7D129B00F38282 /* UIColorExtension.swift */; };
+		E91E19E31F7D161700F38282 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */; };
 		E92269081F53E19F00DAEFAE /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269071F53E19F00DAEFAE /* NSObjectExtension.swift */; };
 		E922690A1F53E1C000DAEFAE /* NSObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */; };
 		E922690D1F53E3C800DAEFAE /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922690C1F53E3C800DAEFAE /* FloatExtension.swift */; };
@@ -60,6 +62,8 @@
 		E91351D61F4EC64900BC1A68 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionTests.swift; sourceTree = "<group>"; };
+		E91E19DF1F7D129B00F38282 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E92269071F53E19F00DAEFAE /* NSObjectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionTests.swift; sourceTree = "<group>"; };
 		E922690C1F53E3C800DAEFAE /* FloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
@@ -133,6 +137,22 @@
 				E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */,
 			);
 			path = Optional;
+			sourceTree = "<group>";
+		};
+		E91E19DE1F7D128E00F38282 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				E91E19DF1F7D129B00F38282 /* UIColorExtension.swift */,
+				E91E19E11F7D12F500F38282 /* New Group */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		E91E19E11F7D12F500F38282 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		E92269061F53E18700DAEFAE /* NSObject */ = {
@@ -269,6 +289,7 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E91E19DE1F7D128E00F38282 /* UIColor */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E9DF34471F4D760300BB36BB /* Array */,
 				E92269361F5533F900DAEFAE /* Bundle */,
@@ -313,6 +334,7 @@
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */,
 				E92269491F55516800DAEFAE /* TSELoggerTests.swift */,
+				E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -398,20 +420,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Trifork A/S";
 				TargetAttributes = {
 					E9DF34251F4D72E100BB36BB = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = ZZGMPFLA2F;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					E9DF342E1F4D72E100BB36BB = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = ZZGMPFLA2F;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -459,6 +481,7 @@
 				E9DF34441F4D743900BB36BB /* CollectionExtension.swift in Sources */,
 				E92269211F5445A400DAEFAE /* DateExtension.swift in Sources */,
 				E92269081F53E19F00DAEFAE /* NSObjectExtension.swift in Sources */,
+				E91E19E01F7D129B00F38282 /* UIColorExtension.swift in Sources */,
 				E922692B1F5459BC00DAEFAE /* UIAlertControllerExtension.swift in Sources */,
 				E92269381F55340500DAEFAE /* BundleExtension.swift in Sources */,
 				E92269431F554A4B00DAEFAE /* UIStackViewExtension.swift in Sources */,
@@ -484,6 +507,7 @@
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
 				E92269301F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift in Sources */,
 				E92269141F53F7AA00DAEFAE /* DoubleExtensionTests.swift in Sources */,
+				E91E19E31F7D161700F38282 /* UIColorExtensionTests.swift in Sources */,
 				E92269231F5446AF00DAEFAE /* DateExtensionTests.swift in Sources */,
 				E92269281F54510F00DAEFAE /* URLExtensionTests.swift in Sources */,
 				E9DF34461F4D747300BB36BB /* CollectionExtensionTests.swift in Sources */,
@@ -520,7 +544,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -528,7 +554,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -574,7 +604,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -582,7 +614,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -616,7 +652,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZZGMPFLA2F;
@@ -632,7 +668,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -641,7 +678,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZZGMPFLA2F;
@@ -656,7 +693,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -674,7 +712,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -691,7 +730,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trifork.TriforkSwiftExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

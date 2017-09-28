@@ -29,13 +29,13 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         attributedString.appendString(text: text, withFont: UIFont.boldSystemFont(ofSize: 15.0), andColor: UIColor.magenta)
         XCTAssert(attributedString.string == text)
         
-        let attributes: [String: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         self.assert(attributes: attributes, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
         
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
         
-        let attributes2: [String: Any] = attributedString.attributes(at: text.characters.count, effectiveRange: nil)
+        let attributes2: [NSAttributedStringKey: Any] = attributedString.attributes(at: text.characters.count, effectiveRange: nil)
         
         let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
         let expectedFontName: String
@@ -49,14 +49,14 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         self.assert(attributes: attributes2, fontName: expectedFontName, fontSize: 50.0, color: nil)
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
-        let attributes3: [String: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        let attributes3: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         self.assert(attributes: attributes3, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
     }
     
     
-    private func assert(attributes: [String: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
-        XCTAssert((attributes[NSFontAttributeName] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
-        XCTAssert((attributes[NSFontAttributeName] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
-        XCTAssert((attributes[NSForegroundColorAttributeName] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
+    private func assert(attributes: [NSAttributedStringKey: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
+        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
+        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
+        XCTAssert((attributes[NSAttributedStringKey.foregroundColor] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
     }
 }

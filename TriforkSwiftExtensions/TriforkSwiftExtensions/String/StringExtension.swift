@@ -77,6 +77,24 @@ public extension String {
         return regExp.numberOfMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: searchRange) > 0
     }
     
+    /// Returns all components from the regular expression matching
+    public func allMatches(withRegularExpression pattern: String) -> [String] {
+        if let matcher = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options()) {
+            let str = self as NSString
+            var matches = [String]()
+            matcher.enumerateMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, str.length), using: { (optResult, flags, stop) -> Void in
+                if let result = optResult, result.numberOfRanges > 1 {
+                    for t in (1 ... (result.numberOfRanges - 1)) {
+                        let s = str.substring(with: result.range(at: t))
+                        matches.append(s)
+                    }
+                }
+            })
+            return matches
+        }
+        return []
+    }
+    
     //MARK: - Validation
     /// Checks if the string contains valid phone number
     public var isPhoneNumber: Bool {
