@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 0.0.9
+github "trifork/TriforkSwiftExtensions" ~> 1.0.0
 ```
 
 
@@ -50,6 +50,7 @@ Happy contributing! 🎉
   - Passing an `Optional` receiver into another function/closure as an unwrapped parameter.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
+  - Constructor with line spacing.
 - **NSObject:**
   - Gets the name of an object's class as a `String`.
 - **String:**

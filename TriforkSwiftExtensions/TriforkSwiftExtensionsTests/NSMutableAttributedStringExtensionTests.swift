@@ -53,6 +53,14 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         self.assert(attributes: attributes3, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
     }
     
+    func testInitWithLineSpacing() {
+        let lineSpacing: CGFloat = 6.0
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: "text", withLineSpacing: lineSpacing)
+        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        
+    }
+    
     
     private func assert(attributes: [NSAttributedStringKey: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
         XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")

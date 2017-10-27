@@ -26,4 +26,12 @@ public extension NSMutableAttributedString {
         let attributedString: NSAttributedString = NSAttributedString(string: text, attributes: attributes)
         self.append(attributedString)
     }
+    
+    /// Initializes an attributed string with line spacing
+    public convenience init(string: String, withLineSpacing lineSpacing: CGFloat) {
+        self.init(string: string)
+        let textParagraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        textParagraphStyle.lineSpacing = lineSpacing
+        self.addAttribute(.paragraphStyle, value:textParagraphStyle, range:NSMakeRange(0, self.length))
+    }
 }

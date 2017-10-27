@@ -41,7 +41,7 @@ class DateExtensionTests: XCTestCase {
         
         //Both
         XCTAssertEqual(self.date.toString(dateStyle: .short, timeStyle: .short, locale: locale, timeZone: timeZone), "8/28/17, 2:40 PM")
-        XCTAssertEqual(self.date.toString(dateStyle: .medium, timeStyle: .medium, locale: locale, timeZone: timeZone), "Aug 28, 2017, 2:40:52 PM")
+        XCTAssertEqual(self.date.toString(dateStyle: .medium, timeStyle: .medium, locale: locale, timeZone: timeZone), "Aug 28, 2017 at 2:40:52 PM")
         XCTAssertEqual(self.date.toString(dateStyle: .long, timeStyle: .long, locale: locale, timeZone: timeZone), "August 28, 2017 at 2:40:52 PM GMT+2")
         XCTAssertEqual(self.date.toString(dateStyle: .full, timeStyle: .full, locale: locale, timeZone: timeZone), "Monday, August 28, 2017 at 2:40:52 PM Central European Summer Time")
         
