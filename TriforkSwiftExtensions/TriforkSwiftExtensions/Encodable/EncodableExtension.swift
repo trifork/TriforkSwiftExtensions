@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension Encodable {
+public extension Encodable {
     
     /// Returns a dictionary representing the data from the receiver.
-    func toDictionary() -> [String: Any]? {
+    public func toDictionary() -> [String: Any]? {
         let dictionary: [String: Any]?
         if let data: Data = try? JSONEncoder().encode(self) {
             dictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any]
