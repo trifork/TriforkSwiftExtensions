@@ -22,8 +22,11 @@ class DoubleExtensionsTests: XCTestCase {
     
     func testStringMaximumDigits() {
         var double: Double = 56.4546789965
-        XCTAssertEqual(double.string(withMaxDigits: 4), "56.45")
-        XCTAssertEqual(double.string(withMaxDigits: 7), "56.45468")
+        
+        let formatter: NumberFormatter = NumberFormatter()
+        
+        XCTAssertEqual(double.string(withMaxDigits: 4), "56\(formatter.decimalSeparator!)45")
+        XCTAssertEqual(double.string(withMaxDigits: 7), "56\(formatter.decimalSeparator!)45468")
         XCTAssertEqual(double.string(withMaxDigits: 2), "56")
         double = 46
         XCTAssertEqual(double.string(withMaxDigits: 4), "46")
@@ -32,9 +35,12 @@ class DoubleExtensionsTests: XCTestCase {
     
     func testStringDigits() {
         var double: Double = 56.4546789965
-        XCTAssertEqual(double.string(withDigits: 4), "56.45")
+        
+        let formatter: NumberFormatter = NumberFormatter()
+        
+        XCTAssertEqual(double.string(withDigits: 4), "56\(formatter.decimalSeparator!)45")
         double = 46
-        XCTAssertEqual(double.string(withDigits: 4), "46.00")
+        XCTAssertEqual(double.string(withDigits: 4), "46\(formatter.decimalSeparator!)00")
     }
     
 }

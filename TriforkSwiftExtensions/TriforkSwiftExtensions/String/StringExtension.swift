@@ -111,6 +111,6 @@ public extension String {
     
     /// Returns the number of characters in the string.
     public var length: Int {
-        return self.characters.count
+        return self.count
     }
 }

@@ -35,7 +35,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
         
-        let attributes2: [NSAttributedStringKey: Any] = attributedString.attributes(at: text.characters.count, effectiveRange: nil)
+        let attributes2: [NSAttributedStringKey: Any] = attributedString.attributes(at: text.count, effectiveRange: nil)
         
         let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
         let expectedFontName: String

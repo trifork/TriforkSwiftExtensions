@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.0
+github "trifork/TriforkSwiftExtensions" ~> 1.0.1
 ```
 
 
@@ -43,6 +43,8 @@ Happy contributing! 🎉
   - Convert to and from ISO8601 formatted strings.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
+- **Encodable:**
+  - Construct a dictionary containing all the values from an `Encodable`.
 - **Float:**
   - Get as string with a maximum or exact number of significant digits.
 - **Optional:**

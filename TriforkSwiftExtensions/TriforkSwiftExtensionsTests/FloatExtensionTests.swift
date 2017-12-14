@@ -22,9 +22,10 @@ class FloatExtensionsTests: XCTestCase {
     }
     
     func testStringMaximumDigits() {
+        let formatter: NumberFormatter = NumberFormatter()
         var float: Float = 56.4546789965
-        XCTAssertEqual(float.string(withMaxDigits: 4), "56.45")
-        XCTAssertEqual(float.string(withMaxDigits: 7), "56.45468")
+        XCTAssertEqual(float.string(withMaxDigits: 4), "56\(formatter.decimalSeparator!)45")
+        XCTAssertEqual(float.string(withMaxDigits: 7), "56\(formatter.decimalSeparator!)45468")
         XCTAssertEqual(float.string(withMaxDigits: 2), "56")
         float = 46
         XCTAssertEqual(float.string(withMaxDigits: 4), "46")
@@ -32,10 +33,11 @@ class FloatExtensionsTests: XCTestCase {
     }
     
     func testStringDigits() {
+        let formatter: NumberFormatter = NumberFormatter()
         var float: Float = 56.4546789965
-        XCTAssertEqual(float.string(withDigits: 4), "56.45")
+        XCTAssertEqual(float.string(withDigits: 4), "56\(formatter.decimalSeparator!)45")
         float = 46
-        XCTAssertEqual(float.string(withDigits: 4), "46.00")
+        XCTAssertEqual(float.string(withDigits: 4), "46\(formatter.decimalSeparator!)00")
     }
     
 }
