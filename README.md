@@ -51,6 +51,8 @@ Happy contributing! 🎉
 - **Optional:**
   - Passing an `Optional` receiver into another function and returns the other functions result or `nil`.
   - Passing an `Optional` receiver into another function/closure as an unwrapped parameter.
+  - **Optional<String>:**
+    - Check whether an optional string is nil or empty.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
   - Constructor with line spacing.
