@@ -40,6 +40,8 @@
 		E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3CB20FDE133002FFDFF /* UIEdgeInsetsExtension.swift */; };
 		E946D3CE20FDE171002FFDFF /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */; };
 		E946D3D220FDE28D002FFDFF /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3D120FDE28D002FFDFF /* UIApplicationExtensions.swift */; };
+		E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3D420FDE718002FFDFF /* CGFloatExtensions.swift */; };
+		E946D3D720FDE811002FFDFF /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */; };
 		E97F00091FE2654200BB262F /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F00081FE2654200BB262F /* EncodableExtension.swift */; };
 		E97F000B1FE2669700BB262F /* EncodableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
@@ -98,6 +100,8 @@
 		E946D3CB20FDE133002FFDFF /* UIEdgeInsetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtension.swift; sourceTree = "<group>"; };
 		E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
 		E946D3D120FDE28D002FFDFF /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		E946D3D420FDE718002FFDFF /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionsTests.swift; sourceTree = "<group>"; };
 		E97F00081FE2654200BB262F /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensionTests.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +297,14 @@
 			path = UIApplication;
 			sourceTree = "<group>";
 		};
+		E946D3D320FDE70A002FFDFF /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				E946D3D420FDE718002FFDFF /* CGFloatExtensions.swift */,
+			);
+			path = CGFloat;
+			sourceTree = "<group>";
+		};
 		E97F00071FE2653100BB262F /* Encodable */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +335,7 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E946D3D320FDE70A002FFDFF /* CGFloat */,
 				E9DF34471F4D760300BB36BB /* Array */,
 				E92269361F5533F900DAEFAE /* Bundle */,
 				E9DF34421F4D743900BB36BB /* Collection */,
@@ -374,6 +387,7 @@
 				E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */,
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */,
+				E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -536,6 +550,7 @@
 				E92269121F53F75000DAEFAE /* DoubleExtension.swift in Sources */,
 				E92269331F55308E00DAEFAE /* UIDeviceExtension.swift in Sources */,
 				E922691C1F5441C400DAEFAE /* DataExtension.swift in Sources */,
+				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 			);
@@ -547,6 +562,7 @@
 			files = (
 				E9DF346E1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift in Sources */,
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
+				E946D3D720FDE811002FFDFF /* CGFloatExtensionsTests.swift in Sources */,
 				E92269301F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift in Sources */,
 				E92269141F53F7AA00DAEFAE /* DoubleExtensionTests.swift in Sources */,
 				E91E19E31F7D161700F38282 /* UIColorExtensionTests.swift in Sources */,

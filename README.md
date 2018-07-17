@@ -36,6 +36,8 @@ Happy contributing! 🎉
   - Name of build configuration
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **CGFloat:**
+  - *Very important* shortcuts for π (🥧)
 - **Data:**
   - Conversion to `String` and hex `String`.
 - **Date:**
