@@ -36,11 +36,14 @@ Happy contributing! 🎉
   - Name of build configuration
 - **Collection:**
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
+- **CGFloat:**
+  - *Very important* shortcuts for π (🥧)
 - **Data:**
   - Conversion to `String` and hex `String`.
 - **Date:**
   - Convert to string according to specified `DateFormatter.Style`.
   - Convert to and from ISO8601 formatted strings.
+  - `isToday`, `isYesterday` and `isTomorrow`.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Encodable:**
@@ -50,6 +53,8 @@ Happy contributing! 🎉
 - **Optional:**
   - Passing an `Optional` receiver into another function and returns the other functions result or `nil`.
   - Passing an `Optional` receiver into another function/closure as an unwrapped parameter.
+  - **Optional<String>:**
+    - Check whether an optional string is nil or empty.
 - **NSMutableAttributedString:**
   - More simple interface to append strings with font and color to `NSMutableAttributedString`.
   - Constructor with line spacing.
@@ -67,8 +72,13 @@ Happy contributing! 🎉
   - Add actions to alerts.
 - **UIColor:**
   - Creating `UIColor` instance directly from Zeplin format: `"rgb 255 0 255"`
+- **UIApplication:**
+  - Open Apple Maps or Google Maps with an address.
+  - Open URLs safe by asking if is can open the URL first.
 - **UIDevice:**
   - Get device model name.
+- **UIEdgeInsets:**
+  - Construct insets with same distance at all edges.
 - **UIView:**
   - Create circled view.
   - Get current first responder.
