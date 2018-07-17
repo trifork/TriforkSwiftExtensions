@@ -70,6 +70,8 @@ Happy contributing! 🎉
   - Creating `UIColor` instance directly from Zeplin format: `"rgb 255 0 255"`
 - **UIDevice:**
   - Get device model name.
+- **UIEdgeInsets:**
+  - Construct insets with same distance at all edges.
 - **UIView:**
   - Create circled view.
   - Get current first responder.
