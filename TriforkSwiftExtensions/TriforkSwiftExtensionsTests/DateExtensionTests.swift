@@ -64,4 +64,18 @@ class DateExtensionTests: XCTestCase {
         XCTAssertEqual(self.date, Date.dateFrom(iso8601StringWithoutMs: "2017-08-28T12:40:52Z"))
     }
     
+    func testIsToday() {
+        XCTAssert(!self.date.isToday, "The date shouldn't be today")
+        XCTAssert(Date().isToday, "The date should be today")
+    }
+    
+    func testIsTomorrow() {
+        XCTAssert(!self.date.isTomorrow, "The date shouldn't be tomorrow")
+        XCTAssert(Date().addingTimeInterval(3600*24).isTomorrow, "The date should be tomorrow")
+    }
+    
+    func testIsYesterday() {
+        XCTAssert(!self.date.isYesterday, "The date shouldn't be yesterday")
+        XCTAssert(Date().addingTimeInterval(-3600*24).isYesterday, "The date should be yesterday")
+    }
 }

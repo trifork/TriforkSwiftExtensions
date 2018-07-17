@@ -76,5 +76,22 @@ public extension Date {
     public static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
         return Formatter.iso8601WithoutMs.date(from: iso8601StringWithoutMs)
     }
+    
+    /// Asks `Calendar.current` whether the instance is today.
+    public var isToday: Bool {
+        return Calendar.current.isDateInToday(self)
+    }
+    
+    /// Asks `Calendar.current` whether the instance is tomorrow.
+    public var isTomorrow: Bool {
+        return Calendar.current.isDateInTomorrow(self)
+    }
+    
+    /// Asks `Calendar.current` whether the instance is yesterday.
+    public var isYesterday: Bool {
+        return Calendar.current.isDateInYesterday(self)
+    }
+    
+    
 }
 

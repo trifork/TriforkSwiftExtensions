@@ -41,6 +41,7 @@ Happy contributing! 🎉
 - **Date:**
   - Convert to string according to specified `DateFormatter.Style`.
   - Convert to and from ISO8601 formatted strings.
+  - `isToday`, `isYesterday` and `isTomorrow`.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Encodable:**
