@@ -68,6 +68,9 @@ Happy contributing! 🎉
   - Add actions to alerts.
 - **UIColor:**
   - Creating `UIColor` instance directly from Zeplin format: `"rgb 255 0 255"`
+- **UIApplication:**
+  - Open Apple Maps or Google Maps with an address.
+  - Open URLs safe by asking if is can open the URL first.
 - **UIDevice:**
   - Get device model name.
 - **UIEdgeInsets:**

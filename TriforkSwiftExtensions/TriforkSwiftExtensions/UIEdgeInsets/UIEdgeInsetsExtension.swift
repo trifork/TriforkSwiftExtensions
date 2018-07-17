@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UIEdgeInsets {
+public extension UIEdgeInsets {
     public init(allEdges distance: CGFloat) {
         self.init(top: distance, left: distance, bottom: distance, right: distance)
     }

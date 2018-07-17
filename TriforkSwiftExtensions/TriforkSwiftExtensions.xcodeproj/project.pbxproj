@@ -39,6 +39,7 @@
 		E922694A1F55516800DAEFAE /* TSELoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92269491F55516800DAEFAE /* TSELoggerTests.swift */; };
 		E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3CB20FDE133002FFDFF /* UIEdgeInsetsExtension.swift */; };
 		E946D3CE20FDE171002FFDFF /* UIEdgeInsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */; };
+		E946D3D220FDE28D002FFDFF /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3D120FDE28D002FFDFF /* UIApplicationExtensions.swift */; };
 		E97F00091FE2654200BB262F /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F00081FE2654200BB262F /* EncodableExtension.swift */; };
 		E97F000B1FE2669700BB262F /* EncodableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
@@ -96,6 +97,7 @@
 		E92269491F55516800DAEFAE /* TSELoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSELoggerTests.swift; sourceTree = "<group>"; };
 		E946D3CB20FDE133002FFDFF /* UIEdgeInsetsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExtension.swift; sourceTree = "<group>"; };
 		E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsTests.swift; sourceTree = "<group>"; };
+		E946D3D120FDE28D002FFDFF /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		E97F00081FE2654200BB262F /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensionTests.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +285,14 @@
 			path = UIEdgeInsets;
 			sourceTree = "<group>";
 		};
+		E946D3CF20FDE274002FFDFF /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				E946D3D120FDE28D002FFDFF /* UIApplicationExtensions.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
 		E97F00071FE2653100BB262F /* Encodable */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +339,7 @@
 				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
+				E946D3CF20FDE274002FFDFF /* UIApplication */,
 				E91E19DE1F7D128E00F38282 /* UIColor */,
 				E92269311F55307F00DAEFAE /* UIDevice */,
 				E946D3CA20FDE11C002FFDFF /* UIEdgeInsets */,
@@ -509,6 +520,7 @@
 				E9DF34441F4D743900BB36BB /* CollectionExtension.swift in Sources */,
 				E92269211F5445A400DAEFAE /* DateExtension.swift in Sources */,
 				E92269081F53E19F00DAEFAE /* NSObjectExtension.swift in Sources */,
+				E946D3D220FDE28D002FFDFF /* UIApplicationExtensions.swift in Sources */,
 				E91E19E01F7D129B00F38282 /* UIColorExtension.swift in Sources */,
 				E922692B1F5459BC00DAEFAE /* UIAlertControllerExtension.swift in Sources */,
 				E92269381F55340500DAEFAE /* BundleExtension.swift in Sources */,
