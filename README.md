@@ -107,5 +107,5 @@ TSELogger.customLogErrorHandler = { (message: String) in
 ---
 
 <p align="center">
-  <img width="220" height="44" src="http://trifork.com/wp-content/uploads/2016/05/logo_trifork.png" alt="TRIFORK">
+  <img width="220" height="44" src="https://trifork.com/wp-content/uploads/2018/06/Trifork_payoff_logo_RGB.png" alt="TRIFORK">
 </p>
