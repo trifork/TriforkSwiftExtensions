@@ -78,4 +78,26 @@ class DateExtensionTests: XCTestCase {
         XCTAssert(!self.date.isYesterday, "The date shouldn't be yesterday")
         XCTAssert(Date().addingTimeInterval(-3600*24).isYesterday, "The date should be yesterday")
     }
+    
+    func testMidnightDate() {
+        XCTAssert(Date().midnightDate.isToday, "Midnight should still be today!")
+        XCTAssert(!Date().midnightDate.isYesterday, "Midnight should not be yesterday!")
+        
+    
+        let equalComponents: [Calendar.Component] = [.year, .month, .day, .quarter, .timeZone, .era, .weekday, .weekOfMonth, .weekOfYear]
+        
+        for component: Calendar.Component in equalComponents {
+            let originalValue: Int = Calendar.current.component(component, from: self.date)
+            let midnightValue: Int = Calendar.current.component(component, from: self.date.midnightDate)
+            XCTAssertEqual(originalValue, midnightValue)
+        }
+        
+        let zeroComponents: [Calendar.Component] = [.hour, .minute, .second, .nanosecond]
+        for component: Calendar.Component in zeroComponents {
+            let midnightValue: Int = Calendar.current.component(component, from: self.date.midnightDate)
+            XCTAssertEqual(midnightValue, 0)
+        }
+        
+        
+    }
 }
