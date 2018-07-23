@@ -93,5 +93,15 @@ public extension Date {
     }
     
     
+    /// Returns a copy of the receiver, where the hours, minutes, seconds and nanoseconds are set to zero.
+    public var midnightDate: Date {
+        var date: Date = self
+        for component: Calendar.Component in [.hour, .minute, .second, .nanosecond] {
+            let componentValue: Int = Calendar.current.component(component, from: date)
+            date = Calendar.current.date(byAdding: component, value: -componentValue, to: date) ?? date
+        }
+        return date
+    }
+    
 }
 
