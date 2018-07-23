@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.2
+github "trifork/TriforkSwiftExtensions" ~> 1.0.3
 ```
 
 
@@ -44,6 +44,7 @@ Happy contributing! 🎉
   - Convert to string according to specified `DateFormatter.Style`.
   - Convert to and from ISO8601 formatted strings.
   - `isToday`, `isYesterday` and `isTomorrow`.
+  - Get midnight representation of a date instance.
 - **Double:**
   - Get as string with a maximum or exact number of significant digits.
 - **Encodable:**
