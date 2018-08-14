@@ -17,6 +17,21 @@ public extension UIApplication {
     }
     
     
+    /// Check whether the current device supports the tel:// scheme
+    public func canOpenPhoneUrl() -> Bool {
+        let canOpen: Bool
+        
+        if let phoneTestUrl: URL = URL(string: "tel://") {
+            canOpen = self.canOpenURL(phoneTestUrl)
+        }
+        else {
+            canOpen = false
+        }
+        
+        return canOpen
+    }
+    
+    
     /// Opens `address` in Apple Maps.
     public func openAppleMaps(address: String) {
         self.openSafe(url: "https://maps.apple.com/?q=\(address.urlEncoded)", options: nil, completionHandler: nil)
@@ -24,7 +39,7 @@ public extension UIApplication {
     
     /// Opens `address` in Google maps if available. If `useAppleMApsIfUnable` is `true` the function will fallback to Apple Maps, if Google Maps is not available. Otherwise the function will do nothing.
     public func openGoogleMaps(address: String, useAppleMapsIfUnable: Bool = false) {
-        openSafe(url: "https://maps.google.com/?q=\(address.urlEncoded)", options: nil) { [weak self] (success: Bool) -> Void in
+        openSafe(url: "comgooglemaps://?q=\(address.urlEncoded)", options: nil) { [weak self] (success: Bool) -> Void in
             if !success && useAppleMapsIfUnable {
                 self?.openAppleMaps(address: address)
             }
