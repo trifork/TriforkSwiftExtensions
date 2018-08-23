@@ -72,4 +72,24 @@ public extension UIApplication {
             completionHandler?(openURL(url))
         }
     }
+    
+    /// Recursively searches for the top most view controller based on a view controller as starting point.
+    ///
+    /// 1. Checks for UINavigationController's visibleViewController
+    /// 2. Checks for selected UITabBarController's selectedViewController
+    /// 3. Check for presented view controllers.
+    static func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
 }

@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.4
+github "trifork/TriforkSwiftExtensions" ~> 1.0.5
 ```
 
 
@@ -76,6 +76,7 @@ Happy contributing! 🎉
 - **UIApplication:**
   - Open Apple Maps or Google Maps with an address.
   - Open URLs safe by asking if is can open the URL first.
+  - Recursive search for the top most view controller.
 - **UIDevice:**
   - Get device model name.
 - **UIEdgeInsets:**
