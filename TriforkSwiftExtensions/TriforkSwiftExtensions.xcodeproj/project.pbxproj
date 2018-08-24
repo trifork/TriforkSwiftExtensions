@@ -157,16 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				E91E19DF1F7D129B00F38282 /* UIColorExtension.swift */,
-				E91E19E11F7D12F500F38282 /* New Group */,
 			);
 			path = UIColor;
-			sourceTree = "<group>";
-		};
-		E91E19E11F7D12F500F38282 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		E92269061F53E18700DAEFAE /* NSObject */ = {
