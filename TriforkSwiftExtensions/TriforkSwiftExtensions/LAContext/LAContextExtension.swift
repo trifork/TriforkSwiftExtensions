@@ -15,7 +15,7 @@ public extension LAContext {
         case touchID
         case faceID
         
-        func name() -> String {
+        public func name() -> String {
             let title: String
             
             switch self {
