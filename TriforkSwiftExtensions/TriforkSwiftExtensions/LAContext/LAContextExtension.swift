@@ -9,8 +9,8 @@
 import Foundation
 import LocalAuthentication
 
-extension LAContext {
-    enum BiometricType: String {
+public extension LAContext {
+    public enum BiometricType: String {
         case none
         case touchID
         case faceID
@@ -31,7 +31,7 @@ extension LAContext {
         }
     }
     
-    static var biometricType: BiometricType {
+    public static var biometricType: BiometricType {
         var error: NSError?
         let context: LAContext = LAContext()
         
