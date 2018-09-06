@@ -11,16 +11,6 @@ import XCTest
 
 class UIViewExtensionTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testCircle() {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 101))
         view.circle()
@@ -28,5 +18,29 @@ class UIViewExtensionTests: XCTestCase {
         view.frame.size.height = 100
         view.circle()
         XCTAssertEqual(view.layer.cornerRadius, 50.0)
+    }
+    
+    
+    func testRemoveAllSubViews() {
+        let emptyParent = UIView()
+        XCTAssertEqual(emptyParent.subviews.count, 0)
+        emptyParent.removeAllSubViews()
+        XCTAssertEqual(emptyParent.subviews.count, 0)
+        let child1 = UIView()
+        let parent1 = UIView()
+        parent1.addSubview(child1)
+        XCTAssertEqual(parent1.subviews.count, 1)
+        parent1.removeAllSubViews()
+        XCTAssertEqual(parent1.subviews.count, 0)
+        
+        let parentMany = UIView()
+        let childs = [UIView(), UIView(), UIView(), UIView()]
+        childs.forEach({(uiView: UIView, _)  in
+              parentMany.addSubview(uiView)
+        })
+        XCTAssertEqual(parentMany.subviews.count, childs.count)
+        parentMany.removeAllSubViews()
+        XCTAssertEqual(parentMany.subviews.count, 0)
+        
     }
 }

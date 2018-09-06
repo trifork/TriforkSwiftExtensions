@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.5
+github "trifork/TriforkSwiftExtensions" ~> 1.0.6
 ```
 
 
@@ -61,6 +61,8 @@ Happy contributing! 🎉
   - Constructor with line spacing.
 - **NSObject:**
   - Gets the name of an object's class as a `String`.
+- **LAContext:**
+  - Gets the available type of biometric id, i.e. TouchID, FaceID or None.
 - **String:**
   - Base64 encoding and decoding.
   - Conversion to `URL` and `Data`.

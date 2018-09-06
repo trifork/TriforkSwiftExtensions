@@ -83,4 +83,16 @@ public extension UIView {
                             0.0 ]
         self.layer.add(animation, forKey: animationKey)
     }
+    
+    
+    /// Removes all subviews in the given view
+    ///
+    /// May not be called in "Draw"
+    public func removeAllSubViews() {
+        //copy to avoid modifying underlying structure at the same time as reading it.
+        let ourSubViews = subviews
+        ourSubViews.forEach { (view: UIView) in
+            view.removeFromSuperview()
+        }
+    }
 }
