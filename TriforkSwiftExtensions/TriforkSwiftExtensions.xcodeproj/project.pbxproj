@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		C349B41721638E05007A4D37 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41621638E05007A4D37 /* UIScrollViewExtension.swift */; };
+		C349B41921638EA1007A4D37 /* UIScrollViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41821638EA1007A4D37 /* UIScrollViewExtensionTests.swift */; };
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
@@ -68,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C349B41621638E05007A4D37 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		C349B41821638EA1007A4D37 /* UIScrollViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensionTests.swift; sourceTree = "<group>"; };
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
 		E91351D31F4EC44500BC1A68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +147,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C349B41521638D47007A4D37 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C349B41621638E05007A4D37 /* UIScrollViewExtension.swift */,
+			);
+			path = UIScrollView;
 		C349B41A21639B13007A4D37 /* CGRect */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +383,7 @@
 				E91E19DE1F7D128E00F38282 /* UIColor */,
 				E92269311F55307F00DAEFAE /* UIDevice */,
 				E946D3CA20FDE11C002FFDFF /* UIEdgeInsets */,
+				C349B41521638D47007A4D37 /* UIScrollView */,
 				E922693F1F55494100DAEFAE /* UIStackView */,
 				E922693C1F5547C400DAEFAE /* UIView */,
 				E922692C1F545B4C00DAEFAE /* UIViewController */,
@@ -404,6 +416,7 @@
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */,
 				E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */,
+				C349B41821638EA1007A4D37 /* UIScrollViewExtensionTests.swift */,
 				C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
@@ -557,6 +570,7 @@
 				E92269381F55340500DAEFAE /* BundleExtension.swift in Sources */,
 				E92269431F554A4B00DAEFAE /* UIStackViewExtension.swift in Sources */,
 				E922693E1F5547D100DAEFAE /* UIViewExtension.swift in Sources */,
+				C349B41721638E05007A4D37 /* UIScrollViewExtension.swift in Sources */,
 				E92269481F554FD900DAEFAE /* TSELogger.swift in Sources */,
 				E922690D1F53E3C800DAEFAE /* FloatExtension.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
@@ -600,6 +614,7 @@
 				E922694A1F55516800DAEFAE /* TSELoggerTests.swift in Sources */,
 				E946D3CE20FDE171002FFDFF /* UIEdgeInsetsTests.swift in Sources */,
 				E922690A1F53E1C000DAEFAE /* NSObjectExtensionTests.swift in Sources */,
+				C349B41921638EA1007A4D37 /* UIScrollViewExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
