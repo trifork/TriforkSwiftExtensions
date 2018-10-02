@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C349B41221637FBB007A4D37 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41121637FBB007A4D37 /* CGPointExtension.swift */; };
+		C349B41421638A6E007A4D37 /* CGPointExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41321638A6E007A4D37 /* CGPointExtensionTest.swift */; };
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
 		E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */; };
 		E91E19E01F7D129B00F38282 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E19DF1F7D129B00F38282 /* UIColorExtension.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C349B41121637FBB007A4D37 /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		C349B41321638A6E007A4D37 /* CGPointExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTest.swift; sourceTree = "<group>"; };
 		E91351D31F4EC44500BC1A68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E91351D61F4EC64900BC1A68 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
@@ -138,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C349B41021637FA4007A4D37 /* CGPoint */ = {
+			isa = PBXGroup;
+			children = (
+				C349B41121637FBB007A4D37 /* CGPointExtension.swift */,
+			);
+			path = CGPoint;
+			sourceTree = "<group>";
+		};
 		E91351D21F4EC44500BC1A68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,22 +349,23 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
+				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9DF34471F4D760300BB36BB /* Array */,
 				E92269361F5533F900DAEFAE /* Bundle */,
 				E946D3D320FDE70A002FFDFF /* CGFloat */,
+				C349B41021637FA4007A4D37 /* CGPoint */,
 				E9DF34421F4D743900BB36BB /* Collection */,
 				E922691A1F5441B900DAEFAE /* Data */,
 				E922691F1F54458D00DAEFAE /* Date */,
 				E92269101F53F74600DAEFAE /* Double */,
 				E97F00071FE2653100BB262F /* Encodable */,
 				E922690B1F53E3C000DAEFAE /* Float */,
-				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9A1EA732140EDDB005EEE52 /* LAContext */,
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
 				E92269061F53E18700DAEFAE /* NSObject */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
 				E92269151F53F93300DAEFAE /* String */,
-				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
 				E946D3CF20FDE274002FFDFF /* UIApplication */,
@@ -391,6 +404,7 @@
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */,
 				E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */,
+				C349B41321638A6E007A4D37 /* CGPointExtensionTest.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -555,6 +569,7 @@
 				E92269331F55308E00DAEFAE /* UIDeviceExtension.swift in Sources */,
 				E922691C1F5441C400DAEFAE /* DataExtension.swift in Sources */,
 				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
+				C349B41221637FBB007A4D37 /* CGPointExtension.swift in Sources */,
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 			);
@@ -571,6 +586,7 @@
 				E92269141F53F7AA00DAEFAE /* DoubleExtensionTests.swift in Sources */,
 				E91E19E31F7D161700F38282 /* UIColorExtensionTests.swift in Sources */,
 				E92269231F5446AF00DAEFAE /* DateExtensionTests.swift in Sources */,
+				C349B41421638A6E007A4D37 /* CGPointExtensionTest.swift in Sources */,
 				E92269281F54510F00DAEFAE /* URLExtensionTests.swift in Sources */,
 				E9DF34461F4D747300BB36BB /* CollectionExtensionTests.swift in Sources */,
 				E92269351F55314900DAEFAE /* UIDeviceExtensionTests.swift in Sources */,
