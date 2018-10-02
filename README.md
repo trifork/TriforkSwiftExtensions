@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.6
+github "trifork/TriforkSwiftExtensions" ~> 1.0.7
 ```
 
 
@@ -38,6 +38,8 @@ Happy contributing! 🎉
   - Safe index access on `Collection` objects, returning `nil` instead of performing *index out of bounds* crashes.
 - **CGFloat:**
   - *Very important* shortcuts for π (🥧)
+- **CGRect:**
+  - `midPoint` to return the middle point of the rect.
 - **Data:**
   - Conversion to `String` and hex `String`.
 - **Date:**
@@ -88,6 +90,8 @@ Happy contributing! 🎉
   - Get current first responder.
   - Round corners on one edge of a view.
   - Perform shake animation.
+- **UIScrollView:**
+  - Handle to set both `contentInsets` and `scrollIndicatorInsets` with one property!
 - **UIStackView:**
   - Remove all arranged subviews.
 - **UIViewController:**
