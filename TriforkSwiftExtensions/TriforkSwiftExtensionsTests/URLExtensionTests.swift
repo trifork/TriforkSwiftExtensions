@@ -27,7 +27,12 @@ class URLExtensionTests: XCTestCase {
             "favorite-emoji": "🐳"
         ]
         let url: URL = URL(string: "http://www.trifork.com")!
-        XCTAssertEqual("http://www.trifork.com?favorite-emoji=%F0%9F%90%B3&text=Cool%20text%20with%20some%20spaces%20in%20it%20%F0%9F%98%8E&auth-token=verysecrettokenthatnobodyknows", url.adding(parameters: parameters).absoluteString)
+        
+        let urlWithParameters: String = url.adding(parameters: parameters).absoluteString
+        XCTAssert(urlWithParameters.contains("text=Cool%20text%20with%20some%20spaces%20in%20it%20%F0%9F%98%8E"))
+        XCTAssert(urlWithParameters.contains("auth-token=verysecrettokenthatnobodyknows"))
+        XCTAssert(urlWithParameters.contains("favorite-emoji=%F0%9F%90%B3"))
+        XCTAssert(urlWithParameters.contains("http://www.trifork.com?"))
     }
     
     
