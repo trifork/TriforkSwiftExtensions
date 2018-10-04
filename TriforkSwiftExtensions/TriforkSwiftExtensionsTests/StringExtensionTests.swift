@@ -82,13 +82,14 @@ class StringExtensionTests: XCTestCase {
         XCTAssertTrue("tkc@trifork.com".isEmail)
         XCTAssertTrue("test@test.test".isEmail)
         XCTAssertTrue("a@b.cd".isEmail)
+        XCTAssertTrue("a@b.c".isEmail) // Allowed but currently there are no top domains with one character
         XCTAssertFalse("tkc[at]trifork[dot]com".isEmail)
         XCTAssertFalse("tkc@trifork[dot]com".isEmail)
         XCTAssertFalse("tkc[at]trifork.com".isEmail)
         XCTAssertFalse("tkc@triforkcom".isEmail)
         XCTAssertFalse("tkc@trifork".isEmail)
         XCTAssertFalse("tkctrifork.com".isEmail)
-        XCTAssertFalse("a@b.c".isEmail)
+        XCTAssertFalse("a@.....trifork.com".isEmail)
     }
     
     func testIsPhoneNumber() {
