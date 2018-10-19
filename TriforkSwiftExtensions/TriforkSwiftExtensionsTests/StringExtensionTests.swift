@@ -90,6 +90,7 @@ class StringExtensionTests: XCTestCase {
         XCTAssertFalse("tkc@trifork".isEmail)
         XCTAssertFalse("tkctrifork.com".isEmail)
         XCTAssertFalse("a@.....trifork.com".isEmail)
+        XCTAssertFalse("sdfsdf@sdf.dk.....d@".isEmail)
     }
     
     func testIsPhoneNumber() {
