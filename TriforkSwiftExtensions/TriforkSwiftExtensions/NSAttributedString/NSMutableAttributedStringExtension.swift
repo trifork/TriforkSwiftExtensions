@@ -27,6 +27,14 @@ public extension NSMutableAttributedString {
         self.append(attributedString)
     }
     
+    /// Adds a paragraph style to the receiver with the lineheight
+    public func setLineHeight(lineHeight: CGFloat) {
+        let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.minimumLineHeight = lineHeight
+        paragraphStyle.maximumLineHeight = lineHeight
+        self.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: self.string.count))
+    }
+    
     /// Initializes an attributed string with line spacing
     public convenience init(string: String, withLineSpacing lineSpacing: CGFloat) {
         self.init(string: string)
