@@ -1,0 +1,75 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/CGFloat/CGFloatExtensions.swift",
+      "line": 13,
+      "symbol": "CGFloat.π",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 13,
+      "symbol": "LAContext.BiometricType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 14,
+      "symbol": "LAContext.BiometricType.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 15,
+      "symbol": "LAContext.BiometricType.touchID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 16,
+      "symbol": "LAContext.BiometricType.faceID",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 18,
+      "symbol": "LAContext.BiometricType.name()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
+      "line": 34,
+      "symbol": "LAContext.biometricType",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/UIEdgeInsets/UIEdgeInsetsExtension.swift",
+      "line": 12,
+      "symbol": "UIEdgeInsets.init(allEdges:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/UIScrollView/UIScrollViewExtension.swift",
+      "line": 12,
+      "symbol": "UIScrollView.contentAndScrollInset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/URL/URLExtension.swift",
+      "line": 13,
+      "symbol": "URL.adding(parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kimdevos/Repositories/TriforkSwiftExtensions"
+}
