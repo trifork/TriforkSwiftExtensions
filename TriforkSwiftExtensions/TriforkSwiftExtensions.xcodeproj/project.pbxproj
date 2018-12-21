@@ -10,6 +10,7 @@
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
 		C3A9C2EC21CCED3F007DF893 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */; };
+		C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */; };
 		E904E2482163A16800B52FF8 /* UIScrollViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904E2472163A16800B52FF8 /* UIScrollViewExtensionTests.swift */; };
 		E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904E24A2163A17C00B52FF8 /* UIScrollViewExtension.swift */; };
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
@@ -72,6 +73,7 @@
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
 		C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
+		C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 		E904E2472163A16800B52FF8 /* UIScrollViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensionTests.swift; sourceTree = "<group>"; };
 		E904E24A2163A17C00B52FF8 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		E91351D31F4EC44500BC1A68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -395,6 +397,7 @@
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
 				E9DF34361F4D72E100BB36BB /* Info.plist */,
+				C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */,
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
@@ -598,6 +601,7 @@
 				E922691E1F54435D00DAEFAE /* DataExtensionTests.swift in Sources */,
 				E92269191F53F9B400DAEFAE /* StringExtensionTests.swift in Sources */,
 				E9DF344B1F4D768F00BB36BB /* ArrayExtensionTests.swift in Sources */,
+				C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */,
 				E92269451F554A7C00DAEFAE /* UIStackViewExtensionTests.swift in Sources */,
 				E922690F1F53E44800DAEFAE /* FloatExtensionTests.swift in Sources */,
 				E97F000B1FE2669700BB262F /* EncodableExtensionTests.swift in Sources */,
