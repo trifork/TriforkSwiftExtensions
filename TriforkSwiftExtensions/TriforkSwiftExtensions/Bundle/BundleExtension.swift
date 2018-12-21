@@ -12,18 +12,11 @@ public extension Bundle {
     
     /// Returns the compile date of the app.
     public var compileDate: Date? {
-        let date: Date?
-        if  let bundleName: String = self.bundleName,
+        guard let bundleName: String = self.bundleName,
             let infoPath: String = self.path(forResource: bundleName, ofType: nil),
-            let infoAttr = try? FileManager.default.attributesOfItem(atPath: infoPath),
-            let infoDate = infoAttr[FileAttributeKey.creationDate] as? Date
-        {
-            date = infoDate
-        }
-        else {
-            date = nil
-        }
-        return date
+            let infoAttr = try? FileManager.default.attributesOfItem(atPath: infoPath)
+            else { return nil }
+        return infoAttr[FileAttributeKey.creationDate] as? Date
     }
     
     
