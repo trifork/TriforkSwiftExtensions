@@ -42,4 +42,5 @@ public extension NSMutableAttributedString {
         textParagraphStyle.lineSpacing = lineSpacing
         self.addAttribute(.paragraphStyle, value:textParagraphStyle, range:NSMakeRange(0, self.length))
     }
+
 }

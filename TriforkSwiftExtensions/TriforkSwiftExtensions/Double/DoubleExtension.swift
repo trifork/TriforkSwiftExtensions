@@ -32,4 +32,5 @@ public extension Double {
         formatter.minimumSignificantDigits = digits
         return formatter.string(from: NSNumber(value: self))
     }
+
 }

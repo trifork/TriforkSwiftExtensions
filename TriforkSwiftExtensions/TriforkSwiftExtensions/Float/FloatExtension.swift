@@ -10,7 +10,6 @@ import Foundation
 
 public extension Float {
     
-    
     /// Returns the receiver as a string with a number of maximum significant digits
     ///
     /// Examples:
@@ -28,4 +27,5 @@ public extension Float {
     public func string(withDigits digits: Int) -> String? {
         return Double(self).string(withDigits: digits)
     }
+
 }

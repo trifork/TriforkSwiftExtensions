@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension UIStackView {
     
     /// Removes all arranged subviews in receiver.
@@ -17,4 +16,5 @@ public extension UIStackView {
             subView.removeFromSuperview()
         }
     }
+
 }

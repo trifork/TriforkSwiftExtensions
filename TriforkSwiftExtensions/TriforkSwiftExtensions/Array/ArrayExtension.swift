@@ -32,4 +32,5 @@ public extension Array where Element: Equatable {
             body(element, index)
         }
     }
+
 }

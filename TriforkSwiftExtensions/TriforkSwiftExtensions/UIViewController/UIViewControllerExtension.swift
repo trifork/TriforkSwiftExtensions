@@ -6,7 +6,6 @@
 //  Copyright © 2017 Trifork A/S. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public extension UIViewController {
@@ -16,4 +15,5 @@ public extension UIViewController {
         let alert: UIAlertController = UIAlertController.okAlert(title: title, message: message, okTitle: okTitle, okAction: okAction)
         alert.present(onViewController: self)
     }
+
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension String {
     
     //MARK: - Encoding
@@ -52,7 +51,6 @@ public extension String {
     public func toData() -> Data? {
         return self.data(using: .utf8)
     }
-    
     
     //MARK: - RegEx
     
