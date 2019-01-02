@@ -8,7 +8,7 @@ Framework with generic Swift extensions.
 ## Installation
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.0.9
+github "trifork/TriforkSwiftExtensions" ~> 1.0.11
 ```
 
 
@@ -71,6 +71,7 @@ Happy contributing! 🎉
   - URL encoding.
   - Check for regular expression matches.
   - Validate as phone number or email.
+  - Convertion to `NSMutableAttributedString` based on a list of enum values for formatting.
 - **UIAlertController:**
   - "OK" alert.
   - Presentation with custom tint color.
