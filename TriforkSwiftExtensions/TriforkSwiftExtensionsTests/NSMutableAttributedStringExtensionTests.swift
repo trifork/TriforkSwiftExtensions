@@ -58,9 +58,34 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: "text", withLineSpacing: lineSpacing)
         let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
-        
     }
     
+    func testSetLineHeihgtAndLineSpacing() {
+        let lineSpacing: CGFloat = 6.0
+        let lineHeight: CGFloat = 3.0
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: "text")
+        attributedString.set(lineHeight: lineHeight, lineSpacing: lineSpacing)
+        self.assert(lineSpacing: lineSpacing, lineHeight: lineHeight, forAttributedString: attributedString)
+        
+        let attributedString2: NSMutableAttributedString = NSMutableAttributedString(string: "text")
+        attributedString2.set(lineHeight: lineHeight)
+        self.assert(lineSpacing: 0, lineHeight: lineHeight, forAttributedString: attributedString2)
+        
+        let attributedString3: NSMutableAttributedString = NSMutableAttributedString(string: "text")
+        attributedString3.set(lineHeight: nil, lineSpacing: lineSpacing)
+        self.assert(lineSpacing: lineSpacing, lineHeight: 0, forAttributedString: attributedString3)
+        
+        let attributedString4: NSMutableAttributedString = NSMutableAttributedString(string: "text")
+        attributedString4.set(lineHeight: nil, lineSpacing: nil)
+        self.assert(lineSpacing: 0, lineHeight: 0, forAttributedString: attributedString4)
+    }
+    
+    private func assert(lineSpacing: CGFloat, lineHeight: CGFloat, forAttributedString attributedString: NSMutableAttributedString) {
+        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+    }
     
     private func assert(attributes: [NSAttributedStringKey: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
         XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
