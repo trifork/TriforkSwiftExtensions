@@ -65,4 +65,11 @@ class ArrayExtensionTests: XCTestCase {
         }
     }
     
+    func testAppending() {
+        let array: [String] = ["0", "1"]
+        let array2: [String] = array.appending("2")
+        XCTAssert(array.count == 2, "This array should only contain 2 elements")
+        XCTAssert(array2.count == 3, "This array should contains 3 elements")
+    }
+    
 }
