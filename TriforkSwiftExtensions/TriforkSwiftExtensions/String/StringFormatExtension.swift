@@ -23,17 +23,27 @@ public extension String {
     ///
     /// Note that you can build project-specific option-sets by implementing an extension with static functions on `Sequence where Element == StringFormatOption`
     public func convertToAttributed(withOptions options: [StringFormatOption]) -> NSMutableAttributedString {
+        let range: NSRange = NSRange(location: 0, length: self.count)
+        return self.format(withOptions: options, inRange: range)
+    }
+    
+    /// Converts the receiver into a `NSMutableAttributedString` based on the provided options within a specified range.
+    ///
+    /// Note that you can build project-specific option-sets by implementing an extension with static functions on `Sequence where Element == StringFormatOption`
+    public func format(withOptions options: [StringFormatOption], inRange range: NSRange) -> NSMutableAttributedString {
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self)
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         options.forEach { (option: StringFormatOption) in
-            self.format(forOption: option, forAttributedString: attributedString, withParagraphStyle: paragraphStyle)
+            self.format(forOption: option, forAttributedString: attributedString, withParagraphStyle: paragraphStyle, range: range)
         }
-        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedString.length))
+        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: range)
         return attributedString
     }
     
-    private func format(forOption option: StringFormatOption, forAttributedString attributedString: NSMutableAttributedString, withParagraphStyle paragraphStyle: NSMutableParagraphStyle) {
-        let range: NSRange = NSRange(location: 0, length: attributedString.length)
+    /// Formats one option for an attributed string with a paragraphstyle in a specified range
+    ///
+    /// The range is not used if you pass an option, which is set on the paragraphstyle. It is your responsibility to add the paragraphstyle to the right range.
+    public func format(forOption option: StringFormatOption, forAttributedString attributedString: NSMutableAttributedString, withParagraphStyle paragraphStyle: NSMutableParagraphStyle, range: NSRange) {
         switch option {
         case .textColor(let color):
             attributedString.addAttribute(.foregroundColor, value: color, range: range)
