@@ -109,4 +109,32 @@ class StringExtensionTests: XCTestCase {
         XCTAssertFalse("+1 123".isPhoneNumber)
         XCTAssertFalse("1234".isPhoneNumber)
     }
+    
+    func testConvertStringToAttributed() {
+        let font = UIFont.systemFont(ofSize: 12)
+        let color = UIColor.magenta
+        
+        let letterSpacing: CGFloat = 5.0
+        let lineSpacing: CGFloat = 3.0
+        let lineHeight: CGFloat = 10.0
+        
+        let string = "This is my awesome string"
+        let attributedString: NSMutableAttributedString = string.convertToAttributed(withOptions: [
+            .font(font),
+            .textColor(color),
+            .letterSpacing(letterSpacing),
+            .lineSpacing(lineSpacing),
+            .lineHeight(lineHeight)
+        ])
+        
+        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        
+        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
+        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
+        XCTAssert((attributes[NSAttributedStringKey.foregroundColor] as? UIColor) == color, "The color should be \(color.description)")
+        XCTAssert((attributes[NSAttributedStringKey.kern] as? CGFloat) == letterSpacing, "The letter spacing should be \(String(describing: letterSpacing))")
+    }
 }
