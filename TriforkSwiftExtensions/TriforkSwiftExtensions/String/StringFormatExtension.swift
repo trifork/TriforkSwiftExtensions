@@ -21,7 +21,7 @@ public extension String {
     
     /// Converts the receiver into a `NSMutableAttributedString` based on the provided options.
     ///
-    /// Note that you can build project-specific option-sets by implementing an extension with static functions on `Sequence where Element == StringFormatOption`
+    /// Note that you can build project-specific option-sets by implementing a `StringFormatOptions` class with static functions returning sets of options.
     public func convertToAttributed(withOptions options: [StringFormatOption]) -> NSMutableAttributedString {
         let range: NSRange = NSRange(location: 0, length: self.count)
         return self.format(withOptions: options, inRange: range)
@@ -29,7 +29,7 @@ public extension String {
     
     /// Converts the receiver into a `NSMutableAttributedString` based on the provided options within a specified range.
     ///
-    /// Note that you can build project-specific option-sets by implementing an extension with static functions on `Sequence where Element == StringFormatOption`
+    /// Note that you can build project-specific option-sets by implementing a `StringFormatOptions` class with static functions returning sets of options.
     public func format(withOptions options: [StringFormatOption], inRange range: NSRange) -> NSMutableAttributedString {
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self)
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()

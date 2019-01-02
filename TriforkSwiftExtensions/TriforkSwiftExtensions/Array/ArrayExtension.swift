@@ -32,4 +32,11 @@ public extension Array where Element: Equatable {
             body(element, index)
         }
     }
+    
+    // Returns a new `Array` made by appending a given element to the `Array`.
+    func appending(_ newElement: Element) -> Array<Element> {
+        var a: Array<Element> = Array(self)
+        a.append(newElement)
+        return a
+    }
 }
