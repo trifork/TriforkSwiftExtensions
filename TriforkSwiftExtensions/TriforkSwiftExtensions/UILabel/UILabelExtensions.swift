@@ -8,10 +8,9 @@
 
 import UIKit
 
-extension UILabel {
-    
+public extension UILabel {
     /// Sets the `attributedText` property based on the String format options.
-    func setText(_ text: String, withOptions options: [StringFormatOption]) {
+    public func setText(_ text: String, withOptions options: [StringFormatOption]) {
         self.attributedText = text.convertToAttributed(withOptions: options)
     }
 }
