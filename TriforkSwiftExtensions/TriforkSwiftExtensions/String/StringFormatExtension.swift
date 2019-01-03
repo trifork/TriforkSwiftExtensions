@@ -15,6 +15,7 @@ public enum StringFormatOption {
     case font(UIFont)
     case textColor(UIColor)
     case letterSpacing(CGFloat)
+    case lineBreakMode(NSLineBreakMode)
 }
 
 public extension String {
@@ -33,6 +34,7 @@ public extension String {
     public func format(withOptions options: [StringFormatOption], inRange range: NSRange) -> NSMutableAttributedString {
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: self)
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .byTruncatingTail //default to truncate tail
         options.forEach { (option: StringFormatOption) in
             self.format(forOption: option, forAttributedString: attributedString, withParagraphStyle: paragraphStyle, range: range)
         }
@@ -56,6 +58,8 @@ public extension String {
             paragraphStyle.lineSpacing = lineSpacing
         case .letterSpacing(let letterSpacing):
             attributedString.addAttribute(.kern, value: letterSpacing, range: range)
+        case .lineBreakMode(let lineBreakMode):
+            paragraphStyle.lineBreakMode = lineBreakMode
         }
     }
 }
