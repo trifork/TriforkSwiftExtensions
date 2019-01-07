@@ -95,4 +95,27 @@ public extension UIView {
             view.removeFromSuperview()
         }
     }
+    
+    /// Finds the first responder in the receiver and its subviews.
+    public func findFirstResponder() -> UIView? {
+        return findFirstResponder(inView: self)
+    }
+    
+    private func findFirstResponder(inView workingView: UIView) -> UIView? {
+        var firstResponder: UIView? = nil
+        if workingView.isFirstResponder {
+            firstResponder = workingView
+        }
+        else {
+            for subview: UIView in workingView.subviews {
+                firstResponder = self.findFirstResponder(inView: subview)
+                
+                if firstResponder != nil {
+                    break
+                }
+            }
+        }
+        
+        return firstResponder
+    }
 }
