@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension Data {
     
     /// Converts to string if possible, otherwise it returns `nil`
@@ -28,4 +27,5 @@ public extension Data {
         }
         return string
     }
+
 }

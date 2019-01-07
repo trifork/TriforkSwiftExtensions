@@ -52,4 +52,5 @@ public extension LAContext {
             return  context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touchID : .none
         }
     }
+
 }

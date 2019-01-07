@@ -6,7 +6,7 @@
 //  Copyright © 2017 Trifork A/S. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// Class that handles log messages in the TriforkSwiftExtensions framework.
 ///

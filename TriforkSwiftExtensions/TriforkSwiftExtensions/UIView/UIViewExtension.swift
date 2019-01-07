@@ -8,13 +8,12 @@
 
 import Foundation
 
-
 public extension UIView {
     
     /// Turns a square view into a circle.
     public func circle() {
         if self.bounds.width == self.bounds.height {
-            self.layer.cornerRadius = self.bounds.width/2.0
+            self.layer.cornerRadius = self.bounds.width / 2.0
         }
         else {
             TSELogger.log(message: "The view must be a square to make it a circle.")
