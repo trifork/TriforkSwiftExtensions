@@ -26,9 +26,10 @@ public extension Numeric {
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47.00"
     public func string(withDigits digits: Int) -> String? {
+        guard let number = self as? NSNumber else { return nil }
         let formatter = NumberFormatter()
         formatter.maximumSignificantDigits = digits
         formatter.minimumSignificantDigits = digits
-        return formatter.string(from: self as! NSNumber)
+        return formatter.string(from: number)
     }
 }

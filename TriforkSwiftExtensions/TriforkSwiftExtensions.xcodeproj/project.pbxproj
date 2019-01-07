@@ -387,6 +387,7 @@
 		E9DF34331F4D72E100BB36BB /* TriforkSwiftExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9DF34361F4D72E100BB36BB /* Info.plist */,
 				E9DF344A1F4D768F00BB36BB /* ArrayExtensionTests.swift */,
 				E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */,
 				C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */,
@@ -396,7 +397,6 @@
 				E92269131F53F7AA00DAEFAE /* DoubleExtensionTests.swift */,
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
-				E9DF34361F4D72E100BB36BB /* Info.plist */,
 				C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */,
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
