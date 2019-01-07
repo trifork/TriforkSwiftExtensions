@@ -42,5 +42,17 @@ public extension NSMutableAttributedString {
         textParagraphStyle.lineSpacing = lineSpacing
         self.addAttribute(.paragraphStyle, value:textParagraphStyle, range:NSMakeRange(0, self.length))
     }
-
+    
+    /// Optionally sets lineHeight and/or lineSpacing
+    public func set(lineHeight: CGFloat? = nil, lineSpacing: CGFloat? = nil) {
+        let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
+        if let lineHeight: CGFloat = lineHeight {
+            paragraphStyle.minimumLineHeight = lineHeight
+            paragraphStyle.maximumLineHeight = lineHeight
+        }
+        if let lineSpacing: CGFloat = lineSpacing {
+            paragraphStyle.lineSpacing = lineSpacing
+        }
+        self.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: self.string.count))
+    }
 }
