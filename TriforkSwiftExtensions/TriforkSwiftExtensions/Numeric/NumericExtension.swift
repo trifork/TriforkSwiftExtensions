@@ -15,9 +15,10 @@ public extension Numeric {
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47"
     public func string(withMaxDigits maxDigits: Int) -> String? {
+        guard let number = self as? NSNumber else { return nil }
         let formatter = NumberFormatter()
         formatter.maximumSignificantDigits = maxDigits
-        return formatter.string(from: self as! NSNumber)
+        return formatter.string(from: number)
     }
 
     /// Returns the receiver as a string with a number significant digits
