@@ -20,6 +20,8 @@ public enum StringFormatOption {
 
 public extension String {
     
+    //MARK: - Formatting
+    
     /// Converts the receiver into a `NSMutableAttributedString` based on the provided options.
     ///
     /// Note that you can build project-specific option-sets by implementing a `StringFormatOptions` class with static functions returning sets of options.
