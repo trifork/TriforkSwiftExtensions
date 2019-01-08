@@ -14,13 +14,13 @@ public extension NSMutableAttributedString {
     /// Appends an attributed string to the receiver with a specified font and color
     public func appendString(text: String, withFont font: UIFont?, andColor color: UIColor?) {
         
-        var attributes: [NSAttributedStringKey: Any] = [NSAttributedStringKey: Any]()
+        var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
         if let font: UIFont = font {
-            attributes[NSAttributedStringKey.font] = font
+            attributes[NSAttributedString.Key.font] = font
         }
         
         if let color: UIColor = color {
-            attributes[NSAttributedStringKey.foregroundColor] = color
+            attributes[NSAttributedString.Key.foregroundColor] = color
         }
         
         let attributedString: NSAttributedString = NSAttributedString(string: text, attributes: attributes)
