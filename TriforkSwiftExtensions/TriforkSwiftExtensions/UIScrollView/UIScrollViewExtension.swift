@@ -9,6 +9,9 @@
 import Foundation
 
 extension UIScrollView {
+
+    /// When setting `contentAndScrollInset` the `UIScrollView`s
+    /// `contentInset` and `scrollIndicatorInsets` get the same value.
     public var contentAndScrollInset: UIEdgeInsets {
         get {
             return contentInset
@@ -18,4 +21,5 @@ extension UIScrollView {
             scrollIndicatorInsets = newValue
         }
     }
+
 }

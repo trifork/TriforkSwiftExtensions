@@ -6,7 +6,6 @@
 //  Copyright © 2018 Trifork A/S. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public extension UIApplication {
@@ -92,4 +91,5 @@ public extension UIApplication {
         }
         return controller
     }
+
 }

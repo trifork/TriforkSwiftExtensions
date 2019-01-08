@@ -9,8 +9,10 @@
 import Foundation
 
 extension CGRect {
+
     /// Return mid point of rect
     public var midPoint: CGPoint {
         return CGPoint(x: midX, y: midY)
     }
+
 }

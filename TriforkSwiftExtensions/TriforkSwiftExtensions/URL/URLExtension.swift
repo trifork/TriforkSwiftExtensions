@@ -9,7 +9,8 @@
 import Foundation
 
 public extension URL {
-    
+
+    /// Adding paramters to URL and returns new URL.
     public func adding(parameters: [String: String]) -> URL {
         
         var urlString: String = self.absoluteString
@@ -18,19 +19,7 @@ public extension URL {
             urlString += "?"
         }
         
-        var i: Int = 0
-        for key: String in parameters.keys {
-            
-            i += 1
-            
-            if let value: String = parameters[key] {
-                urlString += "\(key)=\(value.urlEncodedWithQuery)"
-            }
-            
-            if i < parameters.keys.count {
-                urlString += "&"
-            }
-        }
+       urlString += parameters.map { "\($0.key)=\($0.value.urlEncodedWithQuery)" }.joined(separator: "&")
         
         return URL(string: urlString) ?? self
     }
@@ -48,4 +37,5 @@ public extension URL {
         }
         return value
     }
+
 }

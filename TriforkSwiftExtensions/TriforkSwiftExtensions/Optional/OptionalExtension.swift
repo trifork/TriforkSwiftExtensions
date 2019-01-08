@@ -10,12 +10,12 @@ import Foundation
 
 extension Optional {
     
-    /// Passes the receiver into `action` as a parameter iff the receiver is not `nil`, otherwise the result of this function will be `nil`
+    /// Passes the receiver into `action` as a parameter if the receiver is not `nil`, otherwise the result of this function will be `nil`
     public func passToOrNil<ReturnType>(action : (Wrapped)->ReturnType?) -> ReturnType? {
-        if let safeT = self {
-            return action(safeT)
+        switch self {
+        case .some(let wrapped): return action(wrapped)
+        case .none: return nil
         }
-        return nil
     }
     
     /// Unwraps receiver and passes it as parameter in the `doBlock`. If the receiver is nil, then the block will not be invoked.

@@ -9,9 +9,8 @@
 import Foundation
 
 public extension UIColor {
-    ///
+
     /// Accepts color string of the form: rgb 158 159 165
-    ///
     public convenience init?(rgb: String) {
         let parts = rgb.allMatches(withRegularExpression: "rgb ([0-9]+) ([0-9]+) ([0-9]+)")
         if parts.count == 3 {
@@ -21,4 +20,5 @@ public extension UIColor {
             return nil
         }
     }
+
 }

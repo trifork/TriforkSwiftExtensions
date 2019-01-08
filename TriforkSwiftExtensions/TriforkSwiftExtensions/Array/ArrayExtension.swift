@@ -11,18 +11,17 @@ import Foundation
 public extension Array where Element: Equatable {
     
     /// Removes element from receiver, by comparing with the `Equatable` interface.
+    /// If the same items appears multiple times in the array they will all be removed
     public mutating func removeElement(_ element: Element) {
-        if let index: Int = self.index(of: element) {
-            self.remove(at: index)
-            self.removeElement(element) //Recursive call to remove multiple instances of the same element.
-        }
+        guard let index: Int = self.index(of: element) else {  return }
+        self.remove(at: index)
+        self.removeElement(element) //Recursive call to remove multiple instances of the same element.
     }
     
     /// Removes multiple elements from receiver, by comparing with the `Equatable` interface.
     public mutating func removeElements(inArray array: [Element]) {
-        for object: Element in array {
-            self.removeElement(object)
-        }
+        guard !array.isEmpty else { return }
+        removeAll(where: { array.contains($0) })
     }
     
     
@@ -32,6 +31,7 @@ public extension Array where Element: Equatable {
             body(element, index)
         }
     }
+
 }
 
 public extension Array {

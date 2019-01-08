@@ -8,13 +8,12 @@
 
 import Foundation
 
-
 public extension UIView {
     
     /// Turns a square view into a circle.
     public func circle() {
         if self.bounds.width == self.bounds.height {
-            self.layer.cornerRadius = self.bounds.width/2.0
+            self.layer.cornerRadius = self.bounds.width / 2.0
         }
         else {
             TSELogger.log(message: "The view must be a square to make it a circle.")
@@ -94,5 +93,28 @@ public extension UIView {
         ourSubViews.forEach { (view: UIView) in
             view.removeFromSuperview()
         }
+    }
+    
+    /// Finds the first responder in the receiver and its subviews.
+    public func findFirstResponder() -> UIView? {
+        return findFirstResponder(inView: self)
+    }
+    
+    private func findFirstResponder(inView workingView: UIView) -> UIView? {
+        var firstResponder: UIView? = nil
+        if workingView.isFirstResponder {
+            firstResponder = workingView
+        }
+        else {
+            for subview: UIView in workingView.subviews {
+                firstResponder = self.findFirstResponder(inView: subview)
+                
+                if firstResponder != nil {
+                    break
+                }
+            }
+        }
+        
+        return firstResponder
     }
 }

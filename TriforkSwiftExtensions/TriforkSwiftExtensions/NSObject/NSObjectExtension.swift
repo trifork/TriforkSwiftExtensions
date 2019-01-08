@@ -14,4 +14,5 @@ public extension NSObject {
     public var nameOfClass: String {
         return String(describing: type(of: self)).components(separatedBy: ".").last ?? "Unknown"
     }
+
 }
