@@ -10,12 +10,7 @@ import XCTest
 @testable import TriforkSwiftExtensions
 
 class DataExtensionTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-        
+
     func testToString() {
         let string: String = "Rocket! 🚀"
         let data: Data? = string.data(using: .utf8)
