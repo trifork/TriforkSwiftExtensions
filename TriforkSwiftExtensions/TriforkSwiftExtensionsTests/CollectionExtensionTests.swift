@@ -11,16 +11,6 @@ import XCTest
 
 class CollectionExtensionTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testSafeIndex() {
         let array: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         
