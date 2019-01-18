@@ -22,4 +22,15 @@ extension UIScrollView {
         }
     }
 
+
+    /// Scrolls to the defined page
+    ///
+    /// - Parameters:
+    ///   - page: Page that the srollview should scroll to.
+    ///   - animated: `true` if the scrolling should be animated, `false` if it should be immediate.
+    public func scroll(toPage page: Int, animated: Bool = true) {
+        frame.origin.x = frame.size.width * CGFloat(page)
+        frame.origin.y = 0
+        scrollRectToVisible(frame, animated: animated)
+    }
 }

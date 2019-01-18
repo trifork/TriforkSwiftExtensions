@@ -10,11 +10,18 @@ import Foundation
 import LocalAuthentication
 
 public extension LAContext {
+    /// Supported biometric types for authentication
     public enum BiometricType: String {
+        /// None
         case none
+        
+        /// TouchID, i.e. using the fingerprint scanner
         case touchID
+        
+        /// FaceID, i.e. using the front camera and face recognition
         case faceID
         
+        /// Returns the brand name of the type, e.g. "TouchID" or "FaceID"
         public func name() -> String {
             let title: String
             
@@ -31,6 +38,7 @@ public extension LAContext {
         }
     }
     
+    /// Returns the available biometric type of the device
     public static var biometricType: BiometricType {
         var error: NSError?
         let context: LAContext = LAContext()

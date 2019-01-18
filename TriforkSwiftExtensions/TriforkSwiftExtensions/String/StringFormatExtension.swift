@@ -10,11 +10,22 @@ import Foundation
 
 /// Defines formatting options for strings
 public enum StringFormatOption {
+    /// Line height
     case lineHeight(CGFloat)
+    
+    /// Line spacing
     case lineSpacing(CGFloat)
+    
+    /// Font
     case font(UIFont)
+    
+    /// Text color
     case textColor(UIColor)
+    
+    /// Letter spacing aka. kern
     case letterSpacing(CGFloat)
+    
+    /// Line break mode (e.g. truncating)
     case lineBreakMode(NSLineBreakMode)
 }
 

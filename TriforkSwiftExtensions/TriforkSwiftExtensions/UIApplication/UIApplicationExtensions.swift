@@ -60,7 +60,7 @@ public extension UIApplication {
     /// Opens a url safe by asking the application if it can open the `url`.
     ///
     /// If the `canOpenUrl` check fails the method will do nothing.
-    public func openSafe(url: URL, options: [String: Any]?, completionHandler: ((Bool) -> Void)?) {
+    public func openSafe(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any]?, completionHandler: ((Bool) -> Void)?) {
         if !self.canOpenURL(url) {
             TSELogger.log(message: "could not open url :\(url.absoluteString)")
             completionHandler?(false)

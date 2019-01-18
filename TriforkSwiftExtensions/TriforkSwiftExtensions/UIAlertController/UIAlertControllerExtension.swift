@@ -28,7 +28,7 @@ public extension UIAlertController {
     }
     
     /// Adds an action to the receiver.
-    public func addAction(title: String, style: UIAlertActionStyle, action: (() -> Void)?) {
+    public func addAction(title: String, style: UIAlertAction.Style, action: (() -> Void)?) {
         let alertAction: UIAlertAction = UIAlertAction(title: title, style: style, handler: { (_) in
             action?()
         })
