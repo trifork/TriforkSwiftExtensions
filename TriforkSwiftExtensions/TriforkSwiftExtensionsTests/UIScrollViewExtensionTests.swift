@@ -20,4 +20,40 @@ class UIScrollViewExtensionTests: XCTestCase {
         XCTAssert(scrollView.scrollIndicatorInsets == contentInset)
 
     }
+
+    func testScrollToFirstPage() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+
+        scrollView.contentSize = CGSize(width: 30, height: 10)
+
+        scrollView.scroll(toPage: 0)
+        XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 0, y: 0))
+    }
+
+    func testScrollToValidPage() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+
+        scrollView.contentSize = CGSize(width: 30, height: 10)
+
+        scrollView.scroll(toPage: 1)
+        XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 10, y: 0))
+    }
+
+    func testScrollToLastPage() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+
+        scrollView.contentSize = CGSize(width: 30, height: 10)
+
+        scrollView.scroll(toPage: 2)
+        XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 20, y: 0))
+    }
+
+    func testScrollToInvalidPage() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+
+        scrollView.contentSize = CGSize(width: 30, height: 10)
+
+        scrollView.scroll(toPage: 3)
+        XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 0, y: 0))
+    }
 }
