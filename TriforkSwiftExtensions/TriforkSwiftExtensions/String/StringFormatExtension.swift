@@ -27,6 +27,9 @@ public enum StringFormatOption {
     
     /// Line break mode (e.g. truncating)
     case lineBreakMode(NSLineBreakMode)
+    
+    /// Text alignment for the paragraph
+    case textAlignment(NSTextAlignment)
 }
 
 public extension String {
@@ -73,6 +76,8 @@ public extension String {
             attributedString.addAttribute(.kern, value: letterSpacing, range: range)
         case .lineBreakMode(let lineBreakMode):
             paragraphStyle.lineBreakMode = lineBreakMode
+        case .textAlignment(let textAlignment):
+            paragraphStyle.alignment = textAlignment
         }
     }
 }
