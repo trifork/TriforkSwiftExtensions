@@ -1,12 +1,61 @@
 {
   "warnings": [
     {
-      "file": "/Users/thomas/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/CGFloat/CGFloatExtensions.swift",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/CGFloat/CGFloatExtensions.swift",
       "line": 13,
       "symbol": "CGFloat.π",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
+      "line": 11,
+      "symbol": "Reusable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
+      "line": 12,
+      "symbol": "Reusable.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
+      "line": 14,
+      "symbol": "Reusable.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewCellExtension.swift",
+      "line": 12,
+      "symbol": "UITableViewCell.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewCellExtension.swift",
+      "line": 16,
+      "symbol": "UITableViewCell.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewHeaderFooterViewExtension.swift",
+      "line": 12,
+      "symbol": "UITableViewHeaderFooterView.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewHeaderFooterViewExtension.swift",
+      "line": 16,
+      "symbol": "UITableViewHeaderFooterView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/thomas/Repositories/TriforkSwiftExtensions"
+  "source_directory": "/Users/kimdevos/Repositories/TriforkSwiftExtensions"
 }
