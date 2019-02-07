@@ -44,13 +44,22 @@ class OptionalExtensionTests: XCTestCase {
         }
     }
     
-    func testIsNilOrEmpty() {
+    func testIsNilOrEmptyString() {
         var optionalString: String? = nil
         XCTAssertTrue(optionalString.isNilOrEmpty)
         optionalString = ""
         XCTAssertTrue(optionalString.isNilOrEmpty)
         optionalString = "👻"
         XCTAssertFalse(optionalString.isNilOrEmpty)
+    }
+
+    func testIsNilOrEmptyCollection() {
+        var optionalCollection: [Int]? = nil
+        XCTAssertTrue(optionalCollection.isNilOrEmpty)
+        optionalCollection = []
+        XCTAssertTrue(optionalCollection.isNilOrEmpty)
+        optionalCollection = [1, 2, 3]
+        XCTAssertFalse(optionalCollection.isNilOrEmpty)
     }
     
 }

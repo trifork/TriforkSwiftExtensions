@@ -36,3 +36,11 @@ public extension Optional where Wrapped == String {
         return self?.trimmingCharacters(in: .whitespaces).isEmpty ?? true
     }
 }
+
+public extension Optional where Wrapped: Collection {
+
+    /// Returns `true` if the Optional Collection is either nil or empty.
+    public var isNilOrEmpty: Bool {
+        return self?.isEmpty ?? true
+    }
+}
