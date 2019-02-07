@@ -8,87 +8,52 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 13,
-      "symbol": "LAContext.BiometricType",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
+      "line": 11,
+      "symbol": "Reusable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 14,
-      "symbol": "LAContext.BiometricType.none",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 15,
-      "symbol": "LAContext.BiometricType.touchID",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 16,
-      "symbol": "LAContext.BiometricType.faceID",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 18,
-      "symbol": "LAContext.BiometricType.name()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/LAContext/LAContextExtension.swift",
-      "line": 34,
-      "symbol": "LAContext.biometricType",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
+      "line": 12,
+      "symbol": "Reusable.id",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
-      "line": 13,
-      "symbol": "StringFormatOption.lineHeight(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/Reusable.swift",
       "line": 14,
-      "symbol": "StringFormatOption.lineSpacing(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "symbol": "Reusable.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
-      "line": 15,
-      "symbol": "StringFormatOption.font(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewCellExtension.swift",
+      "line": 12,
+      "symbol": "UITableViewCell.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewCellExtension.swift",
       "line": 16,
-      "symbol": "StringFormatOption.textColor(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "symbol": "UITableViewCell.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
-      "line": 17,
-      "symbol": "StringFormatOption.letterSpacing(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewHeaderFooterViewExtension.swift",
+      "line": 12,
+      "symbol": "UITableViewHeaderFooterView.id",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/String/StringFormatExtension.swift",
-      "line": 18,
-      "symbol": "StringFormatOption.lineBreakMode(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewHeaderFooterViewExtension.swift",
+      "line": 16,
+      "symbol": "UITableViewHeaderFooterView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     }
   ],

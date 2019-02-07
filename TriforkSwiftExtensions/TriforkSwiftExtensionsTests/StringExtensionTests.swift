@@ -118,19 +118,26 @@ class StringExtensionTests: XCTestCase {
         let lineSpacing: CGFloat = 3.0
         let lineHeight: CGFloat = 10.0
         
+        let textAlignment: NSTextAlignment = .center
+        let lineBreakMode: NSLineBreakMode = .byWordWrapping
+        
         let string = "This is my awesome string"
         let attributedString: NSMutableAttributedString = string.convertToAttributed(withOptions: [
             .font(font),
             .textColor(color),
             .letterSpacing(letterSpacing),
             .lineSpacing(lineSpacing),
-            .lineHeight(lineHeight)
+            .lineHeight(lineHeight),
+            .textAlignment(textAlignment),
+            .lineBreakMode(lineBreakMode)
         ])
         
         let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
         XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
         XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.alignment == textAlignment, "The text alignment should be \(textAlignment)")
+        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineBreakMode == lineBreakMode, "The line break mode should be \(lineBreakMode)")
         
         XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
         XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
