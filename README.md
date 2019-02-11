@@ -3,6 +3,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 [![Documentation](https://img.shields.io/badge/Documentation-Jazzy-blue.svg)](https://trifork.github.io/TriforkSwiftExtensions/)
+![Azure Pipelines](https://dev.azure.com/aar-sef/TriforkSwiftExtensions/_apis/build/status/trifork.TriforkSwiftExtensions?branchName=master)
 
 Framework with generic Swift extensions.
 
