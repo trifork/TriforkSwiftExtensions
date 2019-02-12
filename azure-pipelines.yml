@@ -1,0 +1,33 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+trigger:
+- master
+- development
+
+pool:
+  vmImage: 'macOS-10.13'
+
+steps:
+- task: Xcode@5
+  inputs:
+    actions: 'test'
+    scheme: 'TriforkSwiftExtensions'
+    sdk: 'iphonesimulator'
+    configuration: 'Debug'
+    xcWorkspacePath: '**/TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj'
+    xcodeVersion: 'specifyPath'
+    xcodeDeveloperDir: '/Applications/Xcode_10.1.app'
+    signingOption: 'auto'
+    useXcpretty: true
+    publishJUnitResults: 'build/reports/junit.xml'
+    destinationSimulators: 'iPhone 7'
+    destinationTypeOption: 'simulators'
+    destinationPlatformOption: 'iOS'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit' 
+    testResultsFiles: 'build/reports/junit.xml'
