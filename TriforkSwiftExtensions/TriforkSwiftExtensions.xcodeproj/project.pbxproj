@@ -392,7 +392,6 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				C3A5B7D22208D12E009219A4 /* Reusable */,
 				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9DF34471F4D760300BB36BB /* Array */,
@@ -408,6 +407,7 @@
 				E92269061F53E18700DAEFAE /* NSObject */,
 				C3A9C2EA21CCED2F007DF893 /* Numeric */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
+				C3A5B7D22208D12E009219A4 /* Reusable */,
 				E92269151F53F93300DAEFAE /* String */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
