@@ -442,8 +442,9 @@
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
-				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
 				C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */,
+				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
+				C3628FCE2215A8F800519C77 /* StringProtocolTests.swift */,
 				E92269491F55516800DAEFAE /* TSELoggerTests.swift */,
 				E922692F1F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift */,
 				E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */,
@@ -453,7 +454,6 @@
 				E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */,
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
-				C3628FCE2215A8F800519C77 /* StringProtocolTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
