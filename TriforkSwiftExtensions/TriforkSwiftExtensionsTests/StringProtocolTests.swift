@@ -64,4 +64,34 @@ class StringProtocolTests: XCTestCase {
         XCTAssertNil(testString)
     }
 
+    func testStringSlicingWithInvalidFromAndTo() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "!", to: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicing() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "=", to: "&")
+
+        XCTAssertEqual(testString, "Foo")
+    }
+
+    func testSubstringSlicingWithInvalidTo() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "=", to: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicingWithInvalidFrom() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "!", to: "&")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicingWithInvalidFromAndTo() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "!", to: "!")
+
+        XCTAssertNil(testString)
+    }
+
 }
