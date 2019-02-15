@@ -12,6 +12,8 @@
 		C3109972220470B00038A97A /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3109971220470B00038A97A /* UITableViewCellExtension.swift */; };
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
+		C3628FCD2215A86100519C77 /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3628FCC2215A86100519C77 /* StringProtocolExtension.swift */; };
+		C3628FCF2215A8F800519C77 /* StringProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3628FCE2215A8F800519C77 /* StringProtocolTests.swift */; };
 		C3A5B7D42208D153009219A4 /* UITableViewHeaderFooterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5B7D32208D153009219A4 /* UITableViewHeaderFooterViewExtension.swift */; };
 		C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */; };
 		C3A9C2EC21CCED3F007DF893 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */; };
@@ -82,6 +84,8 @@
 		C3109971220470B00038A97A /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
+		C3628FCC2215A86100519C77 /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
+		C3628FCE2215A8F800519C77 /* StringProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolTests.swift; sourceTree = "<group>"; };
 		C3A5B7D32208D153009219A4 /* UITableViewHeaderFooterViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtension.swift; sourceTree = "<group>"; };
 		C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTests.swift; sourceTree = "<group>"; };
 		C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 			children = (
 				E92269161F53F9A100DAEFAE /* StringExtension.swift */,
 				E937DFC821DCBCDC00DE4E8C /* StringFormatExtension.swift */,
+				C3628FCC2215A86100519C77 /* StringProtocolExtension.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -387,7 +392,6 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				C3A5B7D22208D12E009219A4 /* Reusable */,
 				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9DF34471F4D760300BB36BB /* Array */,
@@ -403,6 +407,7 @@
 				E92269061F53E18700DAEFAE /* NSObject */,
 				C3A9C2EA21CCED2F007DF893 /* Numeric */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
+				C3A5B7D22208D12E009219A4 /* Reusable */,
 				E92269151F53F93300DAEFAE /* String */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
@@ -437,8 +442,9 @@
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
-				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
 				C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */,
+				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
+				C3628FCE2215A8F800519C77 /* StringProtocolTests.swift */,
 				E92269491F55516800DAEFAE /* TSELoggerTests.swift */,
 				E922692F1F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift */,
 				E91E19E21F7D161700F38282 /* UIColorExtensionTests.swift */,
@@ -620,6 +626,7 @@
 				C310996F220470520038A97A /* Reusable.swift in Sources */,
 				C3109972220470B00038A97A /* UITableViewCellExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
+				C3628FCD2215A86100519C77 /* StringProtocolExtension.swift in Sources */,
 				C310996D22046FAF0038A97A /* UITableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,6 +659,7 @@
 				E946D3CE20FDE171002FFDFF /* UIEdgeInsetsTests.swift in Sources */,
 				C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */,
 				E922690A1F53E1C000DAEFAE /* NSObjectExtensionTests.swift in Sources */,
+				C3628FCF2215A8F800519C77 /* StringProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
