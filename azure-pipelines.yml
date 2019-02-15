@@ -22,12 +22,7 @@ steps:
     xcodeDeveloperDir: '/Applications/Xcode_10.1.app'
     signingOption: 'auto'
     useXcpretty: true
-    publishJUnitResults: 'build/reports/junit.xml'
+    publishJUnitResults: true
     destinationSimulators: 'iPhone 7'
     destinationTypeOption: 'simulators'
     destinationPlatformOption: 'iOS'
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit' 
-    testResultsFiles: 'build/reports/junit.xml'
