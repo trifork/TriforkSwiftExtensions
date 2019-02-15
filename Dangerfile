@@ -21,4 +21,3 @@ end
 if has_app_changes && !has_test_changes 
     warn("There are changes to sources files, but not the test files?")
 end
-
