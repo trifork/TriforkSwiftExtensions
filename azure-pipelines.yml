@@ -3,7 +3,7 @@ trigger:
 - development
 
 jobs:
-- job: Xcode test
+- job: Xcode_test
   pool:
     vmImage: 'macOS-10.13'
   strategy:
