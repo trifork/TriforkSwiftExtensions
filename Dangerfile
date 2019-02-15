@@ -11,7 +11,6 @@ modified_files = git.modified_files + git.added_files
 has_app_changes = !modified_files.grep("/TriforkSwiftExtensions/TriforkSwiftExtensions/").empty?
 has_test_changes = !modified_files.grep("/TriforkSwiftExtensions/TriforkSwiftExtensions/").empty?
 has_docs_changes = modified_files.grep('/docs/').empty?
-# merging_against_correct_branch = git.branch_for_base == 'branch'
 
 jazzy.check warn: :modified
 
