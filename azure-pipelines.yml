@@ -34,12 +34,14 @@ jobs:
     variables:
       DEVELOPER_DIR: /Applications/Xcode_10.1.app
   steps:
+    - script: echo $DANGER_GITHUB_API_TOKEN
+      displayName: Token test
     - script: bundle update --bundler
       displayName: Update bundler
     - script: bundle install
       displayName: bundle install
     - script: bundle exec danger --verbose
       displayName: Run Danger
-    - script: echo $DANGER_GITHUB_API_TOKEN
+
       env:
         DANGER_GITHUB_API_TOKEN: $(DANGER_GITHUB_API_TOKEN)
