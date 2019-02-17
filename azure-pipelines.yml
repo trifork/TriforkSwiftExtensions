@@ -40,5 +40,6 @@ jobs:
       displayName: bundle install
     - script: bundle exec danger --verbose
       displayName: Run Danger
+    - script: echo $DANGER_GITHUB_API_TOKEN
       env:
         DANGER_GITHUB_API_TOKEN: $(DANGER_GITHUB_API_TOKEN)
