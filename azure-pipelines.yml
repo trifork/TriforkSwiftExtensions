@@ -2,9 +2,6 @@ trigger:
 - master
 - development
 
-variables:
-- group: env_vars
-
 jobs:
 - job: Xcode_test
   pool:
