@@ -16,5 +16,9 @@ public extension UILabel {
     public func setText(_ text: String, withOptions options: [StringFormatOption]) {
         self.attributedText = text.convertToAttributed(withOptions: options)
     }
+
+    public var isTest: String {
+        return "false"
+    }
 }
 
