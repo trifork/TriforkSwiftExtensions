@@ -20,5 +20,9 @@ public extension UILabel {
     public var isTest: String {
         return "false"
     }
+
+    public func test() {
+        
+    }
 }
 
