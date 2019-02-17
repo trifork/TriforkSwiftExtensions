@@ -9,10 +9,10 @@ warn("Big PR") if git.lines_of_code > 500
 modified_files = git.modified_files + git.added_files
 
 has_app_changes = !modified_files.grep("/TriforkSwiftExtensions/TriforkSwiftExtensions/").empty?
-has_test_changes = !modified_files.grep("/TriforkSwiftExtensions/TriforkSwiftExtensions/").empty?
+has_test_changes = !modified_files.grep("/TriforkSwiftExtensions/TriforkSwiftExtensionsTests/").empty?
 has_docs_changes = modified_files.grep('/docs/').empty?
 
-jazzy.check warn: :modified
+jazzy.check warn: :all
 
 if has_app_changes && !has_docs_changes 
     warn("Please generate new docs files by running `bundle exec jazzy`")
