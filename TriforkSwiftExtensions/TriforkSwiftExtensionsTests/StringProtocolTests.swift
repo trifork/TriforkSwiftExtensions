@@ -10,6 +10,7 @@ import XCTest
 
 final class StringProtocolTests: XCTestCase {
 
+    // MARK: - trimmed(
     func testStringTrimWithWhitespaceAndNewLine() {
         let testString = "\nHello World  \n".trimmed()
 
@@ -46,6 +47,7 @@ final class StringProtocolTests: XCTestCase {
         XCTAssertEqual(testString, "Hello World")
     }
 
+    // MARK: - slicing
     func testStringSlicing() {
         let testString = "App=Foo&App=Bar".slicing(from: "=", to: "&")
 
@@ -94,4 +96,28 @@ final class StringProtocolTests: XCTestCase {
         XCTAssertNil(testString)
     }
 
+    // MARK: - nilIfEmpty
+    func testStringNilIfEmptyWithNoEmptyString() {
+        let testString = "Hello World".nilIfEmpty()
+
+        XCTAssertEqual(testString, "Hello World")
+    }
+
+    func testStringNilIfEmptyWithEmptyString() {
+        let testString = "".nilIfEmpty()
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringNilIfEmptyWithNoEmptyString() {
+        let testString = Substring("Hello World").nilIfEmpty()
+
+        XCTAssertEqual(testString, "Hello World")
+    }
+
+    func testSubstringNilIfEmptyWithEmptyString() {
+        let testString = Substring("").nilIfEmpty()
+
+        XCTAssertNil(testString)
+    }
 }

@@ -6,9 +6,14 @@
 //  Copyright © 2019 Trifork A/S. All rights reserved.
 //
 
-import Foundation
-
 public extension StringProtocol where Self.Index == String.Index {
+
+    /// Returns nil if empty
+    ///
+    /// - Returns: nil if empty
+    public func nilIfEmpty() -> Self? {
+        return isEmpty ? nil : self
+    }
 
     /// Returns a trimmmed string
     public func trimmed() -> String {
