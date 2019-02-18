@@ -8,8 +8,11 @@
 
 import UIKit
 
+/// Make your `UITableViewCell` and `UICollectionViewCell` subclasses
+/// conform to this protocol when they are *not* NIB-based but only code-based
+/// for easier register and dequeue.
 public protocol Reusable where Self: UIView {
-    static var id: String { get }
 
-    static var nibName: String { get }
+    /// The reuse identifier to use when registering and later dequeuing a reusable cell
+    static var id: String { get }
 }

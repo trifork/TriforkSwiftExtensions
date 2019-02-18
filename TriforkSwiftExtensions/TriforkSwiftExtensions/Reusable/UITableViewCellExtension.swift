@@ -12,8 +12,4 @@ extension UITableViewCell: Reusable {
     public static var id: String {
         return NSStringFromClass(self)
     }
-
-    public static var nibName: String {
-        return NSStringFromClass(self)
-    }
 }
