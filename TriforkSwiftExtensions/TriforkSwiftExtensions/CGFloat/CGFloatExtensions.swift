@@ -9,7 +9,7 @@
 import Foundation
 
 extension CGFloat {
-    // Less silly global shortcut for π
+    /// Less silly global shortcut for π
     public static var π: CGFloat {
         return CGFloat.pi
     }
