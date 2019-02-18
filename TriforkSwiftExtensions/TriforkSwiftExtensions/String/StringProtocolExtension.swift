@@ -15,7 +15,10 @@ public extension StringProtocol where Self.Index == String.Index {
         return isEmpty ? nil : self
     }
 
-    /// Returns a trimmmed string
+
+    /// /// Returns a trimmmed string
+    ///
+    /// - Returns: Trimmed string
     public func trimmed() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
