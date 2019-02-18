@@ -29,7 +29,7 @@ jazzy run
 
 ## Contributing
 1. Fork
-2. Branch from either `development` (new features 🆕) or `master` (hot fixes 🔥)
+2. Branch from `master`
 3. Develop and write unit tests.
 4. Commit with great messages.
 5. Push when you are done.
