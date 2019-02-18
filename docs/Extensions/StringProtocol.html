@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UITableView Extension Reference</title>
+    <title>StringProtocol Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/UITableView" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/StringProtocol" class="dashAnchor"></a>
 
-    <a title="UITableView Extension Reference"></a>
+    <a title="StringProtocol Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">TriforkSwiftExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      UITableView Extension Reference
+      StringProtocol Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -181,10 +181,10 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>UITableView</h1>
+            <h1>StringProtocol</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableView</span> <span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIDataSourceTranslating</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">StringProtocol</span> <span class="p">:</span> <span class="kt">BidirectionalCollection</span><span class="p">,</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">LosslessStringConvertible</span><span class="p">,</span> <span class="kt">TextOutputStream</span><span class="p">,</span> <span class="kt">TextOutputStreamable</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">SubSequence</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -199,9 +199,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC22TriforkSwiftExtensionsE7dequeueyxSgxmAC8ReusableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/dequeue(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC22TriforkSwiftExtensionsE7dequeueyxSgxmAC8ReusableRzlF">dequeue(_:)</a>
+                    <a name="/s:Sy22TriforkSwiftExtensionsSS5IndexVABRtzrlE7trimmedSSyF"></a>
+                    <a name="//apple_ref/swift/Method/trimmed()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy22TriforkSwiftExtensionsSS5IndexVABRtzrlE7trimmedSSyF">trimmed()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -209,14 +209,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a reusable table-view cell object for the specified reuse identifier and type and adds it to the table.</p>
+                        <p>Returns a trimmmed string</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeue</span><span class="o">&lt;</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">cellClass</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Cell</span><span class="p">?</span> <span class="k">where</span> <span class="kt">Cell</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Reusable.html">Reusable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trimmed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sy22TriforkSwiftExtensionsSS5IndexVABRtzrlE7slicing4from2toSSSgx_SStF"></a>
+                    <a name="//apple_ref/swift/Method/slicing(from:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sy22TriforkSwiftExtensionsSS5IndexVABRtzrlE7slicing4from2toSSSgx_SStF">slicing(from:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new sliced string that is inbetween from and to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">slicing</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -227,12 +254,24 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>cellClass</em>
+                                <em>from</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Cell type</p>
+                                  <p>The string that the range should start at</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string the range should end at</p>
                                 </div>
                               </td>
                             </tr>
@@ -241,149 +280,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A cell of the given type</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC22TriforkSwiftExtensionsE027dequeueReusableHeaderFooterB0yxSgxmAC0G0RzlF"></a>
-                    <a name="//apple_ref/swift/Method/dequeueReusableHeaderFooterView(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC22TriforkSwiftExtensionsE027dequeueReusableHeaderFooterB0yxSgxmAC0G0RzlF">dequeueReusableHeaderFooterView(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a reusable header or footer view located by its identifier.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">dequeueReusableHeaderFooterView</span><span class="o">&lt;</span><span class="kt">HeaderFooterView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">headerFooterClass</span><span class="p">:</span> <span class="kt">HeaderFooterView</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">HeaderFooterView</span><span class="p">?</span> <span class="k">where</span> <span class="kt">HeaderFooterView</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Reusable.html">Reusable</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>headerFooterClass</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A header or footer view of the given type</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC22TriforkSwiftExtensionsE8register4cellyxm_tAC8ReusableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/register(cell:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC22TriforkSwiftExtensionsE8register4cellyxm_tAC8ReusableRzlF">register(cell:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Registers a cell with default cell id</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cell</span> <span class="nv">cellClass</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Cell</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Reusable.html">Reusable</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cellClass</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A cell type</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So11UITableViewC22TriforkSwiftExtensionsE8register12headerFooteryxm_tAC8ReusableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/register(headerFooter:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC22TriforkSwiftExtensionsE8register12headerFooteryxm_tAC8ReusableRzlF">register(headerFooter:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Registers a header or footer with default header or footer id</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">register</span><span class="o">&lt;</span><span class="kt">HeaderFooterView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">headerFooter</span> <span class="nv">headerFooterClass</span><span class="p">:</span> <span class="kt">HeaderFooterView</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="k">where</span> <span class="kt">HeaderFooterView</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Reusable.html">Reusable</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cellClass</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A cell type</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <p>If there is a valid range</p>
                       </div>
                     </section>
                   </div>
