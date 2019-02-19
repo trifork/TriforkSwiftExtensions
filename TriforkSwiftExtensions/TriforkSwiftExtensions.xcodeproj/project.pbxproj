@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C310996D22046FAF0038A97A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310996C22046FAF0038A97A /* UITableViewExtension.swift */; };
-		C310996F220470520038A97A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310996E220470520038A97A /* Reusable.swift */; };
 		C3109972220470B00038A97A /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3109971220470B00038A97A /* UITableViewCellExtension.swift */; };
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
@@ -80,7 +79,6 @@
 
 /* Begin PBXFileReference section */
 		C310996C22046FAF0038A97A /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
-		C310996E220470520038A97A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		C3109971220470B00038A97A /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		C3A5B7D22208D12E009219A4 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				C310996E220470520038A97A /* Reusable.swift */,
 				C3109971220470B00038A97A /* UITableViewCellExtension.swift */,
 				C310996C22046FAF0038A97A /* UITableViewExtension.swift */,
 				C3A5B7D32208D153009219A4 /* UITableViewHeaderFooterViewExtension.swift */,
@@ -623,7 +620,6 @@
 				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
 				E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */,
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
-				C310996F220470520038A97A /* Reusable.swift in Sources */,
 				C3109972220470B00038A97A /* UITableViewCellExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 				C37010BF221AF6370071CBF4 /* StringProtocolExtension.swift in Sources */,
