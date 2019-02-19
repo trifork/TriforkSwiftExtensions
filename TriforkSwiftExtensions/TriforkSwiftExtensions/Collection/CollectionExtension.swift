@@ -14,5 +14,10 @@ public extension Collection {
     public subscript (safe index: Index) -> Iterator.Element? {
         return self.indices.contains(index) ? self[index] : nil
     }
+    
+    /// Tells if this collection is NOT empty (contains element(s))
+    public var isNotEmpty: Bool {
+        return !isEmpty
+    }
 
 }

@@ -43,4 +43,22 @@ class UIViewExtensionTests: XCTestCase {
         XCTAssertEqual(parentMany.subviews.count, 0)
         
     }
+    
+    func testHide() {
+        let view = UIView()
+        view.isHidden = false
+        view.hide()
+        XCTAssert(view.isHidden == true, "view should be hidden when calling hide on a visible view")
+        view.hide()
+        XCTAssert(view.isHidden == true, "nothing should happen second time you call hide")
+    }
+    
+    func testShow() {
+        let view = UIView()
+        view.isHidden = true
+        view.show()
+        XCTAssert(view.isHidden == false, "view should be visible(not hidden) when calling show on an invisible view")
+        view.show()
+        XCTAssert(view.isHidden == false, "nothing should happen second time you call show")
+    }
 }

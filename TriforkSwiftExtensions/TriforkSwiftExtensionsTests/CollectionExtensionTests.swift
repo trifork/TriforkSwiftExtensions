@@ -32,4 +32,15 @@ class CollectionExtensionTests: XCTestCase {
         XCTAssert(array[safe: 10] == nil)
         XCTAssert(array[safe: 100000] == nil)
     }
+    
+    func testIsNotEmpty() {
+        let empty: [String] = []
+        XCTAssert(empty.isNotEmpty == false, "Should not be \"not empty\" when its empty")
+        
+        let single = [""]
+        XCTAssert(single.isNotEmpty, "have content, so should not be empty")
+        
+        let muliple = [42, 42, 42]
+        XCTAssert(muliple.isNotEmpty, "have content, so should not be empty")
+    }
 }

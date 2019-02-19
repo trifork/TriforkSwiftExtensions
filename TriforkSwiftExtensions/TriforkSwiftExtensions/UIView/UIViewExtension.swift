@@ -117,4 +117,15 @@ public extension UIView {
         
         return firstResponder
     }
+    
+    /// Makes this view hidden if it was visible before.
+    public func hide() {
+        isHidden = true
+    }
+    
+    /// Makes this view visible if it was hidden before.
+    public func show() {
+        isHidden = false
+    }
+    
 }
