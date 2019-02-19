@@ -9,6 +9,8 @@
 import UIKit
 
 extension UITableViewCell {
+
+    /// Id of cell. Used to register and deque
     public static var id: String {
         return NSStringFromClass(self)
     }
