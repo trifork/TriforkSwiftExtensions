@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableViewHeaderFooterView: Reusable {
+extension UITableViewHeaderFooterView {
     public static var id: String {
         return NSStringFromClass(self)
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITableViewCell: Reusable {
+extension UITableViewCell {
     public static var id: String {
         return NSStringFromClass(self)
     }
