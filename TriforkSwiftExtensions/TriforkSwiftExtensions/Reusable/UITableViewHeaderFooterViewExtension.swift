@@ -11,7 +11,7 @@ import UIKit
 extension UITableViewHeaderFooterView {
 
     /// Id of header or footer view. Used to register and deque
-    public static var id: String {
+    static var id: String {
         return NSStringFromClass(self)
     }
 }
