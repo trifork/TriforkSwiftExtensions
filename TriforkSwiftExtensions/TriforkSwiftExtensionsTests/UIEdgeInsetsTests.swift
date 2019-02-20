@@ -28,4 +28,10 @@ class UIEdgeInsetsTests: XCTestCase {
         XCTAssert(inset.bottom == 10, "Inset should be 10")
     }
     
+    func testSum() {
+        let inset: UIEdgeInsets = UIEdgeInsets(top: 5, left: 6, bottom: 7, right: 8)
+        XCTAssert(inset.horizontalSum == 14, "Horizontal sum should be 14")
+        XCTAssert(inset.verticalSum == 12, "Vertical sum should be 12")
+    }
+    
 }
