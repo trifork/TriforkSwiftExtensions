@@ -6,16 +6,30 @@
 //  Copyright © 2017 Trifork A/S. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIView {
     
+    /// Rounds the left and right sides of the receiver.
+    ///
+    /// This will also turn a rectangled view into a circle if it is a square.
+    public func roundForHorizontalEdges() {
+        self.layer.cornerRadius = self.bounds.height / 2.0
+    }
+    
+    /// Rounds the top and bottom sides of the receiver.
+    ///
+    /// This will also turn a rectangled view into a circle if it is a square.
+    public func roundForVerticalEdges() {
+        self.layer.cornerRadius = self.bounds.width / 2.0
+    }
+    
     /// Turns a square view into a circle.
+    @available(*, deprecated, message: "This function has issues when AutoLayout decides the sizes (sometimes AL causes decimals in `size` which makes the extension log an error and not perform the `cornerRadius` adjustment. Replaced by `roundForHorizontalEdges` and `roundForVerticalEdges`")
     public func circle() {
         if self.bounds.width == self.bounds.height {
             self.layer.cornerRadius = self.bounds.width / 2.0
-        }
-        else {
+        } else {
             TSELogger.log(message: "The view must be a square to make it a circle.")
         }
     }
