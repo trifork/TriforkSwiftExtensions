@@ -66,6 +66,36 @@ final class StringProtocolTests: XCTestCase {
         XCTAssertNil(testString)
     }
 
+    func testStringSlicingWithNoEnd() {
+        let testString = "App=Foo&App=Bar".slicing(from: "&")
+
+        XCTAssertEqual(testString, "App=Bar")
+    }
+
+    func testStringSlicingWithNoEndAndInvalidEnd() {
+        let testString = "App=Foo&App=Bar".slicing(from: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testStringSlicingWithNoStart() {
+        let testString = "App=Foo&App=Bar".slicing(to: "&")
+
+        XCTAssertEqual(testString, "App=Foo")
+    }
+
+    func testStringSlicingWithNoStartAndInvalidEnd() {
+        let testString = "App=Foo&App=Bar".slicing(to: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testStringSlicingWithNoStartAndEnd() {
+        let testString = "App=Foo&App=Bar".slicing()
+
+        XCTAssertNil(testString)
+    }
+
     func testStringSlicingWithInvalidFromAndTo() {
         let testString = Substring("App=Foo&App=Bar").slicing(from: "!", to: "!")
 
@@ -92,6 +122,36 @@ final class StringProtocolTests: XCTestCase {
 
     func testSubstringSlicingWithInvalidFromAndTo() {
         let testString = Substring("App=Foo&App=Bar").slicing(from: "!", to: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicingWithNoEnd() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "&")
+
+        XCTAssertEqual(testString, "App=Bar")
+    }
+
+    func testSubstringSlicingWithNoEndAndInvalidEnd() {
+        let testString = Substring("App=Foo&App=Bar").slicing(from: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicingWithNoStart() {
+        let testString = Substring("App=Foo&App=Bar").slicing(to: "&")
+
+        XCTAssertEqual(testString, "App=Foo")
+    }
+
+    func testSubstringSlicingWithNoStartAndInvalidEnd() {
+        let testString = Substring("App=Foo&App=Bar").slicing(to: "!")
+
+        XCTAssertNil(testString)
+    }
+
+    func testSubstringSlicingWithNoStartAndEnd() {
+        let testString = Substring("App=Foo&App=Bar").slicing()
 
         XCTAssertNil(testString)
     }
