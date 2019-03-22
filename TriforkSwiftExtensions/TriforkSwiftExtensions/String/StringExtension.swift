@@ -77,20 +77,14 @@ public extension String {
     
     /// Returns all components from the regular expression matching
     public func allMatches(withRegularExpression pattern: String) -> [String] {
-        if let matcher = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options()) {
-            let str = self as NSString
-            var matches = [String]()
-            matcher.enumerateMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, str.length), using: { (optResult, flags, stop) -> Void in
-                if let result = optResult, result.numberOfRanges > 1 {
-                    for t in (1 ... (result.numberOfRanges - 1)) {
-                        let s = str.substring(with: result.range(at: t))
-                        matches.append(s)
-                    }
-                }
-            })
-            return matches
+        guard let matcher = try? NSRegularExpression(pattern: pattern, options: []) else {
+            return []
         }
-        return []
+        return matcher.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+            .compactMap { result in
+                guard let range = Range(result.range, in: self) else { return nil }
+                return String(self[range])
+        }
     }
     
     //MARK: - Validation
