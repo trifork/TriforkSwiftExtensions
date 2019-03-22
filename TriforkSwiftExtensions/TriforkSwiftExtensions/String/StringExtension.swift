@@ -53,29 +53,55 @@ public extension String {
     }
     
     //MARK: - RegEx
-    
+
     /// Check if the receiver matches the regular expression defined in a string format.
-    /// 
-    /// The check is case insensitive
-    public func matches(withRegularExpression regExp: String) -> Bool {
-        let result: Bool
+    ///
+    /// - Parameters:
+    ///   - regExp: Regular expression to match
+    ///   - options: Options the expression uses. Default is empty
+    /// - Returns: return `true` if there is one match or more.
+    public func isMatching(regEx regExp: String, options: NSRegularExpression.Options = []) -> Bool {
         do {
-            let matcher: NSRegularExpression = try NSRegularExpression(pattern: regExp, options: .caseInsensitive)
-            result = self.matches(withRegularExpression: matcher)
+            let matcher: NSRegularExpression = try NSRegularExpression(pattern: regExp, options: options)
+            let searchRange = NSRange(location: 0, length: self.length)
+            return matcher.firstMatch(in: self, options: [], range: searchRange) != nil
         } catch let error as NSError {
-            result = false
             TSELogger.log(message: "Unable to create regular expression from: \(regExp): \(error.localizedDescription)")
+            return false
         }
-        return result
     }
-    
-    /// Checks if the receiver matches a regular expression.
-    public func matches(withRegularExpression regExp: NSRegularExpression) -> Bool {
-        let searchRange: NSRange = NSRange(location: 0, length: self.length)
-        return regExp.numberOfMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: searchRange) > 0
+
+    /// Check if the receiver matches the regular expression defined in a string format.
+    ///
+    /// The check is case insensitive
+    @available(*, deprecated, message: "This function is replaced by `isMatching`. isMatching is **NOT** not `.caseInsensitive`. It can be added as an option.", renamed: "isMatching")
+    public func matches(withRegularExpression regExp: String) -> Bool {
+        return isMatching(regEx: regExp, options: .caseInsensitive)
     }
-    
+
     /// Returns all components from the regular expression matching
+    ///
+    /// - Parameter pattern: regular expression. If not valid it return an empty array.
+    /// - Returns: A list of possible results. First item in list is full match, the rest is possible groups.
+    public func matches(regEx pattern: String) -> [String] {
+        guard let matcher = try? NSRegularExpression(pattern: pattern, options: []) else {
+            return []
+        }
+
+        return matcher.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+            .flatMap { result -> [String] in
+                var values = [String]()
+                for i in 0..<result.numberOfRanges {
+                    guard let range = Range(result.range(at: i), in: self) else { continue }
+                    values.append(String(self[range]))
+                }
+
+                return values
+        }
+    }
+
+    /// Returns all components from the regular expression matching
+    @available(*, deprecated, message: "This function removes the 'fullmatch'. Pleae use the new one.", renamed: "matches")
     public func allMatches(withRegularExpression pattern: String) -> [String] {
         if let matcher = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options()) {
             let str = self as NSString
@@ -102,7 +128,7 @@ public extension String {
     
     /// Check if the string contains a valid email
     public var isEmail: Bool {
-        return self.matches(withRegularExpression: "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$")
+        return self.isMatching(regEx: "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$")
     }
     
     //MARK: - Other
