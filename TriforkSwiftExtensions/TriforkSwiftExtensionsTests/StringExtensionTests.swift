@@ -60,22 +60,26 @@ class StringExtensionTests: XCTestCase {
     
     func testMatchesRegExObject() {
         let regExHtmlPattern: String = "([*_])(.+?)\\1" //Note that the RegEx format of iOS needs special treatment.
-        let regEx: NSRegularExpression = try! NSRegularExpression(pattern: regExHtmlPattern, options: .caseInsensitive)
-        XCTAssertFalse("THERE IS NO ASTERISKS OR UNDERSCORES IN ME 😤".matches(withRegularExpression: regEx))
-        XCTAssertTrue("Hey-Hey! _Look_ at *me*!".matches(withRegularExpression: regEx))
-        XCTAssertFalse("I *wish I could be_ just as cool as the string above.".matches(withRegularExpression: regEx))
+        XCTAssertFalse("THERE IS NO ASTERISKS OR UNDERSCORES IN ME 😤".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
+        XCTAssertTrue("Hey-Hey! _Look_ at *me*!".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
+        XCTAssertFalse("I *wish I could be_ just as cool as the string above.".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
     }
     
     func testMatchesRegExString() {
         let emailPattern: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}" //Note that the RegEx format of iOS needs special treatment.
-        XCTAssertFalse("tkc[at]trifork[dot]com".matches(withRegularExpression: emailPattern))
-        XCTAssertTrue("tkc@trifork.com".matches(withRegularExpression: emailPattern))
-        XCTAssertFalse("tkc@triforkcom".matches(withRegularExpression: emailPattern))
+        XCTAssertFalse("tkc[at]trifork[dot]com".isMatching(regEx: emailPattern))
+        XCTAssertTrue("tkc@trifork.com".isMatching(regEx: emailPattern))
+        XCTAssertFalse("tkc@triforkcom".isMatching(regEx: emailPattern))
     }
     
-    func testAllMatchesWithThreeNames() {
-        let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.
+    func testAllMatches() {
+        let namePattern: String = "(Thomas)" //Note that the RegEx format of iOS needs special treatment.
         XCTAssertEqual("Find my name: Thomas. So my name is Thomas. Are there any Thomases here?".allMatches(withRegularExpression: namePattern).count, 3)
+    }
+
+    func testMatchesWithThreeNames() {
+        let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.
+        XCTAssertEqual("Find my name: Thomas. So my name is Thomas. Are there any Thomases here?".matches(regEx: namePattern).count, 3)
     }
 
     func testAllMatchesWithThreeUrls() {
@@ -86,12 +90,12 @@ class StringExtensionTests: XCTestCase {
                             """
 
         let urlPattern = "https://trifork.com/[\\S]+"
-        XCTAssertEqual(urls.allMatches(withRegularExpression: urlPattern).count, 3)
+        XCTAssertEqual(urls.matches(regEx: urlPattern).count, 3)
     }
 
     func testAllMatchesWithOneName() {
         let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.
-        XCTAssertEqual("Find my name: Thomas.".allMatches(withRegularExpression: namePattern).count, 1)
+        XCTAssertEqual("Find my name: Thomas.".matches(regEx: namePattern).count, 1)
     }
     
     func testIsEmail() {
