@@ -11,6 +11,15 @@ import XCTest
 
 class UIViewExtensionTests: XCTestCase {
     
+    func testCircle() {
+        let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 101))
+        view.circle()
+        XCTAssertEqual(view.layer.cornerRadius, 0.0)
+        view.frame.size.height = 100
+        view.circle()
+        XCTAssertEqual(view.layer.cornerRadius, 50.0)
+    }
+    
     func testRoundEdge() {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 500))
         view.roundForHorizontalEdges()
