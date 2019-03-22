@@ -1,19 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewCellExtension.swift",
-      "line": 12,
-      "symbol": "UITableViewCell.id",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/kimdevos/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Reusable/UITableViewHeaderFooterViewExtension.swift",
-      "line": 12,
-      "symbol": "UITableViewHeaderFooterView.id",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    }
+
   ],
-  "source_directory": "/Users/kimdevos/Repositories/TriforkSwiftExtensions"
+  "source_directory": "/Users/thomas/Repositories/TriforkSwiftExtensions"
 }

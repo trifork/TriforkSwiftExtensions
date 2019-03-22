@@ -97,7 +97,23 @@ class DateExtensionTests: XCTestCase {
             let midnightValue: Int = Calendar.current.component(component, from: self.date.midnightDate)
             XCTAssertEqual(midnightValue, 0)
         }
-        
-        
+    }
+
+    func testDaysAgoWithTodayDate() {
+        let date = Date()
+
+        XCTAssertEqual(date.daysAgo, 0)
+    }
+
+    func testDaysAgoWithYesterdayDate() {
+        let date = Date().addingTimeInterval(-3600 * 24)
+
+        XCTAssertEqual(date.daysAgo, 1)
+    }
+
+    func testDaysAgoWithAWeekAgo() {
+        let date = Date().addingTimeInterval(-3600 * 24 * 7)
+
+        XCTAssertEqual(date.daysAgo, 7)
     }
 }

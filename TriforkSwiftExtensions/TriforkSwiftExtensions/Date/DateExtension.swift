@@ -70,8 +70,7 @@ public extension Date {
     public func asISO8601WithoutMsString() -> String {
         return Formatter.iso8601WithoutMs.string(from: self)
     }
-    
-    
+
     /// Constructs a Date instance based on a ISO8601 formatted string.
     public static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
         return Formatter.iso8601WithoutMs.date(from: iso8601StringWithoutMs)
@@ -91,8 +90,12 @@ public extension Date {
     public var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
     }
-    
-    
+
+    /// Returns the days difference between two dates.
+    public var daysAgo: Int? {
+        return Calendar.current.dateComponents([.day], from: self, to: Date()).day
+    }
+
     /// Returns a copy of the receiver, where the hours, minutes, seconds and nanoseconds are set to zero.
     public var midnightDate: Date {
         var date: Date = self
