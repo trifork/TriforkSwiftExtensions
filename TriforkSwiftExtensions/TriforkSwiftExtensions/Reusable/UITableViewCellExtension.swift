@@ -8,8 +8,10 @@
 
 import UIKit
 
-extension UITableViewCell: Reusable {
-    public static var id: String {
+extension UITableViewCell {
+
+    /// Id of cell. Used to register and deque
+    static var id: String {
         return NSStringFromClass(self)
     }
 }

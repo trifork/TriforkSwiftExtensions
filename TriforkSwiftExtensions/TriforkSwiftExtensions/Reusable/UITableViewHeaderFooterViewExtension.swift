@@ -8,8 +8,10 @@
 
 import UIKit
 
-extension UITableViewHeaderFooterView: Reusable {
-    public static var id: String {
+extension UITableViewHeaderFooterView {
+
+    /// Id of header or footer view. Used to register and deque
+    static var id: String {
         return NSStringFromClass(self)
     }
 }

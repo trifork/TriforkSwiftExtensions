@@ -14,7 +14,7 @@ extension UITableView {
     ///
     /// - Parameter cellClass: Cell type
     /// - Returns: A cell of the given type
-    public func dequeue<Cell: Reusable>(_ cellClass: Cell.Type) -> Cell? {
+    public func dequeue<Cell: UITableViewCell>(_ cellClass: Cell.Type) -> Cell? {
         return dequeueReusableCell(withIdentifier: Cell.id) as? Cell
     }
 
@@ -22,21 +22,21 @@ extension UITableView {
     ///
     /// - Parameter headerFooterClass:
     /// - Returns: A header or footer view of the given type
-    public func dequeueReusableHeaderFooterView<HeaderFooterView: Reusable>(_ headerFooterClass: HeaderFooterView.Type) -> HeaderFooterView? {
+    public func dequeueReusableHeaderFooterView<HeaderFooterView: UITableViewHeaderFooterView>(_ headerFooterClass: HeaderFooterView.Type) -> HeaderFooterView? {
         return dequeueReusableHeaderFooterView(withIdentifier: headerFooterClass.id) as? HeaderFooterView
     }
 
     /// Registers a cell with default cell id
     ///
     /// - Parameter cellClass: A cell type
-    public func register<Cell: Reusable>(cell cellClass: Cell.Type) {
+    public func register<Cell: UITableViewCell>(cell cellClass: Cell.Type) {
         self.register(cellClass, forCellReuseIdentifier: cellClass.id)
     }
 
     /// Registers a header or footer with default header or footer id
     ///
     /// - Parameter cellClass: A cell type
-    public func register<HeaderFooterView: Reusable>(headerFooter headerFooterClass: HeaderFooterView.Type) {
+    public func register<HeaderFooterView: UITableViewHeaderFooterView>(headerFooter headerFooterClass: HeaderFooterView.Type) {
         self.register(headerFooterClass.self, forHeaderFooterViewReuseIdentifier: headerFooterClass.id)
     }
 }
