@@ -199,6 +199,64 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So6UIViewC22TriforkSwiftExtensionsE23roundForHorizontalEdgesyyF"></a>
+                    <a name="//apple_ref/swift/Method/roundForHorizontalEdges()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE23roundForHorizontalEdgesyyF">roundForHorizontalEdges()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rounds the left and right sides of the receiver.</p>
+
+<p>This will also turn a rectangled view into a circle if it is a square.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">roundForHorizontalEdges</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC22TriforkSwiftExtensionsE21roundForVerticalEdgesyyF"></a>
+                    <a name="//apple_ref/swift/Method/roundForVerticalEdges()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE21roundForVerticalEdgesyyF">roundForVerticalEdges()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rounds the top and bottom sides of the receiver.</p>
+
+<p>This will also turn a rectangled view into a circle if it is a square.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">roundForVerticalEdges</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:So6UIViewC22TriforkSwiftExtensionsE6circleyyF"></a>
                     <a name="//apple_ref/swift/Method/circle()" class="dashAnchor"></a>
                     <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE6circleyyF">circle()</a>
@@ -216,7 +274,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">circle</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "This function has issues when AutoLayout decides the sizes (sometimes AL causes decimals in `size` which makes the extension log an error and not perform the `cornerRadius` adjustment. Replaced by `roundForHorizontalEdges` and `roundForVerticalEdges`")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">circle</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
