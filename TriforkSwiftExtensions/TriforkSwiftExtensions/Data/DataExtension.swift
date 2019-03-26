@@ -11,12 +11,12 @@ import Foundation
 public extension Data {
     
     /// Converts to string if possible, otherwise it returns `nil`
-    public func toString() -> String? {
+    func toString() -> String? {
         return String(data: self, encoding: .utf8)
     }
     
     /// Converts to hex-string.
-    public func toHexString() -> String {
+    func toHexString() -> String {
         var string: String = String()
         
         var array: [UInt8] = [UInt8](repeating: 0x0, count: self.count)

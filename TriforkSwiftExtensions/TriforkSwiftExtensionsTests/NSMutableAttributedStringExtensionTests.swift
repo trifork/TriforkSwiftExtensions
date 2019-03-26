@@ -29,13 +29,13 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         attributedString.appendString(text: text, withFont: UIFont.boldSystemFont(ofSize: 15.0), andColor: UIColor.magenta)
         XCTAssert(attributedString.string == text)
         
-        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         self.assert(attributes: attributes, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
         
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
         
-        let attributes2: [NSAttributedStringKey: Any] = attributedString.attributes(at: text.count, effectiveRange: nil)
+        let attributes2: [NSAttributedString.Key: Any] = attributedString.attributes(at: text.count, effectiveRange: nil)
         
         let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
         let expectedFontName: String
@@ -49,15 +49,15 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         self.assert(attributes: attributes2, fontName: expectedFontName, fontSize: 50.0, color: nil)
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
-        let attributes3: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        let attributes3: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
         self.assert(attributes: attributes3, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
     }
     
     func testInitWithLineSpacing() {
         let lineSpacing: CGFloat = 6.0
         let attributedString: NSMutableAttributedString = NSMutableAttributedString(string: "text", withLineSpacing: lineSpacing)
-        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
     }
     
     func testSetLineHeihgtAndLineSpacing() {
@@ -81,15 +81,15 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
     }
     
     private func assert(lineSpacing: CGFloat, lineHeight: CGFloat, forAttributedString attributedString: NSMutableAttributedString) {
-        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
     }
     
-    private func assert(attributes: [NSAttributedStringKey: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
-        XCTAssert((attributes[NSAttributedStringKey.foregroundColor] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
+    private func assert(attributes: [NSAttributedString.Key: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
+        XCTAssert((attributes[NSAttributedString.Key.foregroundColor] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
     }
 }

@@ -11,7 +11,7 @@ public extension StringProtocol where Self.Index == String.Index {
     /// Returns nil if empty
     ///
     /// - Returns: nil if empty
-    public func nilIfEmpty() -> Self? {
+    func nilIfEmpty() -> Self? {
         return isEmpty ? nil : self
     }
 
@@ -19,7 +19,7 @@ public extension StringProtocol where Self.Index == String.Index {
     /// /// Returns a trimmmed string
     ///
     /// - Returns: Trimmed string
-    public func trimmed() -> String {
+    func trimmed() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
@@ -29,7 +29,7 @@ public extension StringProtocol where Self.Index == String.Index {
     ///   - from: The string that the range should start at. Use nil if it should start from the beginning
     ///   - to: The string the range should end at. Use nil if it should use the end.
     /// - Returns: If there is a valid range. Nil if `from` **and** `to` is nil
-    public func slicing(from: Self? = nil, to: Self? = nil) -> String? {
+    func slicing(from: Self? = nil, to: Self? = nil) -> String? {
         if from == nil && to == nil {
             return nil
         }

@@ -11,7 +11,7 @@ import Foundation
 public extension UIStackView {
     
     /// Removes all arranged subviews in receiver.
-    public func removeAllArrangedViews() {
+    func removeAllArrangedViews() {
         for subView: UIView in self.arrangedSubviews {
             subView.removeFromSuperview()
         }

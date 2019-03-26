@@ -11,7 +11,7 @@ import Foundation
 public extension URL {
 
     /// Adding paramters to URL and returns new URL.
-    public func adding(parameters: [String: String]) -> URL {
+    func adding(parameters: [String: String]) -> URL {
         
         var urlString: String = self.absoluteString
         
@@ -27,7 +27,7 @@ public extension URL {
     /// Gets the value of a query parameter in the receiver.
     ///
     /// E.g. my-url://withSomethingCool?id=pewpew, the value of `id` will be `pewpew`.
-    public func valueOfQueryParameter(withName name: String) -> String? {
+    func valueOfQueryParameter(withName name: String) -> String? {
         
         var value: String?
         if let components: URLComponents = URLComponents(string: self.absoluteString) {
