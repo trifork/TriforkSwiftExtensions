@@ -11,7 +11,7 @@ import Foundation
 public extension UIColor {
 
     /// Accepts color string of the form: rgb 158 159 165
-    public convenience init?(rgb: String) {
+    convenience init?(rgb: String) {
         let parts: [String] = rgb.matches(regEx: "rgb ([0-9]+) ([0-9]+) ([0-9]+)")
         if parts.count == 4 {
             let ints: [CGFloat] = parts.compactMap { Int($0) }.map { CGFloat($0) }

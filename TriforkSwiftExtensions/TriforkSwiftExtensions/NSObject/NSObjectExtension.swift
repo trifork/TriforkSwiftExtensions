@@ -11,7 +11,7 @@ import Foundation
 public extension NSObject {
     
     /// Returns the name of the receiver's class.
-    public var nameOfClass: String {
+    var nameOfClass: String {
         return String(describing: type(of: self)).components(separatedBy: ".").last ?? "Unknown"
     }
 

@@ -11,7 +11,7 @@ import LocalAuthentication
 
 public extension LAContext {
     /// Supported biometric types for authentication
-    public enum BiometricType: String {
+    enum BiometricType: String {
         /// None
         case none
         
@@ -39,7 +39,7 @@ public extension LAContext {
     }
     
     /// Returns the available biometric type of the device
-    public static var biometricType: BiometricType {
+    static var biometricType: BiometricType {
         var error: NSError?
         let context: LAContext = LAContext()
         
@@ -55,6 +55,8 @@ public extension LAContext {
                 return .touchID
             case .faceID:
                 return .faceID
+            @unknown default:
+                return .none
             }
         } else {
             return  context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touchID : .none

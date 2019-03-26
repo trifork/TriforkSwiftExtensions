@@ -14,7 +14,7 @@ public extension Numeric {
     /// Examples:
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47"
-    public func string(withMaxDigits maxDigits: Int) -> String? {
+    func string(withMaxDigits maxDigits: Int) -> String? {
         guard let number = self as? NSNumber else { return nil }
         let formatter = NumberFormatter()
         formatter.maximumSignificantDigits = maxDigits
@@ -26,7 +26,7 @@ public extension Numeric {
     /// Examples:
     /// - 45.34234 with `maxDigits` set to 4, becomes "45.34"
     /// - 47 with `maxDigits` set to 4, becomes "47.00"
-    public func string(withDigits digits: Int) -> String? {
+    func string(withDigits digits: Int) -> String? {
         guard let number = self as? NSNumber else { return nil }
         let formatter = NumberFormatter()
         formatter.maximumSignificantDigits = digits

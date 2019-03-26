@@ -152,16 +152,16 @@ class StringExtensionTests: XCTestCase {
             .lineBreakMode(lineBreakMode)
         ])
         
-        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.alignment == textAlignment, "The text alignment should be \(textAlignment)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineBreakMode == lineBreakMode, "The line break mode should be \(lineBreakMode)")
+        let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.alignment == textAlignment, "The text alignment should be \(textAlignment)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineBreakMode == lineBreakMode, "The line break mode should be \(lineBreakMode)")
         
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
-        XCTAssert((attributes[NSAttributedStringKey.foregroundColor] as? UIColor) == color, "The color should be \(color.description)")
-        XCTAssert((attributes[NSAttributedStringKey.kern] as? CGFloat) == letterSpacing, "The letter spacing should be \(String(describing: letterSpacing))")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
+        XCTAssert((attributes[NSAttributedString.Key.foregroundColor] as? UIColor) == color, "The color should be \(color.description)")
+        XCTAssert((attributes[NSAttributedString.Key.kern] as? CGFloat) == letterSpacing, "The letter spacing should be \(String(describing: letterSpacing))")
     }
 }
