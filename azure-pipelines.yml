@@ -20,7 +20,7 @@ jobs:
       configuration: 'Debug'
       xcWorkspacePath: '**/TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj'
       xcodeVersion: 'specifyPath'
-      xcodeDeveloperDir: $DEVELOPER_DIR
+      xcodeDeveloperDir: $(DEVELOPER_DIR)
       signingOption: 'auto'
       useXcpretty: true
       publishJUnitResults: true
