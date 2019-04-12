@@ -5,12 +5,12 @@ trigger:
 jobs:
 - job: Xcode_test
   pool:
-    vmImage: 'macOS-10.13'
+    vmImage: 'macOS-10.14'
   strategy:
     maxParallel: 10
     matrix:
-      xcode101:
-        DEVELOPER_DIR: /Applications/Xcode_10.1.app
+      xcode102:
+        DEVELOPER_DIR: /Applications/Xcode_10.2.app
   steps:
   - task: Xcode@5
     inputs:
@@ -20,7 +20,6 @@ jobs:
       configuration: 'Debug'
       xcWorkspacePath: '**/TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj'
       xcodeVersion: 'specifyPath'
-      xcodeDeveloperDir: '/Applications/Xcode_10.1.app'
       signingOption: 'auto'
       useXcpretty: true
       publishJUnitResults: true
@@ -30,9 +29,9 @@ jobs:
 
 - job: Danger
   pool:
-    vmImage: 'macOS-10.13'
+    vmImage: 'macOS-10.14'
     variables:
-      DEVELOPER_DIR: /Applications/Xcode_10.1.app
+      DEVELOPER_DIR: /Applications/Xcode_10.2.app
   steps:
     - script: bundle update --bundler
       displayName: Update bundler
