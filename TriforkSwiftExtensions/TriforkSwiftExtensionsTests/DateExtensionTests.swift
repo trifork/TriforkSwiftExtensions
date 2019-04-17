@@ -14,14 +14,10 @@ class DateExtensionTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        testDate = Date(timeIntervalSince1970: 1503924052)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+
     func testToStringWithStyles() {
         let locale: Locale = Locale(identifier: "en-US")
         let timeZone: TimeZone = TimeZone(identifier: "Europe/Copenhagen")!
