@@ -105,6 +105,9 @@ public extension Date {
         }
         return date
     }
-    
+
+    func date(byAdding component: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    }
 }
 
