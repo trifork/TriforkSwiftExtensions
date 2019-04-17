@@ -112,4 +112,22 @@ class DateExtensionTests: XCTestCase {
 
         XCTAssertEqual(date.daysAgo, 7)
     }
+
+    func testDateByAddingTomorrow() {
+        let date = Date().date(byAdding: .day, value: 1)
+
+        XCTAssertTrue(date.isTomorrow)
+    }
+
+    func testDateByAddingYesterday() {
+        let date = Date().date(byAdding: .day, value: -1)
+
+        XCTAssertTrue(date.isYesterday)
+    }
+
+    func testDateByAddingSeconds() {
+        let date = testDate.date(byAdding: .second, value: 2)
+
+        XCTAssertEqual(date.timeIntervalSince1970, testDate.timeIntervalSince1970 + 2)
+    }
 }
