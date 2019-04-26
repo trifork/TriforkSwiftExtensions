@@ -17,7 +17,7 @@ class UITextViewExtensionTests: XCTestCase {
         XCTAssertNotEqual(textView.textContainerInset, .zero)
         XCTAssertNotEqual(textView.textContainer.lineFragmentPadding, 0)
 
-        textView.setZeroInset()
+        textView.setTextContainerInsetToZero()
 
         XCTAssertEqual(textView.textContainerInset, .zero)
         XCTAssertEqual(textView.textContainer.lineFragmentPadding, 0)
