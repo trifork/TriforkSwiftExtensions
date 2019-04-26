@@ -9,7 +9,7 @@
 import UIKit
 
 extension UITextView {
-    func setZeroInset() {
+    func setTextContainerInsetToZero() {
         textContainerInset = .zero
         textContainer.lineFragmentPadding = 0
     }
