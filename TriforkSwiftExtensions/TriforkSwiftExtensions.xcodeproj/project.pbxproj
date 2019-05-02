@@ -67,6 +67,8 @@
 		E9DF344B1F4D768F00BB36BB /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF344A1F4D768F00BB36BB /* ArrayExtensionTests.swift */; };
 		E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF346B1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift */; };
 		E9DF346E1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */; };
+		E9EA2CCE227AF3FA00944902 /* ResultClosureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA2CCD227AF3FA00944902 /* ResultClosureExtension.swift */; };
+		E9EA2CD0227B021900944902 /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EA2CCF227B021900944902 /* ResultTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		E9DF344A1F4D768F00BB36BB /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		E9DF346B1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
 		E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtensionTests.swift; sourceTree = "<group>"; };
+		E9EA2CCD227AF3FA00944902 /* ResultClosureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultClosureExtension.swift; sourceTree = "<group>"; };
+		E9EA2CCF227B021900944902 /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +420,7 @@
 				E92269061F53E18700DAEFAE /* NSObject */,
 				C3A9C2EA21CCED2F007DF893 /* Numeric */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
+				E9EA2CCC227AF3ED00944902 /* Result */,
 				C3A5B7D22208D12E009219A4 /* Reusable */,
 				E92269151F53F93300DAEFAE /* String */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
@@ -465,6 +470,7 @@
 				C35BD0D32272EB9F00B24F3B /* UITextViewExtensionTest.swift */,
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
+				E9EA2CCF227B021900944902 /* ResultTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -491,6 +497,14 @@
 				E9DF346B1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift */,
 			);
 			path = NSAttributedString;
+			sourceTree = "<group>";
+		};
+		E9EA2CCC227AF3ED00944902 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				E9EA2CCD227AF3FA00944902 /* ResultClosureExtension.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +649,7 @@
 				E922691C1F5441C400DAEFAE /* DataExtension.swift in Sources */,
 				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
 				E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */,
+				E9EA2CCE227AF3FA00944902 /* ResultClosureExtension.swift in Sources */,
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				C3109972220470B00038A97A /* UITableViewCellExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
@@ -659,6 +674,7 @@
 				E92269281F54510F00DAEFAE /* URLExtensionTests.swift in Sources */,
 				E9DF34461F4D747300BB36BB /* CollectionExtensionTests.swift in Sources */,
 				E92269351F55314900DAEFAE /* UIDeviceExtensionTests.swift in Sources */,
+				E9EA2CD0227B021900944902 /* ResultTests.swift in Sources */,
 				E92269411F55495800DAEFAE /* UIViewExtensionTests.swift in Sources */,
 				E922691E1F54435D00DAEFAE /* DataExtensionTests.swift in Sources */,
 				E92269191F53F9B400DAEFAE /* StringExtensionTests.swift in Sources */,
