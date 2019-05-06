@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Optional Extension Reference</title>
+    <title>Result Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Optional" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Result" class="dashAnchor"></a>
 
-    <a title="Optional Extension Reference"></a>
+    <a title="Result Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">TriforkSwiftExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      Optional Extension Reference
+      Result Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -170,11 +170,11 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>Optional</h1>
+            <h1>Result</h1>
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight swift"><code><span class="kd">@_frozen</span>
-<span class="kd">enum</span> <span class="kt">Optional</span><span class="o">&lt;</span><span class="kt">Wrapped</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ExpressibleByNilLiteral</span></code></pre>
+<span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Failure</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
@@ -189,9 +189,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sq22TriforkSwiftExtensionsE11passToOrNil6actionqd__SgADxXE_tlF"></a>
-                    <a name="//apple_ref/swift/Method/passToOrNil(action:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sq22TriforkSwiftExtensionsE11passToOrNil6actionqd__SgADxXE_tlF">passToOrNil(action:)</a>
+                    <a name="/s:s6ResultO22TriforkSwiftExtensionsE7successyAByxq_GyxXEF"></a>
+                    <a name="//apple_ref/swift/Method/success(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6ResultO22TriforkSwiftExtensionsE7successyAByxq_GyxXEF">success(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -199,14 +199,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Passes the receiver into <code>action</code> as a parameter if the receiver is not <code>nil</code>, otherwise the result of this function will be <code>nil</code></p>
+                        <p><code>handler</code> is only called upon success, with the value as parameter.</p>
+
+<p>Returns the receiver, to allow further operations, e.g. <code><a href="../Extensions/Result.html#/s:s6ResultO22TriforkSwiftExtensionsE7failureyAByxq_Gyq_XEF">failure(_:)</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">passToOrNil</span><span class="o">&lt;</span><span class="kt">ReturnType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="p">(</span><span class="kt">Wrapped</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ReturnType</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ReturnType</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">success</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">((</span><span class="kt">Success</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -216,9 +219,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sq22TriforkSwiftExtensionsE6doWithyyyxXEF"></a>
-                    <a name="//apple_ref/swift/Method/doWith(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sq22TriforkSwiftExtensionsE6doWithyyyxXEF">doWith(_:)</a>
+                    <a name="/s:s6ResultO22TriforkSwiftExtensionsE7failureyAByxq_Gyq_XEF"></a>
+                    <a name="//apple_ref/swift/Method/failure(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6ResultO22TriforkSwiftExtensionsE7failureyAByxq_Gyq_XEF">failure(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -226,76 +229,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unwraps receiver and passes it as parameter in the <code>doBlock</code>. If the receiver is nil, then the block will not be invoked.</p>
+                        <p><code>handler</code> is only called upon failure, with the error as parameter.</p>
+
+<p>Returns the receiver, to allow further operations, e.g. <code><a href="../Extensions/Result.html#/s:s6ResultO22TriforkSwiftExtensionsE7successyAByxq_GyxXEF">success(_:)</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">doWith</span><span class="p">(</span><span class="n">_</span> <span class="nv">doBlock</span><span class="p">:</span> <span class="p">(</span><span class="kt">Wrapped</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sq22TriforkSwiftExtensionsSSRszlE12isNilOrEmptySbvp"></a>
-                    <a name="//apple_ref/swift/Property/isNilOrEmpty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sq22TriforkSwiftExtensionsSSRszlE12isNilOrEmptySbvp">isNilOrEmpty</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns <code>true</code> if the Optional string is either nil or empty.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isNilOrEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:Sq22TriforkSwiftExtensionsSlRzlE12isNilOrEmptySbvp"></a>
-                    <a name="//apple_ref/swift/Property/isNilOrEmpty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sq22TriforkSwiftExtensionsSlRzlE12isNilOrEmptySbvp">isNilOrEmpty</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns <code>true</code> if the Optional Collection is either nil or empty.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isNilOrEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">failure</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">((</span><span class="kt">Failure</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
