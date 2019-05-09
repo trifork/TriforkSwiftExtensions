@@ -31,4 +31,11 @@ public extension Result {
         }
         return self
     }
+    
+    /// Returns a `Result.success(Void())` statement.
+    ///
+    /// Useful when handling operations, which can fail, but does not return anything.
+    static func success() -> Result<Void, Failure> {
+        return .success(Void())
+    }
 }

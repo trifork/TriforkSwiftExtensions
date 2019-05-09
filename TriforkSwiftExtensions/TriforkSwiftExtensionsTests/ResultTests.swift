@@ -34,6 +34,16 @@ class ResultTests: XCTestCase {
             })
     }
     
+    func testVoidSuccess() {
+        let result: Result<Void, ResultTestError> = .success()
+        switch result {
+        case .success:
+            break
+        case .failure:
+            XCTFail("This should not fail.")
+        }
+    }
+    
     //MARK: - 
     private func generateResult(shouldFail: Bool) -> Result<Int, ResultTestError> {
         if shouldFail {
