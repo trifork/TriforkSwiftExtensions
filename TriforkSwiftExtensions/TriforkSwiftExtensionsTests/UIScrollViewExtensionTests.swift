@@ -28,6 +28,7 @@ class UIScrollViewExtensionTests: XCTestCase {
 
         scrollView.scroll(toPage: 0)
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 0, y: 0))
+        XCTAssertEqual(scrollView.frame.origin, CGPoint(x: 0, y: 0))
     }
 
     func testScrollToValidPage() {
@@ -37,6 +38,7 @@ class UIScrollViewExtensionTests: XCTestCase {
 
         scrollView.scroll(toPage: 1)
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 10, y: 0))
+        XCTAssertEqual(scrollView.frame.origin, CGPoint(x: 0, y: 0))
     }
 
     func testScrollToLastPage() {
@@ -46,6 +48,7 @@ class UIScrollViewExtensionTests: XCTestCase {
 
         scrollView.scroll(toPage: 2)
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 20, y: 0))
+        XCTAssertEqual(scrollView.frame.origin, CGPoint(x: 0, y: 0))
     }
 
     func testScrollToInvalidPage() {
@@ -55,5 +58,6 @@ class UIScrollViewExtensionTests: XCTestCase {
 
         scrollView.scroll(toPage: 3)
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 0, y: 0))
+        XCTAssertEqual(scrollView.frame.origin, CGPoint(x: 0, y: 0))
     }
 }
