@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextView {
+public extension UITextView {
 
     /// Sets all inset to zero for text container inset.
     func setTextContainerInsetToZero() {
