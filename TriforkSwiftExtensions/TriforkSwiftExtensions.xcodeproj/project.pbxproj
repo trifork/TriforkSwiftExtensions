@@ -16,6 +16,7 @@
 		C3716D462297C2A100A75E8A /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D412297C2A100A75E8A /* UITableViewCellExtension.swift */; };
 		C3716D472297C2A100A75E8A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D432297C2A100A75E8A /* UITableViewExtension.swift */; };
 		C3716D482297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D452297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift */; };
+		C3716D4B2297C36000A75E8A /* UITableViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */; };
 		C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */; };
 		C3A9C2EC21CCED3F007DF893 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */; };
 		C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */; };
@@ -91,6 +92,7 @@
 		C3716D412297C2A100A75E8A /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		C3716D432297C2A100A75E8A /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C3716D452297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtension.swift; sourceTree = "<group>"; };
+		C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionTests.swift; sourceTree = "<group>"; };
 		C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTests.swift; sourceTree = "<group>"; };
 		C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
 		C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
 				E9EA2CCF227B021900944902 /* ResultTests.swift */,
+				C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				E9EA2CD0227B021900944902 /* ResultTests.swift in Sources */,
 				E92269411F55495800DAEFAE /* UIViewExtensionTests.swift in Sources */,
 				E922691E1F54435D00DAEFAE /* DataExtensionTests.swift in Sources */,
+				C3716D4B2297C36000A75E8A /* UITableViewExtensionTests.swift in Sources */,
 				E92269191F53F9B400DAEFAE /* StringExtensionTests.swift in Sources */,
 				E9DF344B1F4D768F00BB36BB /* ArrayExtensionTests.swift in Sources */,
 				C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */,
