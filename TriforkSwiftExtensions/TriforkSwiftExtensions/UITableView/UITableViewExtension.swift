@@ -10,6 +10,8 @@ import UIKit
 
 extension UITableView {
 
+    // MARK: - Reusable
+
     /// Returns a reusable table-view cell object for the specified reuse identifier and type and adds it to the table.
     ///
     /// - Parameter cellClass: Cell type
