@@ -41,4 +41,22 @@ extension UITableView {
     public func register<HeaderFooterView: UITableViewHeaderFooterView>(headerFooter headerFooterClass: HeaderFooterView.Type) {
         self.register(headerFooterClass.self, forHeaderFooterViewReuseIdentifier: headerFooterClass.id)
     }
+
+    // MARK: -
+
+    /// Updates the height of the table header view.
+    public func updateHeaderViewHeight() {
+        guard let header = tableHeaderView else { return }
+
+        let newSize = header.systemLayoutSizeFitting(CGSize(width: bounds.width, height: 0))
+        header.frame.size.height = newSize.height
+    }
+
+    /// Updates the height of the table foter view.
+    public func updateFooterViewHeight() {
+        guard let header = tableFooterView else { return }
+
+        let newSize = header.systemLayoutSizeFitting(CGSize(width: bounds.width, height: 0))
+        header.frame.size.height = newSize.height
+    }
 }
