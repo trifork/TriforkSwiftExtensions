@@ -11,6 +11,8 @@
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
 		C35BD0D22272EB8E00B24F3B /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */; };
 		C35BD0D42272EB9F00B24F3B /* UITextViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BD0D32272EB9F00B24F3B /* UITextViewExtensionTest.swift */; };
+		C35C0C4B229E781800B6B88A /* FloatingPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C0C4A229E781800B6B88A /* FloatingPointExtensionTests.swift */; };
+		C35C0C4E229E782000B6B88A /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35C0C4D229E782000B6B88A /* FloatingPointExtensions.swift */; };
 		C37010BF221AF6370071CBF4 /* StringProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37010BE221AF6370071CBF4 /* StringProtocolExtension.swift */; };
 		C37010C1221AF6A90071CBF4 /* StringProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37010C0221AF6A90071CBF4 /* StringProtocolTests.swift */; };
 		C3716D462297C2A100A75E8A /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D412297C2A100A75E8A /* UITableViewCellExtension.swift */; };
@@ -87,6 +89,8 @@
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
 		C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtensions.swift; sourceTree = "<group>"; };
 		C35BD0D32272EB9F00B24F3B /* UITextViewExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtensionTest.swift; sourceTree = "<group>"; };
+		C35C0C4A229E781800B6B88A /* FloatingPointExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensionTests.swift; sourceTree = "<group>"; };
+		C35C0C4D229E782000B6B88A /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		C37010BE221AF6370071CBF4 /* StringProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolExtension.swift; sourceTree = "<group>"; };
 		C37010C0221AF6A90071CBF4 /* StringProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProtocolTests.swift; sourceTree = "<group>"; };
 		C3716D412297C2A100A75E8A /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
@@ -186,6 +190,14 @@
 				C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */,
 			);
 			path = UITextView;
+			sourceTree = "<group>";
+		};
+		C35C0C4C229E782000B6B88A /* FloatingPoint */ = {
+			isa = PBXGroup;
+			children = (
+				C35C0C4D229E782000B6B88A /* FloatingPointExtensions.swift */,
+			);
+			path = FloatingPoint;
 			sourceTree = "<group>";
 		};
 		C3716D402297C2A100A75E8A /* UITableViewCell */ = {
@@ -431,6 +443,7 @@
 				E922691A1F5441B900DAEFAE /* Data */,
 				E922691F1F54458D00DAEFAE /* Date */,
 				E97F00071FE2653100BB262F /* Encodable */,
+				C35C0C4C229E782000B6B88A /* FloatingPoint */,
 				E9A1EA732140EDDB005EEE52 /* LAContext */,
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
 				E92269061F53E18700DAEFAE /* NSObject */,
@@ -471,10 +484,12 @@
 				E92269131F53F7AA00DAEFAE /* DoubleExtensionTests.swift */,
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
 				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
+				C35C0C4A229E781800B6B88A /* FloatingPointExtensionTests.swift */,
 				C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */,
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
 				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
+				E9EA2CCF227B021900944902 /* ResultTests.swift */,
 				C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */,
 				E92269181F53F9B400DAEFAE /* StringExtensionTests.swift */,
 				C37010C0221AF6A90071CBF4 /* StringProtocolTests.swift */,
@@ -485,11 +500,10 @@
 				E946D3CD20FDE171002FFDFF /* UIEdgeInsetsTests.swift */,
 				E904E2472163A16800B52FF8 /* UIScrollViewExtensionTests.swift */,
 				E92269441F554A7C00DAEFAE /* UIStackViewExtensionTests.swift */,
+				C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */,
 				C35BD0D32272EB9F00B24F3B /* UITextViewExtensionTest.swift */,
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
-				E9EA2CCF227B021900944902 /* ResultTests.swift */,
-				C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -671,6 +685,7 @@
 				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
 				E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */,
 				E9EA2CCE227AF3FA00944902 /* ResultClosureExtension.swift in Sources */,
+				C35C0C4E229E782000B6B88A /* FloatingPointExtensions.swift in Sources */,
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 				C37010BF221AF6370071CBF4 /* StringProtocolExtension.swift in Sources */,
@@ -685,6 +700,7 @@
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
 				E946D3D720FDE811002FFDFF /* CGFloatExtensionsTests.swift in Sources */,
 				C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */,
+				C35C0C4B229E781800B6B88A /* FloatingPointExtensionTests.swift in Sources */,
 				E92269301F545CA000DAEFAE /* UIAlertControllerExtensionTests.swift in Sources */,
 				E92269141F53F7AA00DAEFAE /* DoubleExtensionTests.swift in Sources */,
 				E904E2482163A16800B52FF8 /* UIScrollViewExtensionTests.swift in Sources */,
