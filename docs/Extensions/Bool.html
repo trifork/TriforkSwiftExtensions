@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TSELogger Class Reference</title>
+    <title>Bool Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/TSELogger" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Bool" class="dashAnchor"></a>
 
-    <a title="TSELogger Class Reference"></a>
+    <a title="Bool Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">TriforkSwiftExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      TSELogger Class Reference
+      Bool Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -179,17 +179,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>TSELogger</h1>
+            <h1>Bool</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TSELogger</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Bool</span></code></pre>
 
                 </div>
               </div>
-            <p>Class that handles log messages in the TriforkSwiftExtensions framework.</p>
-
-<p>This class allows the developer to take over the log-handling by setting the <code>customLogErrorHandler</code> property.</p>
-
+            
           </div>
         </section>
 
@@ -200,9 +197,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:22TriforkSwiftExtensions9TSELoggerC21customLogErrorHandlerySScSgvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/customLogErrorHandler" class="dashAnchor"></a>
-                    <a class="token" href="#/s:22TriforkSwiftExtensions9TSELoggerC21customLogErrorHandlerySScSgvpZ">customLogErrorHandler</a>
+                    <a name="/s:Sb22TriforkSwiftExtensionsE7toAlpha12CoreGraphics7CGFloatVyF"></a>
+                    <a name="//apple_ref/swift/Method/toAlpha()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sb22TriforkSwiftExtensionsE7toAlpha12CoreGraphics7CGFloatVyF">toAlpha()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,18 +207,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Will be invoked instead of the standard <code>print</code> function if set.</p>
-
-<p>Set this property if you want to handle error logs from the framework.</p>
-
-<p>Default is <code>nil</code>.</p>
+                        <p>Converts receiver to either <code>0.0</code> or <code>1.0</code> as a <code>CGFloat</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">customLogErrorHandler</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toAlpha</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span></code></pre>
 
                         </div>
                       </div>
