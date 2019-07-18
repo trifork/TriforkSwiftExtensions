@@ -61,6 +61,8 @@
 		E946D3D720FDE811002FFDFF /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */; };
 		E97F00091FE2654200BB262F /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F00081FE2654200BB262F /* EncodableExtension.swift */; };
 		E97F000B1FE2669700BB262F /* EncodableExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */; };
+		E98EDA6522E074C800BAE5BD /* BoolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98EDA6422E074C800BAE5BD /* BoolExtension.swift */; };
+		E98EDA6722E0751700BAE5BD /* BoolExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98EDA6622E0751700BAE5BD /* BoolExtensionTests.swift */; };
 		E9A1EA752140EDEF005EEE52 /* LAContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1EA742140EDEF005EEE52 /* LAContextExtension.swift */; };
 		E9DF34301F4D72E100BB36BB /* TriforkSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */; };
 		E9DF34371F4D72E100BB36BB /* TriforkSwiftExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -141,6 +143,8 @@
 		E946D3D620FDE811002FFDFF /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionsTests.swift; sourceTree = "<group>"; };
 		E97F00081FE2654200BB262F /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensionTests.swift; sourceTree = "<group>"; };
+		E98EDA6422E074C800BAE5BD /* BoolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtension.swift; sourceTree = "<group>"; };
+		E98EDA6622E0751700BAE5BD /* BoolExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensionTests.swift; sourceTree = "<group>"; };
 		E9A1EA742140EDEF005EEE52 /* LAContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContextExtension.swift; sourceTree = "<group>"; };
 		E9DF34261F4D72E100BB36BB /* TriforkSwiftExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TriforkSwiftExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriforkSwiftExtensions.h; sourceTree = "<group>"; };
@@ -403,6 +407,14 @@
 			path = Encodable;
 			sourceTree = "<group>";
 		};
+		E98EDA6322E074B700BAE5BD /* Bool */ = {
+			isa = PBXGroup;
+			children = (
+				E98EDA6422E074C800BAE5BD /* BoolExtension.swift */,
+			);
+			path = Bool;
+			sourceTree = "<group>";
+		};
 		E9A1EA732140EDDB005EEE52 /* LAContext */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,9 +445,8 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
-				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9DF34471F4D760300BB36BB /* Array */,
+				E98EDA6322E074B700BAE5BD /* Bool */,
 				E92269361F5533F900DAEFAE /* Bundle */,
 				E946D3D320FDE70A002FFDFF /* CGFloat */,
 				C349B41A21639B13007A4D37 /* CGRect */,
@@ -444,6 +455,7 @@
 				E922691F1F54458D00DAEFAE /* Date */,
 				E97F00071FE2653100BB262F /* Encodable */,
 				C35C0C4C229E782000B6B88A /* FloatingPoint */,
+				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9A1EA732140EDDB005EEE52 /* LAContext */,
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
 				E92269061F53E18700DAEFAE /* NSObject */,
@@ -451,6 +463,7 @@
 				E91351D81F4EED7400BC1A68 /* Optional */,
 				E9EA2CCC227AF3ED00944902 /* Result */,
 				E92269151F53F93300DAEFAE /* String */,
+				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
 				E946D3CF20FDE274002FFDFF /* UIApplication */,
@@ -504,6 +517,7 @@
 				C35BD0D32272EB9F00B24F3B /* UITextViewExtensionTest.swift */,
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
+				E98EDA6622E0751700BAE5BD /* BoolExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -671,6 +685,7 @@
 				E922693E1F5547D100DAEFAE /* UIViewExtension.swift in Sources */,
 				E92269481F554FD900DAEFAE /* TSELogger.swift in Sources */,
 				C3716D482297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift in Sources */,
+				E98EDA6522E074C800BAE5BD /* BoolExtension.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
 				E92269171F53F9A100DAEFAE /* StringExtension.swift in Sources */,
 				E97F00091FE2654200BB262F /* EncodableExtension.swift in Sources */,
@@ -715,6 +730,7 @@
 				C3716D4B2297C36000A75E8A /* UITableViewExtensionTests.swift in Sources */,
 				E92269191F53F9B400DAEFAE /* StringExtensionTests.swift in Sources */,
 				E9DF344B1F4D768F00BB36BB /* ArrayExtensionTests.swift in Sources */,
+				E98EDA6722E0751700BAE5BD /* BoolExtensionTests.swift in Sources */,
 				C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */,
 				C35BD0D42272EB9F00B24F3B /* UITextViewExtensionTest.swift in Sources */,
 				E92269451F554A7C00DAEFAE /* UIStackViewExtensionTests.swift in Sources */,
