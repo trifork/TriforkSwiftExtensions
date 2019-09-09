@@ -22,6 +22,8 @@
 		C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */; };
 		C3A9C2EC21CCED3F007DF893 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */; };
 		C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */; };
+		C3D20F9C232633B300DE4845 /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D20F9B232633B300DE4845 /* ErrorExtension.swift */; };
+		C3D20F9E232633D300DE4845 /* ErrorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D20F9D232633D300DE4845 /* ErrorExtensionTests.swift */; };
 		E904E2482163A16800B52FF8 /* UIScrollViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904E2472163A16800B52FF8 /* UIScrollViewExtensionTests.swift */; };
 		E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E904E24A2163A17C00B52FF8 /* UIScrollViewExtension.swift */; };
 		E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91351D91F4EED8600BC1A68 /* OptionalExtension.swift */; };
@@ -102,6 +104,8 @@
 		C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTests.swift; sourceTree = "<group>"; };
 		C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
 		C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
+		C3D20F9B232633B300DE4845 /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		C3D20F9D232633D300DE4845 /* ErrorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtensionTests.swift; sourceTree = "<group>"; };
 		E904E2472163A16800B52FF8 /* UIScrollViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensionTests.swift; sourceTree = "<group>"; };
 		E904E24A2163A17C00B52FF8 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		E91351D31F4EC44500BC1A68 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -234,6 +238,14 @@
 				C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */,
 			);
 			path = Numeric;
+			sourceTree = "<group>";
+		};
+		C3D20F9A232633A600DE4845 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				C3D20F9B232633B300DE4845 /* ErrorExtension.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		E904E2492163A17C00B52FF8 /* UIScrollView */ = {
@@ -454,6 +466,7 @@
 				E922691A1F5441B900DAEFAE /* Data */,
 				E922691F1F54458D00DAEFAE /* Date */,
 				E97F00071FE2653100BB262F /* Encodable */,
+				C3D20F9A232633A600DE4845 /* Error */,
 				C35C0C4C229E782000B6B88A /* FloatingPoint */,
 				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9A1EA732140EDDB005EEE52 /* LAContext */,
@@ -496,6 +509,7 @@
 				E92269221F5446AF00DAEFAE /* DateExtensionTests.swift */,
 				E92269131F53F7AA00DAEFAE /* DoubleExtensionTests.swift */,
 				E97F000A1FE2669700BB262F /* EncodableExtensionTests.swift */,
+				C3D20F9D232633D300DE4845 /* ErrorExtensionTests.swift */,
 				E922690E1F53E44800DAEFAE /* FloatExtensionTests.swift */,
 				C35C0C4A229E781800B6B88A /* FloatingPointExtensionTests.swift */,
 				C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */,
@@ -696,6 +710,7 @@
 				E9A1EA752140EDEF005EEE52 /* LAContextExtension.swift in Sources */,
 				E92269331F55308E00DAEFAE /* UIDeviceExtension.swift in Sources */,
 				C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */,
+				C3D20F9C232633B300DE4845 /* ErrorExtension.swift in Sources */,
 				E922691C1F5441C400DAEFAE /* DataExtension.swift in Sources */,
 				E946D3D520FDE718002FFDFF /* CGFloatExtensions.swift in Sources */,
 				E904E24B2163A17C00B52FF8 /* UIScrollViewExtension.swift in Sources */,
@@ -736,6 +751,7 @@
 				E92269451F554A7C00DAEFAE /* UIStackViewExtensionTests.swift in Sources */,
 				E922690F1F53E44800DAEFAE /* FloatExtensionTests.swift in Sources */,
 				E97F000B1FE2669700BB262F /* EncodableExtensionTests.swift in Sources */,
+				C3D20F9E232633D300DE4845 /* ErrorExtensionTests.swift in Sources */,
 				E922694A1F55516800DAEFAE /* TSELoggerTests.swift in Sources */,
 				E946D3CE20FDE171002FFDFF /* UIEdgeInsetsTests.swift in Sources */,
 				C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */,
