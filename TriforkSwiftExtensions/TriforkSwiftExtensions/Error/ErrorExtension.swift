@@ -9,6 +9,8 @@
 import Foundation
 
 extension Error {
+
+    /// Returns true if it's a network error
     public var isNetworkError: Bool {
         let error = self as NSError
         let networkErrors = [NSURLErrorNetworkConnectionLost,
