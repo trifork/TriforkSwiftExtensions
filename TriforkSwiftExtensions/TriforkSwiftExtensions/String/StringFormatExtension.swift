@@ -6,7 +6,7 @@
 //  Copyright © 2019 Trifork A/S. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Defines formatting options for strings
 public enum StringFormatOption {

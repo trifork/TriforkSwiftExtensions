@@ -6,7 +6,7 @@
 //  Copyright © 2018 Trifork A/S. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension CGFloat {
     /// Less silly global shortcut for π
