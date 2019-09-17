@@ -6,7 +6,7 @@
 //  Copyright © 2017 Trifork A/S. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIDevice {
     
