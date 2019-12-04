@@ -30,7 +30,7 @@ jobs:
       signingOption: 'auto'
       useXcpretty: true
       publishJUnitResults: true
-      destinationSimulators: 'iPhone X'
+      destinationSimulators: 'iPhone 8'
       destinationTypeOption: 'simulators'
       destinationPlatformOption: 'iOS'
 
