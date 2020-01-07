@@ -27,5 +27,14 @@ class UIStackViewExtensionTests: XCTestCase {
         stackView.removeAllArrangedViews()
         XCTAssertEqual(stackView.arrangedSubviews.count, 0)
     }
+
+    func testInitWithAllParameters() {
+        let stackView = UIStackView(arrangedSubviews: [], axis: .vertical, spacing: 10, distribution: .equalCentering, alignment: .center)
+
+        XCTAssertEqual(stackView.axis, .vertical)
+        XCTAssertEqual(stackView.spacing, 10)
+        XCTAssertEqual(stackView.distribution, .equalCentering)
+        XCTAssertEqual(stackView.alignment, .center)
+    }
     
 }
