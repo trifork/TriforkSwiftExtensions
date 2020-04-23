@@ -103,6 +103,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FloatingPoint.html">FloatingPoint</a>
               </li>
               <li class="nav-group-task">
@@ -178,11 +181,11 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>UIStackView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UIStackView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIStackView</span></code></pre>
 
                 </div>
               </div>
@@ -194,6 +197,104 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UIStackViewC22TriforkSwiftExtensionsE16arrangedSubviews4axis7spacing12distribution9alignmentABSaySo6UIViewCG_So22UILayoutConstraintAxisV12CoreGraphics7CGFloatVSo0aB12DistributionVSo0aB9AlignmentVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(arrangedSubviews:axis:spacing:distribution:alignment:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UIStackViewC22TriforkSwiftExtensionsE16arrangedSubviews4axis7spacing12distribution9alignmentABSaySo6UIViewCG_So22UILayoutConstraintAxisV12CoreGraphics7CGFloatVSo0aB12DistributionVSo0aB9AlignmentVtcfc">init(arrangedSubviews:<wbr>axis:<wbr>spacing:<wbr>distribution:<wbr>alignment:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new stack view object that manages the provided views.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">arrangedSubviews</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIView</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                 <span class="nv">axis</span><span class="p">:</span> <span class="kt">NSLayoutConstraint</span><span class="o">.</span><span class="kt">Axis</span> <span class="o">=</span> <span class="o">.</span><span class="n">horizontal</span><span class="p">,</span>
+                 <span class="nv">spacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                 <span class="nv">distribution</span><span class="p">:</span> <span class="kt">UIStackView</span><span class="o">.</span><span class="kt">Distribution</span> <span class="o">=</span> <span class="o">.</span><span class="n">fill</span><span class="p">,</span>
+                 <span class="nv">alignment</span><span class="p">:</span> <span class="kt">UIStackView</span><span class="o">.</span><span class="kt">Alignment</span> <span class="o">=</span> <span class="o">.</span><span class="n">fill</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arrangedSubviews</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The views to be arranged by the stack view.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>axis</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The axis along which the arranged views are laid out. The default value is <code>NSLayoutConstraint.Axis.horizontal</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>spacing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The distance in points between the adjacent edges of the stack view’s arranged views. The default value is <code>0.0</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>distribution</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The distribution of the arranged views along the stack view’s axis. The default value is <code>UIStackView.Distribution.fill</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alignment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The alignment of the arranged subviews perpendicular to the stack view’s axis. The default value is <code>UIStackView.Alignment.fill</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -229,8 +330,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-07-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2020-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

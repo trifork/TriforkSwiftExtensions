@@ -103,6 +103,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FloatingPoint.html">FloatingPoint</a>
               </li>
               <li class="nav-group-task">
@@ -178,11 +181,11 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>UIView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UIView</span> <span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIAppearance</span><span class="p">,</span> <span class="kt">UIAppearanceContainer</span><span class="p">,</span> <span class="kt">UIDynamicItem</span><span class="p">,</span> <span class="kt">UITraitEnvironment</span><span class="p">,</span> <span class="kt">UICoordinateSpace</span><span class="p">,</span> <span class="kt">UIFocusItem</span><span class="p">,</span> <span class="kt">UIFocusItemContainer</span><span class="p">,</span> <span class="kt">CALayerDelegate</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIView</span></code></pre>
 
                 </div>
               </div>
@@ -272,7 +275,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "This function has issues when AutoLayout decides the sizes (sometimes AL causes decimals in `size` which makes the extension log an error and not perform the `cornerRadius` adjustment. Replaced by `roundForHorizontalEdges` and `roundForVerticalEdges`")</span>
+                          <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">deprecated</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">"This function has issues when AutoLayout decides the sizes (sometimes AL causes decimals in `size` which makes the extension log an error and not perform the `cornerRadius` adjustment. Replaced by `roundForHorizontalEdges` and `roundForVerticalEdges`"</span><span class="p">)</span>
 <span class="kd">func</span> <span class="nf">circle</span><span class="p">()</span></code></pre>
 
                         </div>
@@ -312,7 +315,7 @@
                     <code>
                     <a name="/s:So6UIViewC22TriforkSwiftExtensionsE18roundCornersOnEdge4edgeySo06UIRectH0V_tF"></a>
                     <a name="//apple_ref/swift/Method/roundCornersOnEdge(edge:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE18roundCornersOnEdge4edgeySo06UIRectH0V_tF">roundCornersOnEdge(edge:)</a>
+                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE18roundCornersOnEdge4edgeySo06UIRectH0V_tF">roundCornersOnEdge(edge:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -339,7 +342,7 @@
                     <code>
                     <a name="/s:So6UIViewC22TriforkSwiftExtensionsE5shake17withShakeDistance8duration12animationKeyy12CoreGraphics7CGFloatV_SdSStF"></a>
                     <a name="//apple_ref/swift/Method/shake(withShakeDistance:duration:animationKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE5shake17withShakeDistance8duration12animationKeyy12CoreGraphics7CGFloatV_SdSStF">shake(withShakeDistance:duration:animationKey:)</a>
+                    <a class="token" href="#/s:So6UIViewC22TriforkSwiftExtensionsE5shake17withShakeDistance8duration12animationKeyy12CoreGraphics7CGFloatV_SdSStF">shake(withShakeDistance:<wbr>duration:<wbr>animationKey:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -376,7 +379,7 @@
                       <div class="abstract">
                         <p>Removes all subviews in the given view</p>
 
-<p>May not be called in <q>Draw</q></p>
+<p>May not be called in &ldquo;Draw&rdquo;</p>
 
                       </div>
                       <div class="declaration">
@@ -437,7 +440,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -464,7 +467,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">show</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">show</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -479,8 +482,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-07-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2020-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

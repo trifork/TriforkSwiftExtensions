@@ -103,6 +103,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FloatingPoint.html">FloatingPoint</a>
               </li>
               <li class="nav-group-task">
@@ -178,11 +181,11 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Date</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Date</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Date</span></code></pre>
 
                 </div>
               </div>
@@ -199,7 +202,7 @@
                     <code>
                     <a name="/s:10Foundation4DateV22TriforkSwiftExtensionsE8toString9dateStyle04timeI06locale0J4ZoneSSSo015NSDateFormatterI0V_AkA6LocaleVSgAA04TimeL0VSgtF"></a>
                     <a name="//apple_ref/swift/Method/toString(dateStyle:timeStyle:locale:timeZone:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8toString9dateStyle04timeI06locale0J4ZoneSSSo015NSDateFormatterI0V_AkA6LocaleVSgAA04TimeL0VSgtF">toString(dateStyle:timeStyle:locale:timeZone:)</a>
+                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8toString9dateStyle04timeI06locale0J4ZoneSSSo015NSDateFormatterI0V_AkA6LocaleVSgAA04TimeL0VSgtF">toString(dateStyle:<wbr>timeStyle:<wbr>locale:<wbr>timeZone:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,10 +217,10 @@
 <p>This function respects the device&rsquo;s localization and timeZone settings unless other are passed.</p>
 
 <ul>
-<li>short:    <q>8/28/17</q>,                  <q>2:40 PM</q></li>
-<li>medium:   <q>Aug 28, 2017</q>,             <q>2:40:52 PM</q></li>
-<li>long:     <q>August 28, 2017</q>,          <q>2:40:52 PM GMT+2</q></li>
-<li>full:     <q>Monday, August 28, 2017</q>,  <q>2:40:52 PM Central European Summer Time</q></li>
+<li>short:    &ldquo;8/28/17&rdquo;,                  &ldquo;2:40 PM&rdquo;</li>
+<li>medium:   &ldquo;Aug 28, 2017&rdquo;,             &ldquo;2:40:52 PM&rdquo;</li>
+<li>long:     &ldquo;August 28, 2017&rdquo;,          &ldquo;2:40:52 PM GMT+2&rdquo;</li>
+<li>full:     &ldquo;Monday, August 28, 2017&rdquo;,  &ldquo;2:40:52 PM Central European Summer Time&rdquo;</li>
 </ul>
 
                       </div>
@@ -264,7 +267,7 @@
                     <code>
                     <a name="/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom13iso8601StringACSgSS_tFZ"></a>
                     <a name="//apple_ref/swift/Method/dateFrom(iso8601String:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom13iso8601StringACSgSS_tFZ">dateFrom(iso8601String:)</a>
+                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom13iso8601StringACSgSS_tFZ">dateFrom(iso8601String:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -318,7 +321,7 @@
                     <code>
                     <a name="/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom22iso8601StringWithoutMsACSgSS_tFZ"></a>
                     <a name="//apple_ref/swift/Method/dateFrom(iso8601StringWithoutMs:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom22iso8601StringWithoutMsACSgSS_tFZ">dateFrom(iso8601StringWithoutMs:)</a>
+                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE8dateFrom22iso8601StringWithoutMsACSgSS_tFZ">dateFrom(iso8601StringWithoutMs:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -480,7 +483,7 @@
                     <code>
                     <a name="/s:10Foundation4DateV22TriforkSwiftExtensionsE4date8byAdding5valueAcA8CalendarV9ComponentO_SitF"></a>
                     <a name="//apple_ref/swift/Method/date(byAdding:value:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE4date8byAdding5valueAcA8CalendarV9ComponentO_SitF">date(byAdding:value:)</a>
+                    <a class="token" href="#/s:10Foundation4DateV22TriforkSwiftExtensionsE4date8byAdding5valueAcA8CalendarV9ComponentO_SitF">date(byAdding:<wbr>value:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -510,8 +513,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-07-18)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2020-04-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

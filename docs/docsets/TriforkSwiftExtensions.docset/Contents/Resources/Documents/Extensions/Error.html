@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UIEdgeInsets Extension Reference</title>
+    <title>Error Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/UIEdgeInsets" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Extension/Error" class="dashAnchor"></a>
 
-    <a title="UIEdgeInsets Extension Reference"></a>
+    <a title="Error Extension Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -50,7 +50,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">TriforkSwiftExtensions Reference</a>
       <img class="carat" src="../img/carat.png" />
-      UIEdgeInsets Extension Reference
+      Error Extension Reference
     </p>
 
     <div class="content-wrapper">
@@ -182,10 +182,10 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>UIEdgeInsets</h1>
+            <h1>Error</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIEdgeInsets</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
@@ -200,9 +200,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE8allEdgesAB12CoreGraphics7CGFloatV_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(allEdges:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE8allEdgesAB12CoreGraphics7CGFloatV_tcfc">init(allEdges:<wbr>)</a>
+                    <a name="/s:s5ErrorP22TriforkSwiftExtensionsE09isNetworkA0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/isNetworkError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s5ErrorP22TriforkSwiftExtensionsE09isNetworkA0Sbvp">isNetworkError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,68 +210,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code>UIEdgeInsets</code> with same distance to all edges</p>
+                        <p>Returns true if it&rsquo;s a network error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">allEdges</span> <span class="nv">distance</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE13horizontalSum12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/horizontalSum" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE13horizontalSum12CoreGraphics7CGFloatVvp">horizontalSum</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sum of <code>left</code> and <code>right</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">horizontalSum</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE11verticalSum12CoreGraphics7CGFloatVvp"></a>
-                    <a name="//apple_ref/swift/Property/verticalSum" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIEdgeInsetsV22TriforkSwiftExtensionsE11verticalSum12CoreGraphics7CGFloatVvp">verticalSum</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sum of <code>top</code> and <code>bottom</code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">verticalSum</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isNetworkError</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

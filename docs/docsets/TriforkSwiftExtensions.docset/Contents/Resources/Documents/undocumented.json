@@ -1,12 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/thomas/Repositories/TriforkSwiftExtensions/TriforkSwiftExtensions/TriforkSwiftExtensions/Date/DateExtension.swift",
-      "line": 109,
-      "symbol": "Date.date(byAdding:value:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    }
+
   ],
-  "source_directory": "/Users/thomas/Repositories/TriforkSwiftExtensions"
+  "source_directory": "/Users/kasper/Documents/programming/TriforkSwiftExtensions"
 }
