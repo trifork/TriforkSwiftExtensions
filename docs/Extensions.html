@@ -23,7 +23,7 @@
         <a class="header-link" href="index.html">
           TriforkSwiftExtensions Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -79,6 +79,9 @@
                 <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
@@ -100,6 +103,9 @@
                 <a class="nav-group-task-link" href="Extensions/Encodable.html">Encodable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/LAContext.html">LAContext</a>
               </li>
               <li class="nav-group-task">
@@ -116,6 +122,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/String.html">String</a>
@@ -151,10 +160,7 @@
                 <a class="nav-group-task-link" href="Extensions/UITableView.html">UITableView</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/UITableViewCell.html">UITableViewCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Extensions/UITableViewHeaderFooterView.html">UITableViewHeaderFooterView</a>
+                <a class="nav-group-task-link" href="Extensions/UITextView.html">UITextView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/UIView.html">UIView</a>
@@ -164,14 +170,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/Reusable.html">Reusable</a>
               </li>
             </ul>
           </li>
@@ -212,6 +210,37 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">_DestructorSafeContainer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Sb"></a>
+                    <a name="//apple_ref/swift/Extension/Bool" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sb">Bool</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/Bool.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -335,7 +364,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">SubSequence</span> <span class="p">:</span> <span class="kt">Collection</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Collection</span> <span class="p">:</span> <span class="kt">Sequence</span></code></pre>
 
                         </div>
                       </div>
@@ -366,7 +395,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Data</span> <span class="p">:</span> <span class="kt">ReferenceConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">RangeReplaceableCollection</span><span class="p">,</span> <span class="kt">MutableDataProtocol</span><span class="p">,</span> <span class="kt">ContiguousBytes</span></code></pre>
 
                         </div>
                       </div>
@@ -429,6 +458,37 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SF"></a>
+                    <a name="//apple_ref/swift/Extension/FloatingPoint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SF">FloatingPoint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/FloatingPoint.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FloatingPoint</span> <span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">SignedNumeric</span><span class="p">,</span> <span class="kt">Strideable</span> <span class="k">where</span> <span class="k">Self</span> <span class="o">==</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Magnitude</span></code></pre>
 
                         </div>
                       </div>
@@ -552,7 +612,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Numeric</span> <span class="p">:</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">ExpressibleByIntegerLiteral</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Numeric</span> <span class="p">:</span> <span class="kt">AdditiveArithmetic</span><span class="p">,</span> <span class="kt">ExpressibleByIntegerLiteral</span></code></pre>
 
                         </div>
                       </div>
@@ -598,9 +658,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)UITableViewCell"></a>
-                    <a name="//apple_ref/swift/Extension/UITableViewCell" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+                    <a name="/s:s6ResultO"></a>
+                    <a name="//apple_ref/swift/Extension/Result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s6ResultO">Result</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -609,75 +669,14 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         
-                        <a href="Extensions/UITableViewCell.html" class="slightly-smaller">See more</a>
+                        <a href="Extensions/Result.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableViewCell</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIGestureRecognizerDelegate</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)UITableView"></a>
-                    <a name="//apple_ref/swift/Extension/UITableView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UITableView">UITableView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UITableView.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableView</span> <span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIDataSourceTranslating</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)UITableViewHeaderFooterView"></a>
-                    <a name="//apple_ref/swift/Extension/UITableViewHeaderFooterView" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)UITableViewHeaderFooterView">UITableViewHeaderFooterView</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UITableViewHeaderFooterView.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableViewHeaderFooterView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@_frozen</span>
+<span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Success</span><span class="p">,</span> <span class="kt">Failure</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Failure</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
@@ -739,7 +738,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">StringProtocol</span> <span class="p">:</span> <span class="kt">BidirectionalCollection</span><span class="p">,</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">ExpressibleByStringLiteral</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">LosslessStringConvertible</span><span class="p">,</span> <span class="kt">TextOutputStream</span><span class="p">,</span> <span class="kt">TextOutputStreamable</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">SubSequence</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">StringProtocol</span> <span class="p">:</span> <span class="kt">BidirectionalCollection</span><span class="p">,</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">ExpressibleByStringInterpolation</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">LosslessStringConvertible</span><span class="p">,</span> <span class="kt">TextOutputStream</span><span class="p">,</span> <span class="kt">TextOutputStreamable</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Index</span> <span class="o">==</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Index</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">StringInterpolation</span> <span class="o">==</span> <span class="kt">DefaultStringInterpolation</span><span class="p">,</span> <span class="k">Self</span><span class="o">.</span><span class="kt">SubSequence</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
 
                         </div>
                       </div>
@@ -1001,6 +1000,68 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)UITableView"></a>
+                    <a name="//apple_ref/swift/Extension/UITableView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UITableView">UITableView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UITableView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITableView</span> <span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIDataSourceTranslating</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UITextView"></a>
+                    <a name="//apple_ref/swift/Extension/UITextView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UITextView">UITextView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UITextView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITextView</span> <span class="p">:</span> <span class="kt">UIScrollView</span><span class="p">,</span> <span class="kt">UITextInput</span><span class="p">,</span> <span class="kt">UIContentSizeCategoryAdjusting</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)UIView"></a>
                     <a name="//apple_ref/swift/Extension/UIView" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)UIView">UIView</a>
@@ -1095,7 +1156,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-02-19)</p>
+      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-07-18)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

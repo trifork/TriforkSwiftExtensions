@@ -6,22 +6,36 @@
 //  Copyright © 2017 Trifork A/S. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIView {
     
+    /// Rounds the left and right sides of the receiver.
+    ///
+    /// This will also turn a rectangled view into a circle if it is a square.
+    func roundForHorizontalEdges() {
+        self.layer.cornerRadius = self.bounds.height / 2.0
+    }
+    
+    /// Rounds the top and bottom sides of the receiver.
+    ///
+    /// This will also turn a rectangled view into a circle if it is a square.
+    func roundForVerticalEdges() {
+        self.layer.cornerRadius = self.bounds.width / 2.0
+    }
+    
     /// Turns a square view into a circle.
-    public func circle() {
+    @available(*, deprecated, message: "This function has issues when AutoLayout decides the sizes (sometimes AL causes decimals in `size` which makes the extension log an error and not perform the `cornerRadius` adjustment. Replaced by `roundForHorizontalEdges` and `roundForVerticalEdges`")
+    func circle() {
         if self.bounds.width == self.bounds.height {
             self.layer.cornerRadius = self.bounds.width / 2.0
-        }
-        else {
+        } else {
             TSELogger.log(message: "The view must be a square to make it a circle.")
         }
     }
     
     /// Gets the current first responder of the subviews.
-    public func currentFirstResponder() -> UIView? {
+    func currentFirstResponder() -> UIView? {
         var firstResponder: UIView? = nil
         
         if self.isFirstResponder {
@@ -41,7 +55,7 @@ public extension UIView {
     }
     
     /// Rounds corners on an egde
-    public func roundCornersOnEdge(edge: UIRectEdge) {
+    func roundCornersOnEdge(edge: UIRectEdge) {
         
         let mask: CAShapeLayer = CAShapeLayer()
         mask.backgroundColor = UIColor.black.cgColor
@@ -67,7 +81,7 @@ public extension UIView {
     }
     
     /// Performs shake animation on view.
-    public func shake(withShakeDistance shakeDistance: CGFloat = 20, duration: TimeInterval = 0.6, animationKey: String = "shake") {
+    func shake(withShakeDistance shakeDistance: CGFloat = 20, duration: TimeInterval = 0.6, animationKey: String = "shake") {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = duration
@@ -87,7 +101,7 @@ public extension UIView {
     /// Removes all subviews in the given view
     ///
     /// May not be called in "Draw"
-    public func removeAllSubViews() {
+    func removeAllSubViews() {
         //copy to avoid modifying underlying structure at the same time as reading it.
         let ourSubViews = subviews
         ourSubViews.forEach { (view: UIView) in
@@ -96,7 +110,7 @@ public extension UIView {
     }
     
     /// Finds the first responder in the receiver and its subviews.
-    public func findFirstResponder() -> UIView? {
+    func findFirstResponder() -> UIView? {
         return findFirstResponder(inView: self)
     }
     

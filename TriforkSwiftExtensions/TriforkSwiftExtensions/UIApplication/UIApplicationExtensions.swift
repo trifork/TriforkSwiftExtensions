@@ -11,13 +11,13 @@ import UIKit
 public extension UIApplication {
     
     /// Calls `phoneNumber` by using the tel:// scheme.
-    public func callPhoneNumber(phoneNumber: String) {
+    func callPhoneNumber(phoneNumber: String) {
         self.openSafe(url: "tel://\(phoneNumber)", options: nil, completionHandler: nil)
     }
     
     
     /// Check whether the current device supports the tel:// scheme
-    public func canOpenPhoneUrl() -> Bool {
+    func canOpenPhoneUrl() -> Bool {
         let canOpen: Bool
         
         if let phoneTestUrl: URL = URL(string: "tel://") {
@@ -32,12 +32,12 @@ public extension UIApplication {
     
     
     /// Opens `address` in Apple Maps.
-    public func openAppleMaps(address: String) {
+    func openAppleMaps(address: String) {
         self.openSafe(url: "https://maps.apple.com/?q=\(address.urlEncoded)", options: nil, completionHandler: nil)
     }
     
     /// Opens `address` in Google maps if available. If `useAppleMApsIfUnable` is `true` the function will fallback to Apple Maps, if Google Maps is not available. Otherwise the function will do nothing.
-    public func openGoogleMaps(address: String, useAppleMapsIfUnable: Bool = false) {
+    func openGoogleMaps(address: String, useAppleMapsIfUnable: Bool = false) {
         openSafe(url: "comgooglemaps://?q=\(address.urlEncoded)", options: nil) { [weak self] (success: Bool) -> Void in
             if !success && useAppleMapsIfUnable {
                 self?.openAppleMaps(address: address)
@@ -48,7 +48,7 @@ public extension UIApplication {
     /// Opens a url safe by validating the `url` parameter as a valid URL-object and asks the application if it can open the `url`.
     ///
     /// If the `canOpenUrl` check fails the method will do nothing.
-    public func openSafe(url: String, options: [String: Any]?, completionHandler: ((Bool) -> Void)?) {
+    func openSafe(url: String, options: [String: Any]?, completionHandler: ((Bool) -> Void)?) {
         if let safeUrl = URL(string: url) {
             self.openSafe(url: safeUrl, options: nil, completionHandler: completionHandler)
         } else {
@@ -60,7 +60,7 @@ public extension UIApplication {
     /// Opens a url safe by asking the application if it can open the `url`.
     ///
     /// If the `canOpenUrl` check fails the method will do nothing.
-    public func openSafe(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any]?, completionHandler: ((Bool) -> Void)?) {
+    func openSafe(url: URL, options: [UIApplication.OpenExternalURLOptionsKey: Any]?, completionHandler: ((Bool) -> Void)?) {
         if !self.canOpenURL(url) {
             TSELogger.log(message: "could not open url :\(url.absoluteString)")
             completionHandler?(false)

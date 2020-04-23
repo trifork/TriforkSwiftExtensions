@@ -60,22 +60,42 @@ class StringExtensionTests: XCTestCase {
     
     func testMatchesRegExObject() {
         let regExHtmlPattern: String = "([*_])(.+?)\\1" //Note that the RegEx format of iOS needs special treatment.
-        let regEx: NSRegularExpression = try! NSRegularExpression(pattern: regExHtmlPattern, options: .caseInsensitive)
-        XCTAssertFalse("THERE IS NO ASTERISKS OR UNDERSCORES IN ME 😤".matches(withRegularExpression: regEx))
-        XCTAssertTrue("Hey-Hey! _Look_ at *me*!".matches(withRegularExpression: regEx))
-        XCTAssertFalse("I *wish I could be_ just as cool as the string above.".matches(withRegularExpression: regEx))
+        XCTAssertFalse("THERE IS NO ASTERISKS OR UNDERSCORES IN ME 😤".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
+        XCTAssertTrue("Hey-Hey! _Look_ at *me*!".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
+        XCTAssertFalse("I *wish I could be_ just as cool as the string above.".isMatching(regEx: regExHtmlPattern, options: .caseInsensitive))
     }
     
     func testMatchesRegExString() {
         let emailPattern: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}" //Note that the RegEx format of iOS needs special treatment.
-        XCTAssertFalse("tkc[at]trifork[dot]com".matches(withRegularExpression: emailPattern))
-        XCTAssertTrue("tkc@trifork.com".matches(withRegularExpression: emailPattern))
-        XCTAssertFalse("tkc@triforkcom".matches(withRegularExpression: emailPattern))
+        XCTAssertFalse("tkc[at]trifork[dot]com".isMatching(regEx: emailPattern))
+        XCTAssertTrue("tkc@trifork.com".isMatching(regEx: emailPattern))
+        XCTAssertFalse("tkc@triforkcom".isMatching(regEx: emailPattern))
     }
     
     func testAllMatches() {
         let namePattern: String = "(Thomas)" //Note that the RegEx format of iOS needs special treatment.
         XCTAssertEqual("Find my name: Thomas. So my name is Thomas. Are there any Thomases here?".allMatches(withRegularExpression: namePattern).count, 3)
+    }
+
+    func testMatchesWithThreeNames() {
+        let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.
+        XCTAssertEqual("Find my name: Thomas. So my name is Thomas. Are there any Thomases here?".matches(regEx: namePattern).count, 3)
+    }
+
+    func testAllMatchesWithThreeUrls() {
+        let urls: String = """
+                            https://trifork.com/blog
+                            https://trifork.com/jobs
+                            https://trifork.com/about
+                            """
+
+        let urlPattern = "https://trifork.com/[\\S]+"
+        XCTAssertEqual(urls.matches(regEx: urlPattern).count, 3)
+    }
+
+    func testAllMatchesWithOneName() {
+        let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.
+        XCTAssertEqual("Find my name: Thomas.".matches(regEx: namePattern).count, 1)
     }
     
     func testIsEmail() {
@@ -132,16 +152,16 @@ class StringExtensionTests: XCTestCase {
             .lineBreakMode(lineBreakMode)
         ])
         
-        let attributes: [NSAttributedStringKey: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.alignment == textAlignment, "The text alignment should be \(textAlignment)")
-        XCTAssert((attributes[NSAttributedStringKey.paragraphStyle] as? NSParagraphStyle)?.lineBreakMode == lineBreakMode, "The line break mode should be \(lineBreakMode)")
+        let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineSpacing == lineSpacing, "The line spacing should be \(lineSpacing)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.minimumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.maximumLineHeight == lineHeight, "The line height should be \(lineHeight)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.alignment == textAlignment, "The text alignment should be \(textAlignment)")
+        XCTAssert((attributes[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle)?.lineBreakMode == lineBreakMode, "The line break mode should be \(lineBreakMode)")
         
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
-        XCTAssert((attributes[NSAttributedStringKey.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
-        XCTAssert((attributes[NSAttributedStringKey.foregroundColor] as? UIColor) == color, "The color should be \(color.description)")
-        XCTAssert((attributes[NSAttributedStringKey.kern] as? CGFloat) == letterSpacing, "The letter spacing should be \(String(describing: letterSpacing))")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == font.fontName, "The font name should be \(font.fontName)")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.pointSize == font.pointSize, "The size should be \(String(describing: font.pointSize))")
+        XCTAssert((attributes[NSAttributedString.Key.foregroundColor] as? UIColor) == color, "The color should be \(color.description)")
+        XCTAssert((attributes[NSAttributedString.Key.kern] as? CGFloat) == letterSpacing, "The letter spacing should be \(String(describing: letterSpacing))")
     }
 }

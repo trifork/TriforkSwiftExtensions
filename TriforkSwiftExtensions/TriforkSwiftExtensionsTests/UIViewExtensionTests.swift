@@ -20,6 +20,13 @@ class UIViewExtensionTests: XCTestCase {
         XCTAssertEqual(view.layer.cornerRadius, 50.0)
     }
     
+    func testRoundEdge() {
+        let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 500))
+        view.roundForHorizontalEdges()
+        XCTAssertEqual(view.layer.cornerRadius, 250.0)
+        view.roundForVerticalEdges()
+        XCTAssertEqual(view.layer.cornerRadius, 50.0)
+    }
     
     func testRemoveAllSubViews() {
         let emptyParent = UIView()

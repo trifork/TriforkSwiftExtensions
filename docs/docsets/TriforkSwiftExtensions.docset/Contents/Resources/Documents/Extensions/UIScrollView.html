@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           TriforkSwiftExtensions Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -79,6 +79,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
@@ -100,6 +103,9 @@
                 <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/LAContext.html">LAContext</a>
               </li>
               <li class="nav-group-task">
@@ -116,6 +122,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
@@ -151,10 +160,7 @@
                 <a class="nav-group-task-link" href="../Extensions/UITableView.html">UITableView</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/UITableViewCell.html">UITableViewCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Extensions/UITableViewHeaderFooterView.html">UITableViewHeaderFooterView</a>
+                <a class="nav-group-task-link" href="../Extensions/UITextView.html">UITextView</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIView.html">UIView</a>
@@ -164,14 +170,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/Reusable.html">Reusable</a>
               </li>
             </ul>
           </li>
@@ -196,6 +194,33 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So12UIScrollViewC22TriforkSwiftExtensionsE11currentPageSivp"></a>
+                    <a name="//apple_ref/swift/Property/currentPage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIScrollViewC22TriforkSwiftExtensionsE11currentPageSivp">currentPage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the scroll views current page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentPage</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -282,6 +307,98 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So12UIScrollViewC22TriforkSwiftExtensionsE16scrollToNextPage8animatedySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/scrollToNextPage(animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIScrollViewC22TriforkSwiftExtensionsE16scrollToNextPage8animatedySb_tF">scrollToNextPage(animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scrolls to next page if there is a valid page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollToNextPage</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>true</code> if the scrolling should be animated, <code>false</code> if it should be immediate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So12UIScrollViewC22TriforkSwiftExtensionsE20scrollToPreviousPage8animatedySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/scrollToPreviousPage(animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIScrollViewC22TriforkSwiftExtensionsE20scrollToPreviousPage8animatedySb_tF">scrollToPreviousPage(animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Scrolls to previous page if there is a valid page</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scrollToPreviousPage</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>true</code> if the scrolling should be animated, <code>false</code> if it should be immediate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -290,7 +407,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-02-19)</p>
+      <p>&copy; 2019 <a class="link" href="http://trifork.com/" target="_blank" rel="external">Trifork</a>. All rights reserved. (Last updated: 2019-07-18)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -11,7 +11,7 @@ import Foundation
 public extension Bundle {
     
     /// Returns the compile date of the app.
-    public var compileDate: Date? {
+    var compileDate: Date? {
         guard let bundleName: String = self.bundleName,
             let infoPath: String = self.path(forResource: bundleName, ofType: nil),
             let infoAttr = try? FileManager.default.attributesOfItem(atPath: infoPath)
@@ -21,27 +21,27 @@ public extension Bundle {
     
     
     /// Returns the name of the active build configuration when the app was built
-    public var buildConfiguration: String {
+    var buildConfiguration: String {
         return self.infoDictionary?["Configuration"] as? String ?? "Unknown"
     }
     
     /// Returns the bundle name of the app.
-    public var bundleName: String? {
+    var bundleName: String? {
         return self.infoDictionary?["CFBundleName"] as? String
     }
     
     /// Returns the version of the app.
-    public var version: String? {
+    var version: String? {
         return self.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
     /// Returns the build number of the app.
-    public var buildNumber: String? {
+    var buildNumber: String? {
         return self.infoDictionary?["CFBundleVersion"] as? String
     }
     
     /// Returns the version string of the app in the format: VERSION (BUILDNUMBER)
-    public var versionString: String {
+    var versionString: String {
         return "\(self.version ?? "N/A") (\(self.buildNumber ?? "N/A"))"
     }
 }

@@ -40,7 +40,7 @@ public extension Date {
     /// - medium:   "Aug 28, 2017",             "2:40:52 PM"
     /// - long:     "August 28, 2017",          "2:40:52 PM GMT+2"
     /// - full:     "Monday, August 28, 2017",  "2:40:52 PM Central European Summer Time"
-    public func toString(dateStyle: DateFormatter.Style = .none, timeStyle: DateFormatter.Style = .none, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
+    func toString(dateStyle: DateFormatter.Style = .none, timeStyle: DateFormatter.Style = .none, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter: DateFormatter = DateFormatter()
         
         if let locale: Locale = locale {
@@ -56,45 +56,48 @@ public extension Date {
     }
     
     /// Converts receiver to a string of the ISO8601 format.
-    public func asISO8601String() -> String {
+    func asISO8601String() -> String {
         return Formatter.iso8601WithMs.string(from: self)
     }
     
     
     /// Constructs a Date instance based on a ISO8601 formatted string.
-    public static func dateFrom(iso8601String: String) -> Date? {
+    static func dateFrom(iso8601String: String) -> Date? {
         return Formatter.iso8601WithMs.date(from: iso8601String)
     }
     
     /// Converts receiver to a string of the ISO8601 format.
-    public func asISO8601WithoutMsString() -> String {
+    func asISO8601WithoutMsString() -> String {
         return Formatter.iso8601WithoutMs.string(from: self)
     }
-    
-    
+
     /// Constructs a Date instance based on a ISO8601 formatted string.
-    public static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
+    static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
         return Formatter.iso8601WithoutMs.date(from: iso8601StringWithoutMs)
     }
     
     /// Asks `Calendar.current` whether the instance is today.
-    public var isToday: Bool {
+    var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
     
     /// Asks `Calendar.current` whether the instance is tomorrow.
-    public var isTomorrow: Bool {
+    var isTomorrow: Bool {
         return Calendar.current.isDateInTomorrow(self)
     }
     
     /// Asks `Calendar.current` whether the instance is yesterday.
-    public var isYesterday: Bool {
+    var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
     }
-    
-    
+
+    /// Returns the days difference between two dates.
+    var daysAgo: Int? {
+        return Calendar.current.dateComponents([.day], from: self, to: Date()).day
+    }
+
     /// Returns a copy of the receiver, where the hours, minutes, seconds and nanoseconds are set to zero.
-    public var midnightDate: Date {
+    var midnightDate: Date {
         var date: Date = self
         for component: Calendar.Component in [.hour, .minute, .second, .nanosecond] {
             let componentValue: Int = Calendar.current.component(component, from: date)
@@ -102,6 +105,9 @@ public extension Date {
         }
         return date
     }
-    
+
+    func date(byAdding component: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    }
 }
 

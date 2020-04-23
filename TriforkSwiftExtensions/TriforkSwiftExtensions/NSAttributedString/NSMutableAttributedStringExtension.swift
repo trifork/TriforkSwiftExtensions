@@ -12,7 +12,7 @@ import UIKit
 public extension NSMutableAttributedString {
     
     /// Appends an attributed string to the receiver with a specified font and color
-    public func appendString(text: String, withFont font: UIFont?, andColor color: UIColor?) {
+    func appendString(text: String, withFont font: UIFont?, andColor color: UIColor?) {
         
         var attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key: Any]()
         if let font: UIFont = font {
@@ -28,7 +28,7 @@ public extension NSMutableAttributedString {
     }
     
     /// Adds a paragraph style to the receiver with the lineheight
-    public func setLineHeight(lineHeight: CGFloat) {
+    func setLineHeight(lineHeight: CGFloat) {
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         paragraphStyle.minimumLineHeight = lineHeight
         paragraphStyle.maximumLineHeight = lineHeight
@@ -36,7 +36,7 @@ public extension NSMutableAttributedString {
     }
     
     /// Initializes an attributed string with line spacing
-    public convenience init(string: String, withLineSpacing lineSpacing: CGFloat) {
+    convenience init(string: String, withLineSpacing lineSpacing: CGFloat) {
         self.init(string: string)
         let textParagraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         textParagraphStyle.lineSpacing = lineSpacing
@@ -44,7 +44,7 @@ public extension NSMutableAttributedString {
     }
     
     /// Optionally sets lineHeight and/or lineSpacing
-    public func set(lineHeight: CGFloat? = nil, lineSpacing: CGFloat? = nil) {
+    func set(lineHeight: CGFloat? = nil, lineSpacing: CGFloat? = nil) {
         let paragraphStyle: NSMutableParagraphStyle = NSMutableParagraphStyle()
         if let lineHeight: CGFloat = lineHeight {
             paragraphStyle.minimumLineHeight = lineHeight

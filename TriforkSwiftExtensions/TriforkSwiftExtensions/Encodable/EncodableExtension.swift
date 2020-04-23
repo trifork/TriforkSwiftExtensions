@@ -11,7 +11,7 @@ import Foundation
 public extension Encodable {
     
     /// Returns a dictionary representing the data from the receiver.
-    public func toDictionary() -> [String: Any]? {
+    func toDictionary() -> [String: Any]? {
         guard let data: Data = try? JSONEncoder().encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any]
     }
