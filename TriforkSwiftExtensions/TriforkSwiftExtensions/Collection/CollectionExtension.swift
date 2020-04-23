@@ -16,7 +16,7 @@ public extension Collection {
     }
     
     /// Tells if this collection is NOT empty (contains element(s))
-    public var isNotEmpty: Bool {
+    var isNotEmpty: Bool {
         return !isEmpty
     }
 

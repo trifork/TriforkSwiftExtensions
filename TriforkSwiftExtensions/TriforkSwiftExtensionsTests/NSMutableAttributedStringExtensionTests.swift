@@ -30,7 +30,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         XCTAssert(attributedString.string == text)
         
         let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        self.assert(attributes: attributes, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
+        self.assert(attributes: attributes, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta) //in newer ios this is .SFUI-Semibold
         
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
@@ -39,6 +39,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         
         let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
         let expectedFontName: String
+        //in newer ios this is .SFUI-Regular
         if iOSVersionMajor > 9 {
             expectedFontName = ".SFUIDisplay"
         }
@@ -50,6 +51,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
         let attributes3: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
+        //in newer ios this is .SFUI-Semibold
         self.assert(attributes: attributes3, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
     }
     
@@ -88,7 +90,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
     }
     
     private func assert(attributes: [NSAttributedString.Key: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
-        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
+        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil") but was \((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName ?? "nil")")
         XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
         XCTAssert((attributes[NSAttributedString.Key.foregroundColor] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
     }
