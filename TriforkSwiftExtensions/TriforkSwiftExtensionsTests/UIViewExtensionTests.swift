@@ -10,7 +10,12 @@ import XCTest
 @testable import TriforkSwiftExtensions
 
 class UIViewExtensionTests: XCTestCase {
-    
+
+    func testTranslatesAutoresizingMaskIntoConstraintsInit() {
+        let view = UIView(translatesAutoresizingMask: false)
+        XCTAssertFalse(view.translatesAutoresizingMaskIntoConstraints)
+    }
+
     func testCircle() {
         let view: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 101))
         view.circle()
@@ -48,6 +53,17 @@ class UIViewExtensionTests: XCTestCase {
         XCTAssertEqual(parentMany.subviews.count, childs.count)
         parentMany.removeAllSubViews()
         XCTAssertEqual(parentMany.subviews.count, 0)
-        
+    }
+
+    func testAddSubviewWithInsets() {
+        let view = UIView()
+        let view2 = UIView()
+        let superview = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+
+        superview.addSubview(view, withInsets: .zero)
+        superview.addSubview(view2, withInsets: UIEdgeInsets(allEdges: 50))
+        superview.layoutIfNeeded()
+        XCTAssert(superview.bounds.equalTo(view.frame))
+        XCTAssert(superview.bounds.insetBy(dx: 50, dy: 50).equalTo(view2.frame))
     }
 }

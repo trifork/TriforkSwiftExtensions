@@ -9,7 +9,13 @@
 import UIKit
 
 public extension UIView {
-    
+
+    /// Constructor to set `translatesAutoresizingMaskIntoConstraints` directly on init
+    convenience init(translatesAutoresizingMask: Bool) {
+        self.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMask
+    }
+
     /// Rounds the left and right sides of the receiver.
     ///
     /// This will also turn a rectangled view into a circle if it is a square.
@@ -112,6 +118,18 @@ public extension UIView {
     /// Finds the first responder in the receiver and its subviews.
     func findFirstResponder() -> UIView? {
         return findFirstResponder(inView: self)
+    }
+
+    /// Adds `view` as subview to `self` and sets constraints for all edges with specified inset.
+    func addSubview(_ view: UIView, withInsets inset: UIEdgeInsets) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset.left),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -inset.right),
+            view.topAnchor.constraint(equalTo: topAnchor, constant: inset.top),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -inset.bottom)
+        ])
     }
     
     private func findFirstResponder(inView workingView: UIView) -> UIView? {
