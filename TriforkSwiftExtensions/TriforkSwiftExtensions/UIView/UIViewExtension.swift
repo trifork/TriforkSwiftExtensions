@@ -121,7 +121,7 @@ public extension UIView {
     }
 
     /// Adds `view` as subview to `self` and sets constraints for all edges with specified inset.
-    func addSubview(_ view: UIView, withInsets inset: UIEdgeInsets) {
+    func addSubview(_ view: UIView, withEdgeInsets inset: UIEdgeInsets) {
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         NSLayoutConstraint.activate([
