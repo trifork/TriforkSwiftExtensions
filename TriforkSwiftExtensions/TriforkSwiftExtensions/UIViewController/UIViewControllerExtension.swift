@@ -15,5 +15,4 @@ public extension UIViewController {
         let alert: UIAlertController = UIAlertController.okAlert(title: title, message: message, okTitle: okTitle, okAction: okAction)
         alert.present(onViewController: self)
     }
-
 }

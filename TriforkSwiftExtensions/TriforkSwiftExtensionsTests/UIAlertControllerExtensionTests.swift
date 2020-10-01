@@ -49,4 +49,11 @@ class UIAlertControllerExtensionTests: XCTestCase {
         XCTAssertEqual(alert.actions.last?.title, "Cancel")
         XCTAssertEqual(alert.actions.last?.style, .cancel)
     }
+
+    func testPresentOkAlert() {
+        let vc = UIViewController()
+        let alert = vc.presentOkAlert(withTitle: "Title", message: "Yap yap")
+        XCTAssertEqual(alert.title, "Title")
+        XCTAssertEqual(alert.actions.first?.title, "OK")
+    }
 }
