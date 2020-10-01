@@ -30,7 +30,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         XCTAssert(attributedString.string == text)
         
         let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        self.assert(attributes: attributes, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
+        self.assert(attributes: attributes, fontName: ".SFUI-Semibold", fontSize: 15.0, color: UIColor.magenta)
         
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
@@ -40,7 +40,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
         let expectedFontName: String
         if iOSVersionMajor > 9 {
-            expectedFontName = ".SFUIDisplay"
+            expectedFontName = ".SFUI-Regular"
         }
         else {
             expectedFontName = ".SFUIDisplay-Regular"
@@ -50,7 +50,7 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
         let attributes3: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        self.assert(attributes: attributes3, fontName: ".SFUIText-Semibold", fontSize: 15.0, color: UIColor.magenta)
+        self.assert(attributes: attributes3, fontName: ".SFUI-Semibold", fontSize: 15.0, color: UIColor.magenta)
     }
     
     func testInitWithLineSpacing() {
