@@ -22,7 +22,7 @@ public extension UIAlertController {
     /// The `tintColor` defaults to `nil`, which will give the Apple standard.
     func present(onViewController viewController: UIViewController, tintColor: UIColor? = nil) {
         self.view.tintColor = tintColor
-        _ = viewController.present(self, animated: true, completion: {
+        viewController.present(self, animated: true, completion: {
             self.view.tintColor = tintColor
         })
     }
