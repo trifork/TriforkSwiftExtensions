@@ -11,10 +11,8 @@ import UIKit
 public extension UIViewController {
     
     /// Presents a default OK alert on the receiver. `okTitle` defaults to `"OK"` and `okAction` defaults to `nil`.
-    @discardableResult
-    func presentOkAlert(withTitle title: String, message: String, okTitle: String = "OK", okAction: (() -> Void)? = nil) -> UIAlertController {
+    func presentOkAlert(withTitle title: String, message: String, okTitle: String = "OK", okAction: (() -> Void)? = nil) {
         let alert: UIAlertController = UIAlertController.okAlert(title: title, message: message, okTitle: okTitle, okAction: okAction)
         alert.present(onViewController: self)
-        return alert
     }
 }
