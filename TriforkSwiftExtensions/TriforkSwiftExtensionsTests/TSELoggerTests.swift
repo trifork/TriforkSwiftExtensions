@@ -29,9 +29,8 @@ class TSELoggerTests: XCTestCase {
             expect.fulfill()
         }
         XCTAssertNotNil(TSELogger.customLogErrorHandler)
-        
-        let view: UIView = UIView(frame: CGRect(x: 0, y:0, width: 50, height: 10))
-        view.circle()
+
+        UIApplication.shared.openSafe(url: "illegal-url", options: nil, completionHandler: nil)
         waitForExpectations(timeout: 1.0, handler: nil)
     }
     
