@@ -71,11 +71,6 @@ class StringExtensionTests: XCTestCase {
         XCTAssertTrue("tkc@trifork.com".isMatching(regEx: emailPattern))
         XCTAssertFalse("tkc@triforkcom".isMatching(regEx: emailPattern))
     }
-    
-    func testAllMatches() {
-        let namePattern: String = "(Thomas)" //Note that the RegEx format of iOS needs special treatment.
-        XCTAssertEqual("Find my name: Thomas. So my name is Thomas. Are there any Thomases here?".allMatches(withRegularExpression: namePattern).count, 3)
-    }
 
     func testMatchesWithThreeNames() {
         let namePattern: String = "Thomas" //Note that the RegEx format of iOS needs special treatment.

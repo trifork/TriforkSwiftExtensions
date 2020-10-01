@@ -71,14 +71,6 @@ public extension String {
         }
     }
 
-    /// Check if the receiver matches the regular expression defined in a string format.
-    ///
-    /// The check is case insensitive
-    @available(*, deprecated, message: "This function is replaced by `isMatching`. isMatching is **NOT** not `.caseInsensitive`. It can be added as an option.", renamed: "isMatching")
-    func matches(withRegularExpression regExp: String) -> Bool {
-        return isMatching(regEx: regExp, options: .caseInsensitive)
-    }
-
     /// Returns all components from the regular expression matching
     ///
     /// - Parameter pattern: regular expression. If not valid it return an empty array.
@@ -98,25 +90,6 @@ public extension String {
 
                 return values
         }
-    }
-
-    /// Returns all components from the regular expression matching
-    @available(*, deprecated, message: "This function removes the 'fullmatch'. Pleae use the new one.", renamed: "matches")
-    func allMatches(withRegularExpression pattern: String) -> [String] {
-        if let matcher = try? NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options()) {
-            let str = self as NSString
-            var matches = [String]()
-            matcher.enumerateMatches(in: self, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, str.length), using: { (optResult, flags, stop) -> Void in
-                if let result = optResult, result.numberOfRanges > 1 {
-                    for t in (1 ... (result.numberOfRanges - 1)) {
-                        let s = str.substring(with: result.range(at: t))
-                        matches.append(s)
-                    }
-                }
-            })
-            return matches
-        }
-        return []
     }
     
     //MARK: - Validation
