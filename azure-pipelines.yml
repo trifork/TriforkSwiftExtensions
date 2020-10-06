@@ -4,19 +4,25 @@ trigger:
 
 jobs:
 - job: Xcode_test
-  pool:
-    vmImage: 'macOS-10.14'
   strategy:
     maxParallel: 10
     matrix:
-      xcode102:
-        DEVELOPER_DIR: /Applications/Xcode_10.2.app
-      xcode11:
-        DEVELOPER_DIR: /Applications/Xcode_11.app  
-      xcode111:
-        DEVELOPER_DIR: /Applications/Xcode_11.1.app
-      xcode1121:
-        DEVELOPER_DIR: /Applications/Xcode_11.2.1.app
+      #iOS 9+10 simulators requires macos-10.13, which is not supported by Azure Pipelines anymore...
+      #iOS 11 simulators requires macos-10.14 and the Xcode version does not support Swift 5...
+      ios12:
+        IMAGE_NAME: 'macos-10.15'
+        XCODE_DEVELOPER_PATH: /Applications/Xcode_10.3.app
+        IOS_SIMULATORS: 'iPhone X,OS=12.4'
+      ios13:
+        IMAGE_NAME: 'macos-10.15'
+        XCODE_DEVELOPER_PATH: /Applications/Xcode_11.7.app
+        IOS_SIMULATORS: 'iPhone 8,OS=13.7'
+      ios14:
+        IMAGE_NAME: 'macos-10.15'
+        XCODE_DEVELOPER_PATH: /Applications/Xcode_12.app
+        IOS_SIMULATORS: 'iPhone 11,OS=14.0'
+  pool:
+    vmImage: $(IMAGE_NAME)
   steps:
   - task: Xcode@5
     inputs:
@@ -26,11 +32,11 @@ jobs:
       configuration: 'Debug'
       xcWorkspacePath: '**/TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj'
       xcodeVersion: 'specifyPath'
-      xcodeDeveloperDir: $(DEVELOPER_DIR)
+      xcodeDeveloperDir: $(XCODE_DEVELOPER_PATH)
       signingOption: 'auto'
       useXcpretty: true
       publishJUnitResults: true
-      destinationSimulators: 'iPhone 8'
+      destinationSimulators: $(IOS_SIMULATORS)
       destinationTypeOption: 'simulators'
       destinationPlatformOption: 'iOS'
 
