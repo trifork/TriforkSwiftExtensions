@@ -12,7 +12,7 @@ modified_extension_files = modified_files.grep(/TriforkSwiftExtensions/)
 
 has_app_changes = !modified_extension_files.grep(/TriforkSwiftExtensions/).empty?
 has_test_changes = !modified_extension_files.grep(/TriforkSwiftExtensionsTests/).empty?
-has_docs_changes = !modified_files.grep(/docs/).empty?
+#has_docs_changes = !modified_files.grep(/docs/).empty?
 
 jazzy.check warn: :modified
 
