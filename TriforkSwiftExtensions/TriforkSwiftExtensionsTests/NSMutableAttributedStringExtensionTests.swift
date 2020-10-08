@@ -22,35 +22,36 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
     }
     
     func testAppendTextFontColor() {
+        let expectedRegularFontName: String
+        let expectedSemiboldFontName: String
+        if #available(iOS 13, *) {
+            expectedRegularFontName = ".SFUI-Regular"
+            expectedSemiboldFontName = ".SFUI-Semibold"
+        }
+        else {
+            expectedRegularFontName = ".SFUIDisplay"
+            expectedSemiboldFontName = ".SFUIText-Semibold"
+        }
+
         let attributedString: NSMutableAttributedString = NSMutableAttributedString()
         XCTAssert(attributedString.length == 0)
-        
+
         let text: String = "A very testy string"
         attributedString.appendString(text: text, withFont: UIFont.boldSystemFont(ofSize: 15.0), andColor: UIColor.magenta)
         XCTAssert(attributedString.string == text)
-        
+
         let attributes: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        self.assert(attributes: attributes, fontName: ".SFUI-Semibold", fontSize: 15.0, color: UIColor.magenta)
-        
+        self.assert(attributes: attributes, fontName: expectedSemiboldFontName, fontSize: 15.0, color: UIColor.magenta)
+
         let text2: String = "something after that"
         attributedString.appendString(text: text2, withFont: UIFont.systemFont(ofSize: 50.0), andColor: nil)
-        
+
         let attributes2: [NSAttributedString.Key: Any] = attributedString.attributes(at: text.count, effectiveRange: nil)
-        
-        let iOSVersionMajor: Int = ProcessInfo().operatingSystemVersion.majorVersion
-        let expectedFontName: String
-        if iOSVersionMajor > 9 {
-            expectedFontName = ".SFUI-Regular"
-        }
-        else {
-            expectedFontName = ".SFUIDisplay-Regular"
-        }
-        
-        self.assert(attributes: attributes2, fontName: expectedFontName, fontSize: 50.0, color: nil)
+        self.assert(attributes: attributes2, fontName: expectedRegularFontName, fontSize: 50.0, color: nil)
         
         //Check index 0 again, to make sure the attributes weren't changed after 'attributes2' was used.
         let attributes3: [NSAttributedString.Key: Any] = attributedString.attributes(at: 0, effectiveRange: nil)
-        self.assert(attributes: attributes3, fontName: ".SFUI-Semibold", fontSize: 15.0, color: UIColor.magenta)
+        self.assert(attributes: attributes3, fontName: expectedSemiboldFontName, fontSize: 15.0, color: UIColor.magenta)
     }
     
     func testInitWithLineSpacing() {
@@ -88,7 +89,8 @@ class NSMutableAttributedStringExtensionTests: XCTestCase {
     }
     
     private func assert(attributes: [NSAttributedString.Key: Any], fontName: String?, fontSize: CGFloat?, color: UIColor?) {
-        XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.fontName == fontName, "The font name should be \(fontName ?? "nil")")
+        let loadedFontName = (attributes[NSAttributedString.Key.font] as? UIFont)?.fontName
+        XCTAssert(loadedFontName == fontName, "The font name should be \(fontName ?? "nil"), but was \(String(describing: loadedFontName))")
         XCTAssert((attributes[NSAttributedString.Key.font] as? UIFont)?.pointSize == fontSize, "The size should be \(String(describing: fontSize))")
         XCTAssert((attributes[NSAttributedString.Key.foregroundColor] as? UIColor) == color, "The color should be \(color?.description ?? "nil")")
     }
