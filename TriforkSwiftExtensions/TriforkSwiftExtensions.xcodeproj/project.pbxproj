@@ -19,6 +19,8 @@
 		C3716D472297C2A100A75E8A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D432297C2A100A75E8A /* UITableViewExtension.swift */; };
 		C3716D482297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D452297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift */; };
 		C3716D4B2297C36000A75E8A /* UITableViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */; };
+		C380F39E254B5EE800081B25 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F39D254B5EE800081B25 /* SequenceExtensions.swift */; };
+		C380F3A2254B5F3B00081B25 /* SequenceExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380F3A1254B5F3B00081B25 /* SequenceExtensionTests.swift */; };
 		C3A5B7D72208D2DD009219A4 /* ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */; };
 		C3A9C2EC21CCED3F007DF893 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */; };
 		C3A9C2EE21CCEE9F007DF893 /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */; };
@@ -101,6 +103,8 @@
 		C3716D432297C2A100A75E8A /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C3716D452297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewHeaderFooterViewExtension.swift; sourceTree = "<group>"; };
 		C3716D4A2297C36000A75E8A /* UITableViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionTests.swift; sourceTree = "<group>"; };
+		C380F39D254B5EE800081B25 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
+		C380F3A1254B5F3B00081B25 /* SequenceExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionTests.swift; sourceTree = "<group>"; };
 		C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTests.swift; sourceTree = "<group>"; };
 		C3A9C2EB21CCED3F007DF893 /* NumericExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
 		C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
@@ -230,6 +234,14 @@
 				C3716D452297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift */,
 			);
 			path = UITableViewHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		C380F39C254B5EDC00081B25 /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				C380F39D254B5EE800081B25 /* SequenceExtensions.swift */,
+			);
+			path = Sequence;
 			sourceTree = "<group>";
 		};
 		C3A9C2EA21CCED2F007DF893 /* Numeric */ = {
@@ -457,6 +469,8 @@
 		E9DF34281F4D72E100BB36BB /* TriforkSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
+				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9DF34471F4D760300BB36BB /* Array */,
 				E98EDA6322E074B700BAE5BD /* Bool */,
 				E92269361F5533F900DAEFAE /* Bundle */,
@@ -468,15 +482,14 @@
 				E97F00071FE2653100BB262F /* Encodable */,
 				C3D20F9A232633A600DE4845 /* Error */,
 				C35C0C4C229E782000B6B88A /* FloatingPoint */,
-				E9DF342A1F4D72E100BB36BB /* Info.plist */,
 				E9A1EA732140EDDB005EEE52 /* LAContext */,
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
 				E92269061F53E18700DAEFAE /* NSObject */,
 				C3A9C2EA21CCED2F007DF893 /* Numeric */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
 				E9EA2CCC227AF3ED00944902 /* Result */,
+				C380F39C254B5EDC00081B25 /* Sequence */,
 				E92269151F53F93300DAEFAE /* String */,
-				E9DF34291F4D72E100BB36BB /* TriforkSwiftExtensions.h */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
 				E946D3CF20FDE274002FFDFF /* UIApplication */,
@@ -532,6 +545,7 @@
 				E92269401F55495800DAEFAE /* UIViewExtensionTests.swift */,
 				E92269271F54510F00DAEFAE /* URLExtensionTests.swift */,
 				E98EDA6622E0751700BAE5BD /* BoolExtensionTests.swift */,
+				C380F3A1254B5F3B00081B25 /* SequenceExtensionTests.swift */,
 			);
 			path = TriforkSwiftExtensionsTests;
 			sourceTree = "<group>";
@@ -700,6 +714,7 @@
 				E92269481F554FD900DAEFAE /* TSELogger.swift in Sources */,
 				C3716D482297C2A100A75E8A /* UITableViewHeaderFooterViewExtension.swift in Sources */,
 				E98EDA6522E074C800BAE5BD /* BoolExtension.swift in Sources */,
+				C380F39E254B5EE800081B25 /* SequenceExtensions.swift in Sources */,
 				E91351DA1F4EED8600BC1A68 /* OptionalExtension.swift in Sources */,
 				E92269171F53F9A100DAEFAE /* StringExtension.swift in Sources */,
 				E97F00091FE2654200BB262F /* EncodableExtension.swift in Sources */,
@@ -726,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C380F3A2254B5F3B00081B25 /* SequenceExtensionTests.swift in Sources */,
 				E9DF346E1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift in Sources */,
 				E91351DD1F4EEF8400BC1A68 /* OptionalExtensionTests.swift in Sources */,
 				E946D3D720FDE811002FFDFF /* CGFloatExtensionsTests.swift in Sources */,
