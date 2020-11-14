@@ -6,6 +6,8 @@
 //  Copyright © 2020 Trifork A/S. All rights reserved.
 //
 
+
+#if canImport(Combine)
 import XCTest
 import Combine
 
@@ -34,3 +36,4 @@ final class PublisherTests: XCTestCase {
             .store(in: &cancelBag)
     }
 }
+#endif
