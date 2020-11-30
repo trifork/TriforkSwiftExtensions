@@ -13,7 +13,7 @@ SPM is supported from version 1.3.3! 🥳
 
 ### Carthage
 ```
-github "trifork/TriforkSwiftExtensions" ~> 1.4
+github "trifork/TriforkSwiftExtensions" ~> 1.5.1
 ```
 
 ## Contributing
