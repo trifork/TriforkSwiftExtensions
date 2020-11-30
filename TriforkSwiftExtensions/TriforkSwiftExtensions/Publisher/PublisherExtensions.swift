@@ -13,8 +13,49 @@ import Combine
 
 @available(iOS 13.0, *)
 extension Publisher {
+    /// Receives on `DispatchQueue.main`
     public func receiveOnMain() -> Publishers.ReceiveOn<Self, DispatchQueue> {
         return self.receive(on: DispatchQueue.main)
+    }
+
+    /// Zips conditionally based on `condition`.
+    /// Uses `Just` with fallback value if `condition` is `false`
+    public func zipIf<P>(
+        _ condition: @autoclosure () -> Bool,
+        _ constructPublisher: @autoclosure () -> P,
+        fallbackOutput: P.Output) -> Publishers.Zip<Self, AnyPublisher<P.Output, P.Failure>> where P : Publisher, P.Failure == Self.Failure {
+        let publisher = PublisherHelper.conditional(condition: condition(), constructPublisher: constructPublisher(), fallbackOutput: fallbackOutput)
+        return zip(publisher)
+    }
+
+    /// FlatMaps conditionally based on `condition`
+    /// Uses `Just` with fallback value if `condition` is `false`
+    public func flatMapIf<P>(
+        _ condition: @autoclosure () -> Bool,
+        _ constructPublisher: @autoclosure () -> P,
+        fallbackOutput: P.Output) -> Publishers.FlatMap<AnyPublisher<P.Output, P.Failure>, Self> where P : Publisher, Self.Failure == P.Failure {
+        let publisher = PublisherHelper.conditional(condition: condition(), constructPublisher: constructPublisher(), fallbackOutput: fallbackOutput)
+        return flatMap({ _ in publisher })
+    }
+}
+
+@available(iOS 13.0, *)
+private final class PublisherHelper {
+
+    /// Takes a bool (as autoclosure) which indicates whether the publisher should be constructed.
+    /// If the `condition` returns `true` the publisher will be constructed, otherwise it will fallback on
+    /// a `Just` publisher with `fallbackOutput`
+    static func conditional<P>(
+        condition: @autoclosure () -> Bool,
+        constructPublisher: @autoclosure () -> P,
+        fallbackOutput: P.Output) -> AnyPublisher<P.Output, P.Failure> where P : Publisher {
+        if condition() {
+            return constructPublisher().eraseToAnyPublisher()
+        } else {
+            return Just(fallbackOutput)
+                .setFailureType(to: P.Failure.self)
+                .eraseToAnyPublisher()
+        }
     }
 }
 #endif
