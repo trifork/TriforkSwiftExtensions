@@ -31,11 +31,12 @@ extension Publisher {
     /// FlatMaps conditionally based on `condition`
     /// Uses `Just` with fallback value if `condition` is `false`
     public func flatMapIf<P>(
-        _ condition: @autoclosure () -> Bool,
-        _ constructPublisher: @autoclosure () -> P,
+        _ condition: @escaping @autoclosure () -> Bool,
+        _ constructPublisher: @escaping (Self.Output) -> P,
         fallbackOutput: P.Output) -> Publishers.FlatMap<AnyPublisher<P.Output, P.Failure>, Self> where P : Publisher, Self.Failure == P.Failure {
-        let publisher = PublisherHelper.conditional(condition: condition(), constructPublisher: constructPublisher(), fallbackOutput: fallbackOutput)
-        return flatMap({ _ in publisher })
+        self.flatMap { (output) in
+            PublisherHelper.conditional(condition: condition(), constructPublisher: constructPublisher(output), fallbackOutput: fallbackOutput)
+        }
     }
 }
 

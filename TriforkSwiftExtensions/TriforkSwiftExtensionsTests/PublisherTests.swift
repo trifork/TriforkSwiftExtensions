@@ -80,7 +80,9 @@ final class PublisherTests: XCTestCase {
         let expectationTrueCondition = XCTestExpectation(description: "True expectation never returned")
 
         let publisher = Just("🥳").setFailureType(to: Error.self)
-        publisher.flatMapIf(false, ForceFailPublisher(), fallbackOutput: "🥤")
+        publisher.flatMapIf(false, { _ in
+            ForceFailPublisher()
+        }, fallbackOutput: "🥤")
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case .failure:
@@ -93,7 +95,10 @@ final class PublisherTests: XCTestCase {
             })
             .store(in: &cancelBag)
 
-        publisher.flatMapIf(true, Just("🍾").setFailureType(to: Error.self), fallbackOutput: "🥤")
+        publisher.flatMapIf(true, { (v: String) -> AnyPublisher<String, Error> in
+            XCTAssertEqual(v, "🥳")
+            return Just("🍾").setFailureType(to: Error.self).eraseToAnyPublisher()
+        }, fallbackOutput: "🥤")
             .sink(receiveCompletion: { (completion) in
                 switch completion {
                 case .failure:
