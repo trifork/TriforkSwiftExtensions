@@ -63,7 +63,7 @@ private struct SequenceTestElement {
     let date: Date
 
     static func testSequence() -> [SequenceTestElement] {
-        [
+        return [
             SequenceTestElement(date: Date(timeIntervalSince1970: 7)),
             SequenceTestElement(date: Date(timeIntervalSince1970: 0)),
             SequenceTestElement(date: Date(timeIntervalSince1970: 2)),
