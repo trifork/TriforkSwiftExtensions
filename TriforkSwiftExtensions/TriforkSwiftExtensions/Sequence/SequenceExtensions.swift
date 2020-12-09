@@ -21,21 +21,21 @@ extension Sequence {
 
     /// Sorts list by key path
     func sorted<T: Comparable>(by keyPath: KeyPath<Element, T>, using comparator: (T, T) -> Bool = (<)) -> [Element] {
-        sorted { a, b in
+        return sorted { a, b in
             comparator(a[keyPath: keyPath], b[keyPath: keyPath])
         }
     }
 
     /// max function by key path
     func max<T: Comparable>(by keyPath: KeyPath<Element, T>, using comparator: (T, T) -> Bool = (<)) -> Element? {
-        self.max { a, b in
+        return self.max { a, b in
             comparator(a[keyPath: keyPath], b[keyPath: keyPath])
         }
     }
 
     /// min function by key path
     func min<T: Comparable>(by keyPath: KeyPath<Element, T>, using comparator: (T, T) -> Bool = (<)) -> Element? {
-        self.min { a, b in
+        return self.min { a, b in
             comparator(a[keyPath: keyPath], b[keyPath: keyPath])
         }
     }
