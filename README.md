@@ -29,5 +29,5 @@ All documentation can be read [here](https://trifork.github.io/TriforkSwiftExten
 ---
 
 <p align="center">
-  <img width="220" height="44" src="https://jira.trifork.com//s/-p6q4kx/804003/9c3efa9da3fa1ef9d504f68de6c57528/_/jira-logo-scaled.png" alt="TRIFORK">
+  <img width="220" src="https://jira.trifork.com//s/-p6q4kx/804003/9c3efa9da3fa1ef9d504f68de6c57528/_/jira-logo-scaled.png" alt="TRIFORK">
 </p>
