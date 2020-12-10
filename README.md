@@ -1,10 +1,5 @@
 # TriforkSwiftExtensions
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
-![SPM](https://img.shields.io/badge/SPM-compatible-green.svg)
-![Azure Pipelines](https://dev.azure.com/aar-sef/TriforkSwiftExtensions/_apis/build/status/trifork.TriforkSwiftExtensions?branchName=master)
-
 ## Motivation
 This framework is a large set of useful convenience extensions for Apple's SDKs. Most functions are kept as very small functions, which makes the SDK a little easier to use.
 
@@ -34,5 +29,5 @@ All documentation can be read [here](https://trifork.github.io/TriforkSwiftExten
 ---
 
 <p align="center">
-  <img width="220" height="44" src="https://trifork.com/wp-content/uploads/2018/06/Trifork_payoff_logo_RGB.png" alt="TRIFORK">
+  <img width="220" height="44" src="https://jira.trifork.com//s/-p6q4kx/804003/9c3efa9da3fa1ef9d504f68de6c57528/_/jira-logo-scaled.png" alt="TRIFORK">
 </p>
