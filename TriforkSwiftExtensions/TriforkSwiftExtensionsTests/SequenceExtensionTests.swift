@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import TriforkSwiftExtensions
 
 #if canImport(Combine)
 import Combine
@@ -32,4 +33,41 @@ class SequenceExtensionTests: XCTestCase {
         }
     }
     #endif
+
+    func testSortedByKeyPath() {
+        let sequence = SequenceTestElement.testSequence()
+        let sorted = sequence.sorted(by: \.date)
+        XCTAssertEqual(sorted.first?.date, Date(timeIntervalSince1970: 0))
+        XCTAssertEqual(sorted.last?.date, Date(timeIntervalSince1970: 7))
+
+        let sorted2 = sequence.sorted(by: \.date, using: >)
+        XCTAssertEqual(sorted2.first?.date, Date(timeIntervalSince1970: 7))
+        XCTAssertEqual(sorted2.last?.date, Date(timeIntervalSince1970: 0))
+    }
+
+    func testMinByKeyPath() {
+        let sequence = SequenceTestElement.testSequence()
+        let min = sequence.min(by: \.date)
+        XCTAssertEqual(min?.date, Date(timeIntervalSince1970: 0))
+    }
+
+    func testMaxByKeyPath() {
+        let sequence = SequenceTestElement.testSequence()
+        let max = sequence.max(by: \.date)
+        XCTAssertEqual(max?.date, Date(timeIntervalSince1970: 7))
+    }
+}
+
+
+private struct SequenceTestElement {
+    let date: Date
+
+    static func testSequence() -> [SequenceTestElement] {
+        return [
+            SequenceTestElement(date: Date(timeIntervalSince1970: 7)),
+            SequenceTestElement(date: Date(timeIntervalSince1970: 0)),
+            SequenceTestElement(date: Date(timeIntervalSince1970: 2)),
+            SequenceTestElement(date: Date(timeIntervalSince1970: 1))
+        ]
+    }
 }
