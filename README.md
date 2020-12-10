@@ -5,7 +5,8 @@
 ![SPM](https://img.shields.io/badge/SPM-compatible-green.svg)
 ![Azure Pipelines](https://dev.azure.com/aar-sef/TriforkSwiftExtensions/_apis/build/status/trifork.TriforkSwiftExtensions?branchName=master)
 
-Framework with generic Swift extensions.
+## Motivation
+This framework is a large set of useful convenience extensions for Apple's SDKs. Most functions are kept as very small functions, which makes the SDK a little easier to use.
 
 ## Installation
 ### SPM
