@@ -108,4 +108,20 @@ class UIScrollViewExtensionTests: XCTestCase {
         XCTAssertEqual(scrollView.contentOffset, CGPoint(x: 20, y: 0))
         XCTAssertEqual(scrollView.frame.origin, CGPoint(x: 0, y: 0))
     }
+
+
+
+    func testCurrentPage() {
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: 100, height: 500))
+        scrollView.contentSize = CGSize(width: scrollView.bounds.width * 10, height: 500)
+        assertCurrentPage(on: scrollView, scrollToPage: 5, expectedPage: 5)
+        assertCurrentPage(on: scrollView, scrollToPage: 0, expectedPage: 0)
+        assertCurrentPage(on: scrollView, scrollToPage: 10, expectedPage: 10)
+        assertCurrentPage(on: scrollView, scrollToPage: 100, expectedPage: 10)
+    }
+
+    private func assertCurrentPage(on scrollView: UIScrollView, scrollToPage: Int, expectedPage: Int) {
+        scrollView.contentOffset.x = scrollView.bounds.width * CGFloat(scrollToPage)
+        XCTAssertEqual(scrollView.currentPage, expectedPage)
+    }
 }
