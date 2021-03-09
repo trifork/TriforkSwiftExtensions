@@ -77,6 +77,7 @@ final class PublisherTests: XCTestCase {
 
     func testFlatMapIf() {
         let expectationFalseCondition = XCTestExpectation(description: "False expectation never returned")
+        let expectationTrueFailCondition = XCTestExpectation(description: "True failing expectation never returned")
         let expectationTrueCondition = XCTestExpectation(description: "True expectation never returned")
 
         let publisher = Just("🥳").setFailureType(to: Error.self)
@@ -92,6 +93,19 @@ final class PublisherTests: XCTestCase {
                 }
             }, receiveValue: { (result) in
                 XCTAssertEqual(result, "🥤")
+            })
+            .store(in: &cancelBag)
+
+        publisher.zipIf(true, Fail(error: TestError.fail), fallbackOutput: "🥤")
+            .sink(receiveCompletion: { (completion) in
+                switch completion {
+                case .failure:
+                    expectationTrueFailCondition.fulfill()
+                case .finished:
+                    XCTFail("This should have failed!")
+                }
+            }, receiveValue: { (result) in
+                XCTFail("No value - should have failed!")
             })
             .store(in: &cancelBag)
 
@@ -132,6 +146,10 @@ private struct ForceFailPublisher: Publisher {
     private func failTest() {
         XCTFail("This publisher should never be constructed!")
     }
+}
+
+enum TestError : Error {
+    case fail
 }
 
 #endif

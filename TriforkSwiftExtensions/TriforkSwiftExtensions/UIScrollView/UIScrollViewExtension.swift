@@ -12,7 +12,7 @@ extension UIScrollView {
 
     /// Return the scroll views current page
     public var currentPage: Int {
-        return Int(contentOffset.x / frame.width)
+        return min(Int(contentOffset.x / bounds.width), Int(contentSize.width / bounds.width))
     }
 
     /// When setting `contentAndScrollInset` the `UIScrollView`s
