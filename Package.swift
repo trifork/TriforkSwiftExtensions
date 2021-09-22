@@ -6,12 +6,13 @@ import PackageDescription
 let package = Package(
     name: "TriforkSwiftExtensions",
     platforms: [
-       .iOS(.v9),
+        .iOS(.v11),
     ],
     products: [
-        .library(name: "TriforkSwiftExtensions",
-
-                 targets: ["TriforkSwiftExtensions"])
+        .library(
+            name: "TriforkSwiftExtensions",
+            targets: ["TriforkSwiftExtensions"]
+        )
     ],
 
     targets: [
