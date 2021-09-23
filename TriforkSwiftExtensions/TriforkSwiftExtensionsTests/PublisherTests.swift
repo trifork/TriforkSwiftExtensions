@@ -26,17 +26,17 @@ final class PublisherTests: XCTestCase {
         super.tearDown()
     }
 
-    func testIsOnMain() {
-        var cancelBag = Set<AnyCancellable>()
-
-        PassthroughSubject<Void, Never>()
-            .receive(on: DispatchQueue.global(qos: .background))
-            .receiveOnMain()
-            .sink(receiveValue: { _ in
-                XCTAssertTrue(Thread.isMainThread)
-            })
-            .store(in: &cancelBag)
-    }
+//    func testIsOnMain() {
+//        var cancelBag = Set<AnyCancellable>()
+//
+//        PassthroughSubject<Void, Never>()
+//            .receive(on: DispatchQueue.global(qos: .background))
+//            .receiveOnMain()
+//            .sink(receiveValue: { _ in
+//                XCTAssertTrue(Thread.isMainThread)
+//            })
+//            .store(in: &cancelBag)
+//    }
 
     func testZipIf() {
         let expectationFalseCondition = XCTestExpectation(description: "False expectation never returned")

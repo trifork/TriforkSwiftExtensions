@@ -13,10 +13,14 @@ import Combine
 
 @available(iOS 13.0, *)
 extension Publisher {
+
+    /// THIS FUNCTION IS REMOVED TO SUPPORT pre iOS 11 apps for Xcode 13.0. There is a known issue where Combine code fails to build when building for armv7
+    /// (this is in the release notes of Xcode 13.0)
+    /// THIS FUNCTION IS ONLY REMOVED IN A WORKAROUND VERSION OF THIS FRAMEWORK.
     /// Receives on `DispatchQueue.main`
-    public func receiveOnMain() -> Publishers.ReceiveOn<Self, DispatchQueue> {
-        return self.receive(on: DispatchQueue.main)
-    }
+//    public func receiveOnMain() -> Publishers.ReceiveOn<Self, DispatchQueue> {
+//        return self.receive(on: DispatchQueue.main)
+//    }
 
     /// Zips conditionally based on `condition`.
     /// Uses `Just` with fallback value if `condition` is `false`
