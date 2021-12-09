@@ -1,8 +1,0 @@
-author: Trifork
-author_url: http://trifork.com/
-github_url: https://github.com/Trifork/TriforkSwiftExtensions
-root_url: https://trifork.github.io/trifork/
-module: TriforkSwiftExtensions
-output: docs
-theme: fullwidth
-xcodebuild_arguments: [-project, './TriforkSwiftExtensions/TriforkSwiftExtensions.xcodeproj', -scheme, 'TriforkSwiftExtensions']
