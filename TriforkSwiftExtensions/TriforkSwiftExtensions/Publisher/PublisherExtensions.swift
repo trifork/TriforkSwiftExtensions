@@ -8,7 +8,7 @@
 
 import Foundation
 
-#if !(os(iOS) && (arch(i386) || arch(arm)))
+#if canImport(Combine) &&  !(os(iOS) && (arch(i386) || arch(arm))) //canImport(Combine) && is64Bit
 import Combine
 
 @available(iOS 13.0, *)
