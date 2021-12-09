@@ -8,6 +8,11 @@
 
 import Foundation
 
+/// Xcode 13 release has a known error for Combine code and armv7 architectures.
+/// https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-13-release-notes
+///
+/// Swift libraries depending on Combine may fail to build for targets including armv7 and i386 architectures. (82183186, 82189214)
+/// Workaround: Use an updated version of the library that isn’t impacted (if available) or remove armv7 and i386 support (for example, increase the deployment target of the library to iOS 11 or higher).
 #if canImport(Combine) &&  !(os(iOS) && (arch(i386) || arch(arm))) //canImport(Combine) && is64Bit
 import Combine
 

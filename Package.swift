@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "TriforkSwiftExtensions",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v9),
     ],
     products: [
         .library(
