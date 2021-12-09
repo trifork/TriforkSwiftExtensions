@@ -21,6 +21,10 @@ jobs:
         IMAGE_NAME: 'macos-10.15'
         XCODE_DEVELOPER_PATH: /Applications/Xcode_12.app
         IOS_SIMULATORS: 'iPhone 11,OS=14.0'
+      ios15:
+        IMAGE_NAME: 'macos-11'
+        XCODE_DEVELOPER_PATH: /Applications/Xcode_13.1.app
+        IOS_SIMULATORS: 'iPhone 13,OS=15.0'
   pool:
     vmImage: $(IMAGE_NAME)
   steps:
@@ -39,19 +43,4 @@ jobs:
       destinationSimulators: $(IOS_SIMULATORS)
       destinationTypeOption: 'simulators'
       destinationPlatformOption: 'iOS'
-
-- job: Danger
-  pool:
-    vmImage: 'macOS-10.14'
-    variables:
-      DEVELOPER_DIR: /Applications/Xcode_10.2.app
-  steps:
-    - script: bundle update --bundler
-      displayName: Update bundler
-    - script: bundle install
-      displayName: bundle install
-    - script: bundle exec danger --verbose
-      displayName: Run Danger
-
-      env:
-        DANGER_GITHUB_API_TOKEN: $(DANGER_GITHUB_API_TOKEN)
+      
