@@ -72,4 +72,58 @@ class ArrayExtensionTests: XCTestCase {
         XCTAssert(array2.count == 3, "This array should contains 3 elements")
     }
     
+    func testUniqueForArrayOfInt() {
+        let objectsArray: [Int] = [0, 1, 2, 3, 4, 1]
+        let uniqueArray = objectsArray.unique()
+        let expectedArray = uniqueArray.sorted()
+        XCTAssertEqual(expectedArray, [0, 1, 2, 3, 4])
+    }
+    
+    func testUniqueForArrayOfStrings() {
+        let objectsArray: [String] = ["a", "b", "c", "d", "e", "a"]
+        let uniqueArray = objectsArray.unique()
+        let expectedArray = uniqueArray.sorted()
+        XCTAssertEqual(expectedArray, ["a", "b", "c", "d", "e"])
+    }
+    
+    func testJoined() {
+        let testArray1 = ["Monday", "Tuesday"]
+        let testArray2 = ["Monday", "Tuesday", "Wednesday", "Thursday"]
+        let joinedString1 = testArray1.joined(by: ", ", end: " and ")
+        let joinedString2 = testArray2.joined(by: ", ", end: " and ")
+        XCTAssertEqual(joinedString1, "Monday and Tuesday")
+        XCTAssertEqual(joinedString2, "Monday, Tuesday, Wednesday and Thursday")
+    }
+    
+    func testHead() {
+        let testArray = [1, 2]
+        XCTAssertEqual(testArray.head, 1)
+    }
+    
+    func testTail() {
+        let testArray1 = [1, 2]
+        let testArray2 = [1, 2, 3, 4, 5]
+        XCTAssertEqual(testArray1.tail, [2])
+        XCTAssertEqual(testArray2.tail, [2, 3, 4, 5])
+    }
+    
+    func testNilIfEmpty() {
+        let emptyArray: [Int] = []
+        let testArray = [1, 2, 3, 4]
+        XCTAssertNil(emptyArray.nilIfEmpty)
+        XCTAssertEqual(testArray.nilIfEmpty, testArray)
+    }
+    
+    func testSplit() {
+        let testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let splitArrays = testArray.split { $0 > 5 }
+        XCTAssertEqual(splitArrays.1, [1, 2, 3, 4, 5])
+        XCTAssertEqual(splitArrays.0, [6, 7, 8, 9, 10])
+    }
+    
+    func testGet() {
+        let testArray = ["Casper", "Anders", "Niels", "Thomas"]
+        XCTAssertEqual(testArray.get(index: 2), "Niels")
+        XCTAssertNil(testArray.get(index: 4))
+    }
 }
