@@ -97,8 +97,8 @@ public extension Array {
     /// Returns `nil` if the `Array` is empty, otherwise returning self.
     var nilIfEmpty: [Element]? { isEmpty ? nil : self }
     
-    /// Splits the `Array` into two, where the first `Array` contains the elements that match the bool and the second `Array` contains the rest.
-    func split(by: shouldAppendToFirst(Element) -> Bool) -> ([Element], [Element]) {
+    /// Splits the `Array` into two dependent on the "shouldAppendToFirst-Argument", where the first `Array` contains the elements that match the bool and the second `Array` contains the rest.
+    func split(by shouldAppendToFirst: (Element) -> Bool) -> ([Element], [Element]) {
         var first: [Element] = []
         var second: [Element] = []
         
