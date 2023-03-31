@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Date {
-    
+
     private struct Formatter {
         static let iso8601WithMs: DateFormatter = {
             let formatter = DateFormatter()
@@ -19,7 +19,7 @@ public extension Date {
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
             return formatter
         }()
-        
+
         static let iso8601WithoutMs: DateFormatter = {
             let formatter = DateFormatter()
             formatter.calendar = Calendar(identifier: .iso8601)
@@ -29,7 +29,7 @@ public extension Date {
             return formatter
         }()
     }
-    
+
     /// Converts receiver to string with given style.
     ///
     /// Both date and time styles defaults to none, which means they will not be included in the string
@@ -42,30 +42,30 @@ public extension Date {
     /// - full:     "Monday, August 28, 2017",  "2:40:52 PM Central European Summer Time"
     func toString(dateStyle: DateFormatter.Style = .none, timeStyle: DateFormatter.Style = .none, locale: Locale? = nil, timeZone: TimeZone? = nil) -> String {
         let dateFormatter: DateFormatter = DateFormatter()
-        
+
         if let locale: Locale = locale {
             dateFormatter.locale = locale
         }
         if let timeZone: TimeZone = timeZone {
             dateFormatter.timeZone = timeZone
         }
-        
+
         dateFormatter.timeStyle = timeStyle
         dateFormatter.dateStyle = dateStyle
         return dateFormatter.string(from: self)
     }
-    
+
     /// Converts receiver to a string of the ISO8601 format.
     func asISO8601String() -> String {
         return Formatter.iso8601WithMs.string(from: self)
     }
-    
-    
+
+
     /// Constructs a Date instance based on a ISO8601 formatted string.
     static func dateFrom(iso8601String: String) -> Date? {
         return Formatter.iso8601WithMs.date(from: iso8601String)
     }
-    
+
     /// Converts receiver to a string of the ISO8601 format.
     func asISO8601WithoutMsString() -> String {
         return Formatter.iso8601WithoutMs.string(from: self)
@@ -75,17 +75,17 @@ public extension Date {
     static func dateFrom(iso8601StringWithoutMs: String) -> Date? {
         return Formatter.iso8601WithoutMs.date(from: iso8601StringWithoutMs)
     }
-    
+
     /// Asks `Calendar.current` whether the instance is today.
     var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
-    
+
     /// Asks `Calendar.current` whether the instance is tomorrow.
     var isTomorrow: Bool {
         return Calendar.current.isDateInTomorrow(self)
     }
-    
+
     /// Asks `Calendar.current` whether the instance is yesterday.
     var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
@@ -107,7 +107,34 @@ public extension Date {
     }
 
     func date(byAdding component: Calendar.Component, value: Int) -> Date {
-        return Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+        Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    }
+
+    func date(bySubtracting component: Calendar.Component, value: Int) -> Date {
+        Calendar.current.date(byAdding: component, value: -value, to: self) ?? self
+    }
+
+    /// Return a new `Date` by subtracting a `TimeInterval` to this `Date`.
+    ///
+    /// - parameter timeInterval: The value to add, in seconds.
+    func subtractingTimeInterval(_ timeInterval: TimeInterval) -> Date {
+        addingTimeInterval(-timeInterval)
+    }
+
+    /// Return a new `Date` by adding a `TimeInterval` to date `Date`.
+    ///
+    /// - parameter date: the date to add to
+    /// - parameter timeInterval: The value to add, in seconds.
+    static func +(date: Date, timeInterval: TimeInterval) -> Date {
+        date.addingTimeInterval(timeInterval)
+    }
+
+    /// Return a new `Date` by subtracting a `TimeInterval` from date `Date`.
+    ///
+    /// - parameter date: the date to subtract from
+    /// - parameter timeInterval: The value to subtract, in seconds.
+    static func -(date: Date, timeInterval: TimeInterval) -> Date {
+        date.subtractingTimeInterval(timeInterval)
     }
 }
 

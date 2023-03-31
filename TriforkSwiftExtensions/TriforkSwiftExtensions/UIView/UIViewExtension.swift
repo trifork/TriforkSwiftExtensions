@@ -142,4 +142,17 @@ public extension UIView {
     func show() {
         isHidden = false
     }
+
+    /// Tells if this view is visible.
+    /// inverse of isHidden.
+    var isVisible: Bool {
+        get {
+            !isHidden
+        }
+        set {
+            isHidden = !newValue
+        }
+    }
+
+
 }

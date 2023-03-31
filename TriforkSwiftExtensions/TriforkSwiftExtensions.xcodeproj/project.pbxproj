@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A02D4EEEB24C7A1D8AB6327 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */; };
+		1A02D7CC5B56C4F33C7D5ED5 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */; };
+		1A02DC5570DD8FA92F06126C /* UIControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */; };
+		1A02DD8BA539DE7AE9A78D4F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02D6CEB899DE021E506AC6 /* UIFont.swift */; };
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
 		C35BD0D22272EB8E00B24F3B /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */; };
@@ -93,6 +97,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A02D6CEB899DE021E506AC6 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlEvent.swift; sourceTree = "<group>"; };
+		1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
 		C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtensions.swift; sourceTree = "<group>"; };
@@ -192,6 +200,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A02D0BE082706696DFBE88A /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		1A02D1C835C6867C735D05DE /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		1A02D2825AEC120C99288629 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DE048E6DCFD2782164D9 /* Event */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		1A02DE048E6DCFD2782164D9 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		1A02DEAFD393A617ABCCEC22 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				1A02D6CEB899DE021E506AC6 /* UIFont.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		C349B41A21639B13007A4D37 /* CGRect */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +567,10 @@
 				E922693C1F5547C400DAEFAE /* UIView */,
 				E922692C1F545B4C00DAEFAE /* UIViewController */,
 				E92269241F5450F900DAEFAE /* URL */,
+				1A02D0BE082706696DFBE88A /* Dictionary */,
+				1A02DEAFD393A617ABCCEC22 /* UIFont */,
+				1A02D1C835C6867C735D05DE /* UITextField */,
+				1A02D2825AEC120C99288629 /* UIControl */,
 			);
 			path = TriforkSwiftExtensions;
 			sourceTree = "<group>";
@@ -749,6 +801,10 @@
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 				C37010BF221AF6370071CBF4 /* StringProtocolExtension.swift in Sources */,
+				1A02D7CC5B56C4F33C7D5ED5 /* Dictionary.swift in Sources */,
+				1A02DD8BA539DE7AE9A78D4F /* UIFont.swift in Sources */,
+				1A02D4EEEB24C7A1D8AB6327 /* UITextField.swift in Sources */,
+				1A02DC5570DD8FA92F06126C /* UIControlEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
