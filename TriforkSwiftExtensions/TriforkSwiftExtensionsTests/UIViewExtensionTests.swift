@@ -1,11 +1,3 @@
-//
-//  UIViewExtensionTests.swift
-//  TriforkSwiftExtensions
-//
-//  Created by Thomas Kalhøj Clemensen on 29/08/2017.
-//  Copyright © 2017 Trifork A/S. All rights reserved.
-//
-
 import XCTest
 @testable import TriforkSwiftExtensions
 
@@ -56,5 +48,23 @@ class UIViewExtensionTests: XCTestCase {
         superview.layoutIfNeeded()
         XCTAssert(superview.bounds.equalTo(view.frame))
         XCTAssert(superview.bounds.insetBy(dx: 50, dy: 50).equalTo(view2.frame))
+    }
+
+    func testHide() {
+        let view = UIView()
+        view.isHidden = false
+        view.hide()
+        XCTAssert(view.isHidden == true, "view should be hidden when calling hide on a visible view")
+        view.hide()
+        XCTAssert(view.isHidden == true, "nothing should happen second time you call hide")
+    }
+
+    func testShow() {
+        let view = UIView()
+        view.isHidden = true
+        view.show()
+        XCTAssert(view.isHidden == false, "view should be visible(not hidden) when calling show on an invisible view")
+        view.show()
+        XCTAssert(view.isHidden == false, "nothing should happen second time you call show")
     }
 }

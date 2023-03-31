@@ -1,11 +1,3 @@
-//
-//  UIViewExtension.swift
-//  TriforkSwiftExtensions
-//
-//  Created by Thomas Kalhøj Clemensen on 29/08/2017.
-//  Copyright © 2017 Trifork A/S. All rights reserved.
-//
-
 import UIKit
 
 public extension UIView {
@@ -20,25 +12,25 @@ public extension UIView {
     ///
     /// This will also turn a rectangled view into a circle if it is a square.
     func roundHorizontalEdges() {
-        self.layer.cornerRadius = self.bounds.height / 2.0
+        layer.cornerRadius = self.bounds.height / 2.0
     }
     
     /// Rounds the top and bottom sides of the receiver.
     ///
     /// This will also turn a rectangled view into a circle if it is a square.
     func roundVerticalEdges() {
-        self.layer.cornerRadius = self.bounds.width / 2.0
+        layer.cornerRadius = self.bounds.width / 2.0
     }
     
     /// Gets the current first responder of the subviews.
     func currentFirstResponder() -> UIView? {
         var firstResponder: UIView? = nil
         
-        if self.isFirstResponder {
+        if isFirstResponder {
             firstResponder = self
         }
         else {
-            for view: UIView in self.subviews {
+            for view: UIView in subviews {
                 firstResponder = view.currentFirstResponder()
                 
                 if firstResponder != nil {
@@ -73,7 +65,7 @@ public extension UIView {
             break;
         }
         
-        self.layer.mask = mask
+        layer.mask = mask
     }
     
     /// Performs shake animation on view.
@@ -90,7 +82,7 @@ public extension UIView {
                             -shakeDistance/4.0,
                             shakeDistance/4.0,
                             0.0 ]
-        self.layer.add(animation, forKey: animationKey)
+        layer.add(animation, forKey: animationKey)
     }
     
     
@@ -107,7 +99,7 @@ public extension UIView {
     
     /// Finds the first responder in the receiver and its subviews.
     func findFirstResponder() -> UIView? {
-        return findFirstResponder(inView: self)
+        findFirstResponder(inView: self)
     }
 
     /// Adds `view` as subview to `self` and sets constraints for all edges with specified inset.
@@ -138,5 +130,16 @@ public extension UIView {
         }
         
         return firstResponder
+    }
+
+
+    /// Makes this view hidden if it was visible before.
+    func hide() {
+        isHidden = true
+    }
+
+    /// Makes this view visible if it was hidden before.
+    func show() {
+        isHidden = false
     }
 }
