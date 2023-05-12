@@ -70,11 +70,11 @@ extension Array where Element == String {
         return reduce("") { partialResult, element in
             if partialResult.isEmpty {
                 return element
-            } else if element == lastElement {
-                return partialResult + end + element
-            } else {
-                return partialResult + by + element
             }
+            if element == lastElement {
+                return partialResult + end + element
+            }
+            return partialResult + by + element
         }
     }
 }
@@ -92,13 +92,13 @@ public extension Array {
     var head: Element? { first }
     
     /// Removes the first element and retuns a new `Array` containing the rest of the elements.
-    var tail: [Element] { Array(dropFirst()) }
+    func tail() -> [Element] { Array(dropFirst()) }
     
     /// Returns `nil` if the `Array` is empty, otherwise returning self.
     var nilIfEmpty: [Element]? { isEmpty ? nil : self }
     
     /// Splits the `Array` into two dependent on the "shouldAppendToFirst-Argument", where the first `Array` contains the elements that match the bool and the second `Array` contains the rest.
-    func split(by shouldAppendToFirst: (Element) -> Bool) -> ([Element], [Element]) {
+    func split(by shouldAppendToFirst: (Element) -> Bool) -> (first: [Element], second: [Element]) {
         var first: [Element] = []
         var second: [Element] = []
         
@@ -113,7 +113,7 @@ public extension Array {
     }
     
     /// Return the indexed element if within boundaries, else `nil`
-    func get(index: Int) -> Element? {
+    func getOrNil(index: Int) -> Element? {
         return index >= 0 && index < count ? self[index] : nil
     }
 }
