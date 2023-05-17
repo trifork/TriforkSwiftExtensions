@@ -91,8 +91,8 @@ public extension Date {
         return Calendar.current.isDateInYesterday(self)
     }
 
-    /// Returns the days difference between two dates.
-    var daysAgo: Int? { // TODO check
+    /// Returns the amount of whole days (24hours) difference between two dates.
+    var daysAgo: Int? {
         return Calendar.current.dateComponents([.day], from: self, to: Date()).day
     }
 
