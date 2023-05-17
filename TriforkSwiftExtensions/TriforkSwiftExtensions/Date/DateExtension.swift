@@ -92,10 +92,11 @@ public extension Date {
     }
 
     /// Returns the days difference between two dates.
-    var daysAgo: Int? {
+    var daysAgo: Int? { // TODO check
         return Calendar.current.dateComponents([.day], from: self, to: Date()).day
     }
 
+    @available(*, deprecated, message: "This property is deprecated. Use startOfDay instead")
     /// Returns a copy of the receiver, where the hours, minutes, seconds and nanoseconds are set to zero.
     var midnightDate: Date {
         var date: Date = self
@@ -105,9 +106,73 @@ public extension Date {
         }
         return date
     }
-
+    
+    var startOfYear: Date {
+        alignTo(resolution: .year)
+    }
+    
+    var startOfMonth: Date {
+        alignTo(resolution: .month)
+    }
+    
+    var startOfDay: Date {
+        alignTo(resolution: .day)
+    }
+    
+    var startOfHour: Date {
+        alignTo(resolution: .hour)
+    }
+    
+    var startOfMinute: Date {
+        alignTo(resolution: .minute)
+    }
+    
+    var startOfSecond: Date {
+        alignTo(resolution: .second)
+    }
+    
     func date(byAdding component: Calendar.Component, value: Int) -> Date {
         return Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    }
+    
+    func date(bySubtracting component: Calendar.Component, value: Int) -> Date {
+        Calendar.current.date(byAdding: component, value: -value, to: self) ?? self
+    }
+    
+    func alignTo(resolution: Calendar.Component) -> Date {
+        var dateComponents = Calendar.current.dateComponents(Set([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone]), from: self)
+        switch resolution {
+        case .year:
+            dateComponents.setValue(0, for: .month)
+            dateComponents.setValue(0, for: .day)
+            dateComponents.setValue(0, for: .hour)
+            dateComponents.setValue(0, for: .minute)
+            dateComponents.setValue(0, for: .second)
+            dateComponents.setValue(0, for: .nanosecond)
+        case .month:
+            dateComponents.setValue(0, for: .day)
+            dateComponents.setValue(0, for: .hour)
+            dateComponents.setValue(0, for: .minute)
+            dateComponents.setValue(0, for: .second)
+            dateComponents.setValue(0, for: .nanosecond)
+        case .day:
+            dateComponents.setValue(0, for: .hour)
+            dateComponents.setValue(0, for: .minute)
+            dateComponents.setValue(0, for: .second)
+            dateComponents.setValue(0, for: .nanosecond)
+        case .hour:
+            dateComponents.setValue(0, for: .minute)
+            dateComponents.setValue(0, for: .second)
+            dateComponents.setValue(0, for: .nanosecond)
+        case .minute:
+            dateComponents.setValue(0, for: .second)
+            dateComponents.setValue(0, for: .nanosecond)
+        case .second:
+            dateComponents.setValue(0, for: .nanosecond)
+        default:
+            break
+        }
+        return NSCalendar.current.date(from: dateComponents) ?? self
     }
 }
 
