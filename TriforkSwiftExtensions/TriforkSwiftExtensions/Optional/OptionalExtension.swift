@@ -1,10 +1,6 @@
 //
 //  OptionalExtension.swift
 //  TriforkSwiftExtensions
-//
-//  Created by Kasper Martin Tvede on 24/08/2017.
-//  Copyright © 2017 Trifork A/S. All rights reserved.
-//
 
 import Foundation
 
@@ -20,11 +16,15 @@ extension Optional {
     
     /// Unwraps receiver and passes it as parameter in the `doBlock`. If the receiver is nil, then the block will not be invoked.
     public func doWith(_ doBlock: (Wrapped) -> ()) {
-        switch self {
-        case .some(let wrapped):
+        if let wrapped = self {
             doBlock(wrapped)
-        case .none:
-            break
+        }
+    }
+    
+    /// Unwraps a double nilable value into a single nilable value.
+    func flattern<T>() -> T? where Wrapped == T? {
+        return flatMap { (wrapped: Wrapped) in
+            wrapped
         }
     }
 }
@@ -44,3 +44,4 @@ public extension Optional where Wrapped: Collection {
         return self?.isEmpty ?? true
     }
 }
+
