@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A02D4EEEB24C7A1D8AB6327 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */; };
+		1A02D7CC5B56C4F33C7D5ED5 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */; };
+		1A02D8EA90EAC07DEFEF7500 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02DD33BF566C0A5565C8FC /* NotificationCenter.swift */; };
+		1A02DC5570DD8FA92F06126C /* UIControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */; };
+		1A02DD8BA539DE7AE9A78D4F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02D6CEB899DE021E506AC6 /* UIFont.swift */; };
+		3C5B005B2A56CCA7009878A0 /* Categorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B005A2A56CCA7009878A0 /* Categorization.swift */; };
 		C349B41C21639B2A007A4D37 /* CGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41B21639B2A007A4D37 /* CGRectExtension.swift */; };
 		C349B41E21639B5C007A4D37 /* CGRectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */; };
 		C35BD0D22272EB8E00B24F3B /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */; };
@@ -93,6 +99,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A02D6CEB899DE021E506AC6 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlEvent.swift; sourceTree = "<group>"; };
+		1A02DD33BF566C0A5565C8FC /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		3C5B005A2A56CCA7009878A0 /* Categorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categorization.swift; sourceTree = "<group>"; };
 		C349B41B21639B2A007A4D37 /* CGRectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtension.swift; sourceTree = "<group>"; };
 		C349B41D21639B5C007A4D37 /* CGRectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionTests.swift; sourceTree = "<group>"; };
 		C35BD0D12272EB8E00B24F3B /* UITextViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewExtensions.swift; sourceTree = "<group>"; };
@@ -192,6 +204,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A02D0BE082706696DFBE88A /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DEA45C9ABA4960CEB69E /* Dictionary.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		1A02D1C835C6867C735D05DE /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DF1C13CC7B2CF83E81B4 /* UITextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		1A02D2825AEC120C99288629 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DE048E6DCFD2782164D9 /* Event */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		1A02DBD3761136FA792B236B /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				1A02DD33BF566C0A5565C8FC /* NotificationCenter.swift */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		1A02DE048E6DCFD2782164D9 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				1A02D9A55662C7C993CF01A2 /* UIControlEvent.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		1A02DEAFD393A617ABCCEC22 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				1A02D6CEB899DE021E506AC6 /* UIFont.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
+		3CA554AB2A53F7F7007F3E68 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
 		C349B41A21639B13007A4D37 /* CGRect */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				C380F39D254B5EE800081B25 /* SequenceExtensions.swift */,
+				3C5B005A2A56CCA7009878A0 /* Categorization.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -491,6 +560,7 @@
 				E9DF34421F4D743900BB36BB /* Collection */,
 				E922691A1F5441B900DAEFAE /* Data */,
 				E922691F1F54458D00DAEFAE /* Date */,
+				1A02D0BE082706696DFBE88A /* Dictionary */,
 				E97F00071FE2653100BB262F /* Encodable */,
 				C3D20F9A232633A600DE4845 /* Error */,
 				C35C0C4C229E782000B6B88A /* FloatingPoint */,
@@ -498,12 +568,14 @@
 				E9DF346A1F4DA22B00BB36BB /* NSAttributedString */,
 				E92269061F53E18700DAEFAE /* NSObject */,
 				C3A9C2EA21CCED2F007DF893 /* Numeric */,
+				1A02DBD3761136FA792B236B /* NotificationCenter */,
 				E91351D81F4EED7400BC1A68 /* Optional */,
 				C366946425607DAD00C34E28 /* Publisher */,
 				E9EA2CCC227AF3ED00944902 /* Result */,
 				C380F39C254B5EDC00081B25 /* Sequence */,
 				E92269151F53F93300DAEFAE /* String */,
 				E92269461F554FC500DAEFAE /* TriforkSwiftExtensionUtilities */,
+				E92269241F5450F900DAEFAE /* URL */,
 				E92269291F5459B200DAEFAE /* UIAlertController */,
 				E946D3CF20FDE274002FFDFF /* UIApplication */,
 				E91E19DE1F7D128E00F38282 /* UIColor */,
@@ -518,7 +590,9 @@
 				C35BD0D02272EB8E00B24F3B /* UITextView */,
 				E922693C1F5547C400DAEFAE /* UIView */,
 				E922692C1F545B4C00DAEFAE /* UIViewController */,
-				E92269241F5450F900DAEFAE /* URL */,
+				1A02DEAFD393A617ABCCEC22 /* UIFont */,
+				1A02D1C835C6867C735D05DE /* UITextField */,
+				1A02D2825AEC120C99288629 /* UIControl */,
 			);
 			path = TriforkSwiftExtensions;
 			sourceTree = "<group>";
@@ -526,6 +600,7 @@
 		E9DF34331F4D72E100BB36BB /* TriforkSwiftExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				3CA554AB2A53F7F7007F3E68 /* Optional */,
 				C366946925607DBB00C34E28 /* PublisherTests.swift */,
 				E9DF34361F4D72E100BB36BB /* Info.plist */,
 				E9DF344A1F4D768F00BB36BB /* ArrayExtensionTests.swift */,
@@ -543,7 +618,6 @@
 				C3A9C2ED21CCEE9F007DF893 /* IntExtensionTests.swift */,
 				E9DF346D1F4DA2FB00BB36BB /* NSMutableAttributedStringExtensionTests.swift */,
 				E92269091F53E1C000DAEFAE /* NSObjectExtensionTests.swift */,
-				E91351DC1F4EEF8400BC1A68 /* OptionalExtensionTests.swift */,
 				E9EA2CCF227B021900944902 /* ResultTests.swift */,
 				C3A5B7D62208D2DD009219A4 /* ReusableTests.swift */,
 				C380F3A1254B5F3B00081B25 /* SequenceExtensionTests.swift */,
@@ -652,8 +726,9 @@
 		E9DF341D1F4D72E100BB36BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Trifork A/S";
 				TargetAttributes = {
 					E9DF34251F4D72E100BB36BB = {
@@ -717,6 +792,7 @@
 				C35BD0D22272EB8E00B24F3B /* UITextViewExtensions.swift in Sources */,
 				E92269211F5445A400DAEFAE /* DateExtension.swift in Sources */,
 				E92269081F53E19F00DAEFAE /* NSObjectExtension.swift in Sources */,
+				3C5B005B2A56CCA7009878A0 /* Categorization.swift in Sources */,
 				E937DFCC21DCBD2000DE4E8C /* UILabelExtensions.swift in Sources */,
 				E946D3D220FDE28D002FFDFF /* UIApplicationExtensions.swift in Sources */,
 				E91E19E01F7D129B00F38282 /* UIColorExtension.swift in Sources */,
@@ -749,6 +825,11 @@
 				E946D3CC20FDE133002FFDFF /* UIEdgeInsetsExtension.swift in Sources */,
 				E9DF346C1F4DA24800BB36BB /* NSMutableAttributedStringExtension.swift in Sources */,
 				C37010BF221AF6370071CBF4 /* StringProtocolExtension.swift in Sources */,
+				1A02D7CC5B56C4F33C7D5ED5 /* Dictionary.swift in Sources */,
+				1A02DD8BA539DE7AE9A78D4F /* UIFont.swift in Sources */,
+				1A02D4EEEB24C7A1D8AB6327 /* UITextField.swift in Sources */,
+				1A02DC5570DD8FA92F06126C /* UIControlEvent.swift in Sources */,
+				1A02D8EA90EAC07DEFEF7500 /* NotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,6 +921,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -904,6 +986,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -915,7 +998,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -936,10 +1020,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TriforkSwiftExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trifork.TriforkSwiftExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -961,10 +1052,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TriforkSwiftExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trifork.TriforkSwiftExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -982,7 +1080,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZZGMPFLA2F;
 				INFOPLIST_FILE = TriforkSwiftExtensionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trifork.TriforkSwiftExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1000,7 +1102,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZZGMPFLA2F;
 				INFOPLIST_FILE = TriforkSwiftExtensionsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.trifork.TriforkSwiftExtensionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -1,25 +1,7 @@
-//
-//  OptionalExtensionTests.swift
-//  TriforkSwiftExtensions
-//
-//  Created by Kasper Martin Tvede on 24/08/2017.
-//  Copyright © 2017 Trifork A/S. All rights reserved.
-//
-
 import XCTest
 @testable import TriforkSwiftExtensions
 
 class OptionalExtensionTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
     func testPassTo(){
         var receiver : String? = ""
@@ -60,6 +42,14 @@ class OptionalExtensionTests: XCTestCase {
         XCTAssertTrue(optionalCollection.isNilOrEmpty)
         optionalCollection = [1, 2, 3]
         XCTAssertFalse(optionalCollection.isNilOrEmpty)
+    }
+    
+    func testFlattern() {
+        let fullNil: String?? = nil
+        XCTAssertNil(fullNil.flattern())
+        
+        let notNil: String?? = "test"
+        XCTAssertEqual("test",notNil.flattern())
     }
     
 }
