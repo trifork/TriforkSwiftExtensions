@@ -1,7 +1,3 @@
-//
-//  OptionalExtension.swift
-//  TriforkSwiftExtensions
-
 import Foundation
 
 extension Optional {

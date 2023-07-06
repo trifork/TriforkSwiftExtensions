@@ -1,7 +1,3 @@
-//
-//  OptionalExtensionTests.swift
-//  TriforkSwiftExtensions
-
 import XCTest
 @testable import TriforkSwiftExtensions
 
