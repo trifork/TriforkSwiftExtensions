@@ -131,16 +131,16 @@ public extension Date {
         alignTo(resolution: .second)
     }
     
-    func date(byAdding component: Calendar.Component, value: Int) -> Date {
-        return Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    func date(byAdding component: Calendar.Component, value: Int, calendar: Calendar = .current) -> Date {
+        return calendar.date(byAdding: component, value: value, to: self) ?? self
+    }
+
+    func date(bySubtracting component: Calendar.Component, value: Int, calendar: Calendar = .current) -> Date {
+        return calendar.date(byAdding: component, value: -value, to: self) ?? self
     }
     
-    func date(bySubtracting component: Calendar.Component, value: Int) -> Date {
-        Calendar.current.date(byAdding: component, value: -value, to: self) ?? self
-    }
-    
-    func alignTo(resolution: Calendar.Component) -> Date {
-        var dateComponents = Calendar.current.dateComponents(Set([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone]), from: self)
+    func alignTo(resolution: Calendar.Component, calendar: Calendar = .current) -> Date {
+        var dateComponents = calendar.dateComponents(Set([.year, .month, .day, .hour, .minute, .second, .nanosecond, .timeZone]), from: self)
         switch resolution {
         case .year:
             dateComponents.setValue(0, for: .month)
@@ -172,7 +172,7 @@ public extension Date {
         default:
             break
         }
-        return NSCalendar.current.date(from: dateComponents) ?? self
+        return calendar.date(from: dateComponents) ?? self
     }
 }
 
