@@ -79,7 +79,6 @@ class DateExtensionTests: XCTestCase {
         XCTAssert(Date().midnightDate.isToday, "Midnight should still be today!")
         XCTAssert(!Date().midnightDate.isYesterday, "Midnight should not be yesterday!")
         
-    
         let equalComponents: [Calendar.Component] = [.year, .month, .day, .quarter, .timeZone, .era, .weekday, .weekOfMonth, .weekOfYear]
         
         for component: Calendar.Component in equalComponents {
@@ -102,32 +101,184 @@ class DateExtensionTests: XCTestCase {
     }
 
     func testDaysAgoWithYesterdayDate() {
-        let date = Date().addingTimeInterval(-3600 * 24)
+        let date = Date().date(bySubtracting: .day, value: 1)
 
         XCTAssertEqual(date.daysAgo, 1)
     }
 
     func testDaysAgoWithAWeekAgo() {
-        let date = Date().addingTimeInterval(-3600 * 24 * 7)
+        let date = Date().date(bySubtracting: .day, value: 7)
 
         XCTAssertEqual(date.daysAgo, 7)
     }
-
-    func testDateByAddingTomorrow() {
+    
+    func testDaysAgoWithLessThan24HoursInTheFuture() {
         let date = Date().date(byAdding: .day, value: 1)
-
-        XCTAssertTrue(date.isTomorrow)
+        XCTAssertEqual(date.daysAgo, 0)
+    }
+    
+    func testDaysAgoWithMoreThan24HoursInTheFuture() {
+        let date = Date().date(byAdding: .day, value: 1).date(byAdding: .second, value: 1)
+        XCTAssertEqual(date.daysAgo, -1)
     }
 
-    func testDateByAddingYesterday() {
-        let date = Date().date(byAdding: .day, value: -1)
+    func testDateByAddingOneDay() {
+        let date1 = Date().date(byAdding: .day, value: 1)
+        let date2 = testDate.date(byAdding: .day, value: 1)
 
-        XCTAssertTrue(date.isYesterday)
+        XCTAssertTrue(date1.isTomorrow)
+        XCTAssertEqual(date2.timeIntervalSince1970, testDate.timeIntervalSince1970 + (3600 * 24))
     }
 
-    func testDateByAddingSeconds() {
+    func testDateByAddingOneNegativeDay() {
+        let date1 = Date().date(byAdding: .day, value: -1)
+        let date2 = testDate.date(byAdding: .day, value: -1)
+
+        XCTAssertTrue(date1.isYesterday)
+        XCTAssertEqual(date2.timeIntervalSince1970, testDate.timeIntervalSince1970 - (3600 * 24))
+    }
+
+    func testDateByAddingTwoSeconds() {
         let date = testDate.date(byAdding: .second, value: 2)
 
         XCTAssertEqual(date.timeIntervalSince1970, testDate.timeIntervalSince1970 + 2)
+    }
+    
+    func testDateBySubtractingOneDay() {
+        let date1 = Date().date(bySubtracting: .day, value: 1)
+        let date2 = testDate.date(bySubtracting: .day, value: 1)
+
+        XCTAssertTrue(date1.isYesterday)
+        XCTAssertEqual(date2.timeIntervalSince1970, testDate.timeIntervalSince1970 - (3600 * 24))
+    }
+
+    func testDateBySubtractingOneNegativeDay() {
+        let date1 = Date().date(bySubtracting: .day, value: -1)
+        let date2 = testDate.date(bySubtracting: .day, value: -1)
+
+        XCTAssertTrue(date1.isTomorrow)
+        XCTAssertEqual(date2.timeIntervalSince1970, testDate.timeIntervalSince1970 + (3600 * 24))
+    }
+
+    func testDateBySubtractingSeconds() {
+        let date = testDate.date(bySubtracting: .second, value: 2)
+
+        XCTAssertEqual(date.timeIntervalSince1970, testDate.timeIntervalSince1970 - 2)
+    }
+    
+    func testStartOfYear() {
+        let danishCalendar = Calendar(identifier: .iso8601)
+        
+        var dateComponents = DateComponents()
+        dateComponents.minute = 50
+        dateComponents.hour = 12
+        dateComponents.day = 17
+        dateComponents.month = 5
+        dateComponents.year = 2023
+        let date = danishCalendar.date(from: dateComponents)
+        
+        var expectedDateComponents = DateComponents()
+        expectedDateComponents.minute = 0
+        expectedDateComponents.hour = 0
+        expectedDateComponents.day = 0
+        expectedDateComponents.month = 0
+        expectedDateComponents.year = 2023
+        let expectedDate = danishCalendar.date(from: expectedDateComponents)
+        
+        XCTAssertEqual(date?.startOfYear ?? Date(), expectedDate)
+    }
+    
+    func testStartOfMonth() {
+        let danishCalendar = Calendar(identifier: .iso8601)
+        
+        var dateComponents = DateComponents()
+        dateComponents.minute = 50
+        dateComponents.hour = 12
+        dateComponents.day = 17
+        dateComponents.month = 5
+        dateComponents.year = 2023
+        let date = danishCalendar.date(from: dateComponents)
+        
+        var expectedDateComponents = DateComponents()
+        expectedDateComponents.minute = 0
+        expectedDateComponents.hour = 0
+        expectedDateComponents.day = 0
+        expectedDateComponents.month = 5
+        expectedDateComponents.year = 2023
+        let expectedDate = danishCalendar.date(from: expectedDateComponents)
+        
+        XCTAssertEqual(date?.startOfMonth ?? Date(), expectedDate)
+    }
+    
+    func testStartOfDay() {
+        let danishCalendar = Calendar(identifier: .iso8601)
+        
+        var dateComponents = DateComponents()
+        dateComponents.minute = 50
+        dateComponents.hour = 12
+        dateComponents.day = 17
+        dateComponents.month = 5
+        dateComponents.year = 2023
+        let date = danishCalendar.date(from: dateComponents)
+        
+        var expectedDateComponents = DateComponents()
+        expectedDateComponents.minute = 0
+        expectedDateComponents.hour = 0
+        expectedDateComponents.day = 17
+        expectedDateComponents.month = 5
+        expectedDateComponents.year = 2023
+        let expectedDate = danishCalendar.date(from: expectedDateComponents)
+        
+        XCTAssertEqual(date?.startOfDay ?? Date(), expectedDate)
+    }
+    
+    func testStartOfMinute() {
+        let danishCalendar = Calendar(identifier: .iso8601)
+        
+        var dateComponents = DateComponents()
+        dateComponents.second = 10
+        dateComponents.minute = 50
+        dateComponents.hour = 12
+        dateComponents.day = 17
+        dateComponents.month = 5
+        dateComponents.year = 2023
+        let date = danishCalendar.date(from: dateComponents)
+        
+        var expectedDateComponents = DateComponents()
+        expectedDateComponents.second = 0
+        expectedDateComponents.minute = 50
+        expectedDateComponents.hour = 12
+        expectedDateComponents.day = 17
+        expectedDateComponents.month = 5
+        expectedDateComponents.year = 2023
+        let expectedDate = danishCalendar.date(from: expectedDateComponents)
+        
+        XCTAssertEqual(date?.startOfMinute ?? Date(), expectedDate)
+    }
+    
+    func testStartOfSeconds() {
+        let danishCalendar = Calendar(identifier: .iso8601)
+        
+        var dateComponents = DateComponents()
+        dateComponents.nanosecond = 45
+        dateComponents.second = 10
+        dateComponents.minute = 50
+        dateComponents.hour = 12
+        dateComponents.day = 17
+        dateComponents.month = 5
+        dateComponents.year = 2023
+        let date = danishCalendar.date(from: dateComponents)
+        
+        var expectedDateComponents = DateComponents()
+        expectedDateComponents.nanosecond = 0
+        expectedDateComponents.second = 10
+        expectedDateComponents.minute = 50
+        expectedDateComponents.hour = 12
+        expectedDateComponents.day = 17
+        expectedDateComponents.month = 5
+        expectedDateComponents.year = 2023
+        let expectedDate = danishCalendar.date(from: expectedDateComponents)
+        
+        XCTAssertEqual(date?.startOfSecond ?? Date(), expectedDate)
     }
 }
