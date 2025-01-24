@@ -9,6 +9,10 @@
 import Foundation
 
 public extension URL {
+    
+    init (staticString: StaticString) {
+        self.init(string: staticString.description)!
+    }
 
     /// Adding paramters to URL and returns new URL.
     func adding(parameters: [String: String]) -> URL {

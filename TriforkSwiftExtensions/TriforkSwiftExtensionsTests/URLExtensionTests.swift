@@ -41,4 +41,11 @@ class URLExtensionTests: XCTestCase {
         let url: URL = URL(string: "https://www.trifork.com?id=cool_beans")!
         XCTAssertEqual(url.valueOfQueryParameter(withName: "id"), "cool_beans")
     }
+    
+    func testValidStaticStringURLInitialization() {
+        let validStaticString: StaticString = "https://www.trifork.com"
+        let url = URL(staticString: validStaticString)
+        
+        XCTAssertEqual(url.absoluteString, "https://www.trifork.com")
+    }
 }
